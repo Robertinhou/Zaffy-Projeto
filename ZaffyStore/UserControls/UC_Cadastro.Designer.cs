@@ -101,6 +101,7 @@
             // pbEyeClosed
             // 
             pbEyeClosed.Cursor = Cursors.Hand;
+            pbEyeClosed.Image = Properties.Resources.icons8_invisível_32;
             pbEyeClosed.Location = new Point(330, 313);
             pbEyeClosed.Name = "pbEyeClosed";
             pbEyeClosed.Size = new Size(31, 28);
@@ -173,6 +174,7 @@
             // pbEyeOpen
             // 
             pbEyeOpen.Cursor = Cursors.Hand;
+            pbEyeOpen.Image = Properties.Resources.icons8_visível_32;
             pbEyeOpen.Location = new Point(330, 313);
             pbEyeOpen.Name = "pbEyeOpen";
             pbEyeOpen.Size = new Size(31, 28);

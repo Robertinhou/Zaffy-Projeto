@@ -92,5 +92,10 @@ namespace ZaffyStore.UserControls
             }
 
         }
+
+        private void UC_Cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

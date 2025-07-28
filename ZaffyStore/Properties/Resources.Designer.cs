@@ -93,6 +93,36 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_excluir_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-excluir-48 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_excluir_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-excluir-481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_excluir_482 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-excluir-482", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_invisível_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-invisível-32", resourceCulture);

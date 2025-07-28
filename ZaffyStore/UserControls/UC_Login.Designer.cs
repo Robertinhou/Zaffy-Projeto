@@ -93,6 +93,7 @@
             linkCadastro.TabIndex = 5;
             linkCadastro.TabStop = true;
             linkCadastro.Text = "Cadastre-se";
+            linkCadastro.LinkClicked += linkCadastro_LinkClicked;
             // 
             // linkEsqueciSenha
             // 
@@ -110,12 +111,14 @@
             // pbEyeClosed
             // 
             pbEyeClosed.Cursor = Cursors.Hand;
-            pbEyeClosed.Location = new Point(338, 269);
+            pbEyeClosed.Image = Properties.Resources.icons8_invisível_32;
+            pbEyeClosed.Location = new Point(338, 267);
             pbEyeClosed.Name = "pbEyeClosed";
             pbEyeClosed.Size = new Size(31, 28);
             pbEyeClosed.SizeMode = PictureBoxSizeMode.StretchImage;
             pbEyeClosed.TabIndex = 15;
             pbEyeClosed.TabStop = false;
+            pbEyeClosed.Click += pbEyeClosed_Click;
             // 
             // btnLogin
             // 
@@ -129,6 +132,7 @@
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtSenha
             // 
@@ -182,12 +186,14 @@
             // pbEyeOpen
             // 
             pbEyeOpen.Cursor = Cursors.Hand;
-            pbEyeOpen.Location = new Point(338, 269);
+            pbEyeOpen.Image = Properties.Resources.icons8_visível_32;
+            pbEyeOpen.Location = new Point(338, 267);
             pbEyeOpen.Name = "pbEyeOpen";
             pbEyeOpen.Size = new Size(31, 28);
             pbEyeOpen.SizeMode = PictureBoxSizeMode.StretchImage;
             pbEyeOpen.TabIndex = 16;
             pbEyeOpen.TabStop = false;
+            pbEyeOpen.Click += pbEyeOpen_Click;
             // 
             // pictureBox3
             // 
@@ -232,7 +238,6 @@
             Controls.Add(pictureBox1);
             Name = "UC_Login";
             Size = new Size(800, 493);
-            Load += UC_Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
