@@ -4,5 +4,14 @@
     <Compile Update="Conteudo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControls\UC_Cadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_EsqueciSenha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
