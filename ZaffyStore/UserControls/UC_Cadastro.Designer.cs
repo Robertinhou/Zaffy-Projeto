@@ -43,6 +43,10 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
+            lblTamanho = new Label();
+            lblMaiuscula = new Label();
+            lblMinuscula = new Label();
+            lblEspecial = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeOpen).BeginInit();
@@ -55,6 +59,10 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(115, 76, 191);
+            panel1.Controls.Add(lblEspecial);
+            panel1.Controls.Add(lblMinuscula);
+            panel1.Controls.Add(lblMaiuscula);
+            panel1.Controls.Add(lblTamanho);
             panel1.Controls.Add(linkLogin);
             panel1.Controls.Add(txtSenha);
             panel1.Controls.Add(label4);
@@ -76,7 +84,7 @@
             linkLogin.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkLogin.AutoSize = true;
             linkLogin.LinkColor = Color.White;
-            linkLogin.Location = new Point(155, 418);
+            linkLogin.Location = new Point(217, 458);
             linkLogin.Name = "linkLogin";
             linkLogin.Size = new Size(91, 15);
             linkLogin.TabIndex = 5;
@@ -121,7 +129,7 @@
             btnCadastrar.FlatStyle = FlatStyle.Popup;
             btnCadastrar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(138, 379);
+            btnCadastrar.Location = new Point(200, 419);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(124, 36);
             btnCadastrar.TabIndex = 4;
@@ -220,6 +228,38 @@
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
             // 
+            // lblTamanho
+            // 
+            lblTamanho.AutoSize = true;
+            lblTamanho.Location = new Point(73, 344);
+            lblTamanho.Name = "lblTamanho";
+            lblTamanho.Size = new Size(0, 15);
+            lblTamanho.TabIndex = 9;
+            // 
+            // lblMaiuscula
+            // 
+            lblMaiuscula.AutoSize = true;
+            lblMaiuscula.Location = new Point(73, 366);
+            lblMaiuscula.Name = "lblMaiuscula";
+            lblMaiuscula.Size = new Size(0, 15);
+            lblMaiuscula.TabIndex = 19;
+            // 
+            // lblMinuscula
+            // 
+            lblMinuscula.AutoSize = true;
+            lblMinuscula.Location = new Point(73, 388);
+            lblMinuscula.Name = "lblMinuscula";
+            lblMinuscula.Size = new Size(0, 15);
+            lblMinuscula.TabIndex = 20;
+            // 
+            // lblEspecial
+            // 
+            lblEspecial.AutoSize = true;
+            lblEspecial.Location = new Point(73, 409);
+            lblEspecial.Name = "lblEspecial";
+            lblEspecial.Size = new Size(0, 15);
+            lblEspecial.TabIndex = 21;
+            // 
             // UC_Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -242,6 +282,8 @@
 
         #endregion
 
+
+
         private Panel panel1;
         private LinkLabel linkLogin;
         private TextBox txtSenha;
@@ -257,5 +299,9 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Label lblEspecial;
+        private Label lblMinuscula;
+        private Label lblMaiuscula;
+        private Label lblTamanho;
     }
 }
