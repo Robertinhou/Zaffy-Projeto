@@ -59,7 +59,7 @@ namespace ZaffyStore.UserControls
                         {
                             if (usuarios.CadastrarUsuario())
                             {
-                                MessageBox.Show("Cadastro realizado" + MessageBoxButtons.OK);
+                                MessageBox.Show("Cadastro realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 UC_Login login = new UC_Login();
                                 this.Controls.Clear();
@@ -90,11 +90,6 @@ namespace ZaffyStore.UserControls
             {
                 MessageBox.Show("Erro:" + ex.Message);
             }
-
-        }
-
-        private void UC_Cadastro_Load(object sender, EventArgs e)
-        {
 
         }
     }

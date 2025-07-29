@@ -16,7 +16,7 @@ namespace ZaffyStore.UserControls
         public UC_EsqueciSenha()
         {
             InitializeComponent();
-            txtSenha.UseSystemPasswordChar = true;
+            txtNovaSenha.UseSystemPasswordChar = true;
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -28,21 +28,57 @@ namespace ZaffyStore.UserControls
 
         private void pbEyeClosed_Click(object sender, EventArgs e)
         {
-            txtSenha.UseSystemPasswordChar = false;
+            txtNovaSenha.UseSystemPasswordChar = false;
             pbEyeClosed.Visible = false;
         }
 
         private void pbEyeOpen_Click(object sender, EventArgs e)
         {
-            txtSenha.UseSystemPasswordChar = true;
+            txtNovaSenha.UseSystemPasswordChar = true;
             pbEyeClosed.Visible = true;
         }
 
         private void btnMudarSenha_Click(object sender, EventArgs e)
         {
-            UC_Login login = new UC_Login();
-            this.Controls.Clear();
-            this.Controls.Add(login);
+            try
+            {
+                if (!txtEmail.Text.Equals("") && !txtNovaSenha.Text.Equals(""))
+                {
+
+                    Usuarios usuarios = new Usuarios();
+                    usuarios.Email = txtEmail.Text;
+                    usuarios.Senha = txtNovaSenha.Text;
+
+                    if (Usuarios.ValidarEmail(txtEmail.Text))
+                    {
+                        if (usuarios.verificarEmailExistente())
+                        {
+                            usuarios.MudarSenha();
+                            MessageBox.Show("Senha atualizada");
+                            UC_Login login = new UC_Login();
+                            this.Controls.Clear();
+                            this.Controls.Add(login);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email não cadastrado");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email inválido");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Preencha os campos");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
+
         }
     }
 }

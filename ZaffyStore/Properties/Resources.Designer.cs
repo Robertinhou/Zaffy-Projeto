@@ -153,6 +153,16 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap linhas {
+            get {
+                object obj = ResourceManager.GetObject("linhas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoZaffyBranca {
             get {
                 object obj = ResourceManager.GetObject("logoZaffyBranca", resourceCulture);
@@ -196,6 +206,36 @@ namespace ZaffyStore.Properties {
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade1 {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade11 {
+            get {
+                object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waves {
+            get {
+                object obj = ResourceManager.GetObject("waves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waves___Copia {
+            get {
+                object obj = ResourceManager.GetObject("waves - Copia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

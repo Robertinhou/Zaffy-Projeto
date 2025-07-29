@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Conteudo));
             panelTop = new Panel();
             pbMinimize = new PictureBox();
             pbClose = new PictureBox();
@@ -100,6 +101,7 @@
             Controls.Add(panel1);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Conteudo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

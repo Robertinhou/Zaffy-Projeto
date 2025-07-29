@@ -41,10 +41,14 @@
             label1 = new Label();
             pbEyeOpen = new PictureBox();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeOpen).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -72,20 +76,21 @@
             linkLogin.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkLogin.AutoSize = true;
             linkLogin.LinkColor = Color.White;
-            linkLogin.Location = new Point(154, 428);
+            linkLogin.Location = new Point(155, 418);
             linkLogin.Name = "linkLogin";
             linkLogin.Size = new Size(91, 15);
             linkLogin.TabIndex = 5;
             linkLogin.TabStop = true;
             linkLogin.Text = "Já possuo conta";
+            linkLogin.LinkClicked += linkLogin_LinkClicked;
             // 
             // txtSenha
             // 
             txtSenha.Font = new Font("Segoe UI", 12F);
-            txtSenha.Location = new Point(73, 313);
+            txtSenha.Location = new Point(73, 312);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(251, 29);
-            txtSenha.TabIndex = 17;
+            txtSenha.TabIndex = 3;
             // 
             // label4
             // 
@@ -108,6 +113,7 @@
             pbEyeClosed.SizeMode = PictureBoxSizeMode.StretchImage;
             pbEyeClosed.TabIndex = 15;
             pbEyeClosed.TabStop = false;
+            pbEyeClosed.Click += pbEyeClosed_Click;
             // 
             // btnCadastrar
             // 
@@ -115,12 +121,13 @@
             btnCadastrar.FlatStyle = FlatStyle.Popup;
             btnCadastrar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(140, 389);
+            btnCadastrar.Location = new Point(138, 379);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(124, 36);
             btnCadastrar.TabIndex = 4;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // txtEmail
             // 
@@ -181,16 +188,37 @@
             pbEyeOpen.SizeMode = PictureBoxSizeMode.StretchImage;
             pbEyeOpen.TabIndex = 16;
             pbEyeOpen.TabStop = false;
+            pbEyeOpen.Click += pbEyeOpen_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logoZaffyBranca;
-            pictureBox1.Location = new Point(435, 80);
+            pictureBox1.Location = new Point(436, 80);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(332, 317);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.waves;
+            pictureBox2.Location = new Point(545, 327);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(304, 187);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.waves___Copia;
+            pictureBox3.Location = new Point(347, -14);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(304, 187);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
             // 
             // UC_Cadastro
             // 
@@ -198,14 +226,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
             Name = "UC_Cadastro";
-            Size = new Size(800, 493);
-            Load += UC_Cadastro_Load;
+            Size = new Size(801, 493);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeOpen).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -224,5 +255,7 @@
         private Label label1;
         private PictureBox pbEyeOpen;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

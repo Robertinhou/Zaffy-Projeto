@@ -38,9 +38,7 @@ namespace ZaffyStore.UserControls
                         {
                             string nomeLogado = usuarios.BuscarNome();
 
-                            //UC_Home homePage = new UC_Home(nomeLogado, this);
-                            //this.Controls.Clear();
-                            //this.Controls.Add(homePage);
+                            MessageBox.Show("LOGIN REALIZADO PAIZAO");
                         }
                         else
                         {

@@ -107,6 +107,7 @@
             linkEsqueciSenha.TabStop = true;
             linkEsqueciSenha.Text = "Esqueci a Senha";
             linkEsqueciSenha.VisitedLinkColor = Color.FromArgb(128, 128, 255);
+            linkEsqueciSenha.LinkClicked += linkEsqueciSenha_LinkClicked;
             // 
             // pbEyeClosed
             // 
@@ -136,6 +137,7 @@
             // 
             // txtSenha
             // 
+            txtSenha.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtSenha.Font = new Font("Segoe UI", 12F);
             txtSenha.Location = new Point(78, 267);
             txtSenha.Name = "txtSenha";
@@ -155,6 +157,7 @@
             // 
             // txtLogin
             // 
+            txtLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtLogin.Font = new Font("Segoe UI", 12F);
             txtLogin.Location = new Point(78, 193);
             txtLogin.Name = "txtLogin";
@@ -237,7 +240,7 @@
             Controls.Add(label5);
             Controls.Add(pictureBox1);
             Name = "UC_Login";
-            Size = new Size(800, 493);
+            Size = new Size(801, 493);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
