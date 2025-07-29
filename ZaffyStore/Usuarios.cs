@@ -216,13 +216,14 @@ namespace ZaffyStore
                     comando.Parameters.AddWithValue("@email", Email);
 
                     int resultado = Convert.ToInt32(comando.ExecuteScalar());
+
                     if (resultado > 0)
                     {
-                        return false;
+                        return true;
                     }
                     else
                     {
-                        return true;
+                        return false;
                     }
                 }
             }
