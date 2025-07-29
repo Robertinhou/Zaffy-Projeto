@@ -51,10 +51,11 @@ namespace ZaffyStore.UserControls
 
                     if (Usuarios.ValidarEmail(txtEmail.Text))
                     {
-                        if (usuarios.verificarEmailExistente())
+                        if (!usuarios.verificarEmailExistente())
                         {
                             usuarios.MudarSenha();
                             MessageBox.Show("Senha atualizada");
+
                             UC_Login login = new UC_Login();
                             this.Controls.Clear();
                             this.Controls.Add(login);

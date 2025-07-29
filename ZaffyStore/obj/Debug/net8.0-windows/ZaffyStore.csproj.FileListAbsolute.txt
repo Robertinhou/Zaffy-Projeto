@@ -1,3 +1,9 @@
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.csproj.AssemblyReference.cache
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.Conteudo.resources
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_Cadastro.resources
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_EsqueciSenha.resources
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_Login.resources
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.csproj.GenerateResource.cache
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-windows\ZaffyStore.exe
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-windows\ZaffyStore.deps.json
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-windows\ZaffyStore.runtimeconfig.json
@@ -19,13 +25,7 @@ C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-wind
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.csproj.AssemblyReference.cache
-C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.Conteudo.resources
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.Properties.Resources.resources
-C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_Cadastro.resources
-C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_EsqueciSenha.resources
-C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_Login.resources
-C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.csproj.GenerateResource.cache
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.AssemblyInfoInputs.cache
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-Projeto\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.AssemblyInfo.cs

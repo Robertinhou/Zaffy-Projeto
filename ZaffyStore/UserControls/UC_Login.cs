@@ -34,15 +34,23 @@ namespace ZaffyStore.UserControls
                         usuarios.Email = txtLogin.Text;
                         usuarios.Senha = txtSenha.Text;
 
-                        if (usuarios.verificarLogin())
-                        {
-                            string nomeLogado = usuarios.BuscarNome();
 
-                            MessageBox.Show("LOGIN REALIZADO PAIZAO");
+                        if (usuarios.verificarEmailExistente())
+                        {
+                            if (usuarios.verificarLogin())
+                            {
+                                string nomeLogado = usuarios.BuscarNome();
+
+                                MessageBox.Show("LOGIN REALIZADO PAIZAO");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erro ao efetuar login");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Erro ao realizar login");
+                            MessageBox.Show("Usuário não cadastrado");
                         }
                     }
                     else

@@ -204,6 +204,15 @@ namespace ZaffyStore
             return regex.IsMatch(email);
         }
 
+        public static bool ValidarSenha(string senha)
+        {
+            // Mínimo 8 caracteres, pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial
+            string senhaValida = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$";
+            Regex regex = new Regex(senhaValida);
+            return regex.IsMatch(senha);
+        }
+
+
         public bool verificarEmailExistente()
         {
             try
@@ -219,11 +228,11 @@ namespace ZaffyStore
 
                     if (resultado > 0)
                     {
-                        return true;
+                        return false;
                     }
                     else
                     {
-                        return false;
+                        return true;
                     }
                 }
             }

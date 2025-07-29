@@ -55,20 +55,25 @@ namespace ZaffyStore.UserControls
 
                     if (Usuarios.ValidarEmail(txtEmail.Text))
                     {
+
                         if (usuarios.verificarEmailExistente())
                         {
-                            if (usuarios.CadastrarUsuario())
+                            if (Usuarios.ValidarSenha(txtSenha.Text))
                             {
-                                MessageBox.Show("Cadastro realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                UC_Login login = new UC_Login();
-                                this.Controls.Clear();
-                                this.Controls.Add(login);
                             }
-                            else
-                            {
-                                MessageBox.Show("Falha ao cadastrar usuário");
-                            }
+                                if (usuarios.CadastrarUsuario())
+                                {
+                                    MessageBox.Show("Cadastro realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    UC_Login login = new UC_Login();
+                                    this.Controls.Clear();
+                                    this.Controls.Add(login);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Falha ao cadastrar usuário");
+                                }
                         }
                         else
                         {
