@@ -20,6 +20,8 @@ namespace ZaffyStore.UserControls
             InitializeComponent();
             txtNovaSenha.UseSystemPasswordChar = true;
             txtNovaSenha.TextChanged += txtNovaSenha_TextChanged;
+            txtNovaSenha.Enabled = false;
+            btnMudarSenha.Visible = false;
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -45,87 +47,99 @@ namespace ZaffyStore.UserControls
         {
             try
             {
-                if (!txtEmail.Text.Equals("") && !txtNovaSenha.Text.Equals(""))
+                Usuarios usuarios = new Usuarios();
+                if (txtNovaSenha.Enabled == false)
                 {
-
-                    Usuarios usuarios = new Usuarios();
-                    usuarios.Email = txtEmail.Text;
-                    usuarios.Senha = txtNovaSenha.Text;
-
-                    if (Usuarios.ValidarEmail(txtEmail.Text))
+                    if (!txtEmail.Text.Equals(""))
                     {
-                        if (!usuarios.verificarEmailExistente())
+
+
+                        usuarios.Email = txtEmail.Text;
+
+
+
+                        if (Usuarios.ValidarEmail(txtEmail.Text))
                         {
-                            MailMessage mail = new MailMessage();
-                            mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
-                            mail.To.Add(new MailAddress("0001082383@senaimgaluno.com.br", "Matheus"));
-
-                            Random r = new Random();
-
-
-                            string codigo = "";
-
-                            for (int i = 0; i < 9; i++)
+                            if (!usuarios.verificarEmailExistente())
                             {
+                                MailMessage mail = new MailMessage();
+                                mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
+                                mail.To.Add(new MailAddress("0001082383@senaimgaluno.com.br", "Matheus"));
 
+                                Random r = new Random();
 
-                                codigo += r.Next(6).ToString();
+                                string codigo = "";
 
+                                for (int i = 0; i < 9; i++)
+                                {
+                                    codigo += r.Next(6).ToString();
+                                }
+
+                                MessageBox.Show(codigo);
+
+                                mail.Subject = "Redefinição de Senha";
+                                mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
+
+                                using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+                                {
+                                    smtp.UseDefaultCredentials = false;
+                                    smtp.EnableSsl = true;
+                                    smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "bsjykctzdcwxumhn");
+
+                                    try
+                                    {
+                                        smtp.Send(mail);
+                                        MessageBox.Show("Enviado!");
+                                        txtNovaSenha.Enabled = true;
+                                        btnEnviar.Visible = false;
+                                        btnMudarSenha.Visible = true;
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message, "Não mandou");
+                                    }
+                                }
                             }
-
-                            MessageBox.Show(codigo);
-
-                            mail.Subject = "Redefinição de Senha";
-                            mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
-
-                            using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+                            else
                             {
-
-                                smtp.UseDefaultCredentials = false;
-                                smtp.EnableSsl = true;
-                                smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "");
-
-                                try
-                                {
-                                    smtp.Send(mail);
-                                    MessageBox.Show("Enviado!");
-
-
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Não mandou");
-                                }
-
-
-                                //usuarios.MudarSenha();
-                                //MessageBox.Show("Senha atualizada");
-
-                                //UC_Login login = new UC_Login();
-                                //this.Controls.Clear();
-                                //this.Controls.Add(login);
+                                MessageBox.Show("Email não cadastrado");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Email não cadastrado");
+                            MessageBox.Show("Email inválido");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Email inválido");
+                        MessageBox.Show("Preencha os campos");
                     }
                 }
-                else
+                else // se for verdadeiro vai mandar email senao o txt senha ativa e redefine a senha
                 {
-                    MessageBox.Show("Preencha os campos");
+                    if (!txtNovaSenha.Text.Equals(""))
+                    {
+                        usuarios.Email = txtEmail.Text;
+                        usuarios.Senha = txtNovaSenha.Text;
+
+                        if (usuarios.MudarSenha())
+                        {
+                            MessageBox.Show("Senha atualizada");
+                            UC_Login login = new UC_Login();
+                            this.Controls.Clear();
+                            this.Controls.Add(login);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não atualizou a senha mas chegou aqui");
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro:" + ex.Message);
             }
-
         }
 
         private void txtNovaSenha_TextChanged(object sender, EventArgs e)
@@ -154,6 +168,102 @@ namespace ZaffyStore.UserControls
         private void UC_EsqueciSenha_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Usuarios usuarios = new Usuarios();
+                if (txtNovaSenha.Enabled == false)
+                {
+                    if (!txtEmail.Text.Equals(""))
+                    {
+                        usuarios.Email = txtEmail.Text;
+
+                        if (Usuarios.ValidarEmail(txtEmail.Text))
+                        {
+                            if (!usuarios.verificarEmailExistente())
+                            {
+                                MailMessage mail = new MailMessage();
+                                mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
+                                mail.To.Add(new MailAddress("0001082383@senaimgaluno.com.br", "Matheus"));
+
+                                Random r = new Random();
+
+                                string codigo = "";
+
+                                for (int i = 0; i < 9; i++)
+                                {
+                                    codigo += r.Next(6).ToString();
+                                }
+
+                               // MessageBox.Show(codigo);
+
+                                mail.Subject = "Redefinição de Senha";
+                                mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
+
+                                using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+                                {
+                                    smtp.UseDefaultCredentials = false;
+                                    smtp.EnableSsl = true;
+                                    smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "bsjykctzdcwxumhn");
+
+                                    try
+                                    {
+                                        smtp.Send(mail);
+                                        MessageBox.Show("Enviado!");
+                                        txtCodigo.Text = codigo;
+                                        txtNovaSenha.Enabled = true;
+                                        btnEnviar.Visible = false;
+                                        btnMudarSenha.Visible = true;
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message, "Não mandou");
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Email não cadastrado");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email inválido");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos");
+                    }
+                }
+                else // se for verdadeiro vai mandar email senao o txt senha ativa e redefine a senha
+                {
+                    if (!txtNovaSenha.Text.Equals(""))
+                    {
+                        usuarios.Email = txtEmail.Text;
+                        usuarios.Senha = txtNovaSenha.Text;
+
+                        if (usuarios.MudarSenha())
+                        {
+                            MessageBox.Show("Senha atualizada");
+                            UC_Login login = new UC_Login();
+                            this.Controls.Clear();
+                            this.Controls.Add(login);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não atualizou a senha mas chegou aqui");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
         }
     }
 }

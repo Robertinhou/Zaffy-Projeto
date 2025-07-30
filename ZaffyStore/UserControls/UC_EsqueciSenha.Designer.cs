@@ -45,6 +45,8 @@
             lblMinuscula = new Label();
             lblMaiuscula = new Label();
             lblTamanho = new Label();
+            txtCodigo = new TextBox();
+            btnEnviar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
@@ -78,7 +80,7 @@
             linkLogin.AutoSize = true;
             linkLogin.Font = new Font("Segoe UI", 11F);
             linkLogin.LinkColor = Color.Indigo;
-            linkLogin.Location = new Point(165, 401);
+            linkLogin.Location = new Point(165, 409);
             linkLogin.Name = "linkLogin";
             linkLogin.Size = new Size(46, 20);
             linkLogin.TabIndex = 5;
@@ -104,12 +106,13 @@
             btnMudarSenha.FlatStyle = FlatStyle.Popup;
             btnMudarSenha.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnMudarSenha.ForeColor = Color.White;
-            btnMudarSenha.Location = new Point(128, 362);
+            btnMudarSenha.Location = new Point(128, 370);
             btnMudarSenha.Name = "btnMudarSenha";
             btnMudarSenha.Size = new Size(119, 36);
             btnMudarSenha.TabIndex = 4;
             btnMudarSenha.Text = "Redefinir";
             btnMudarSenha.UseVisualStyleBackColor = false;
+            btnMudarSenha.Visible = false;
             btnMudarSenha.Click += btnMudarSenha_Click;
             // 
             // txtNovaSenha
@@ -216,10 +219,34 @@
             lblTamanho.Size = new Size(0, 15);
             lblTamanho.TabIndex = 23;
             // 
+            // txtCodigo
+            // 
+            txtCodigo.Font = new Font("Segoe UI", 12F);
+            txtCodigo.Location = new Point(61, 327);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(251, 29);
+            txtCodigo.TabIndex = 27;
+            // 
+            // btnEnviar
+            // 
+            btnEnviar.BackColor = Color.Indigo;
+            btnEnviar.FlatStyle = FlatStyle.Popup;
+            btnEnviar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
+            btnEnviar.ForeColor = Color.White;
+            btnEnviar.Location = new Point(128, 370);
+            btnEnviar.Name = "btnEnviar";
+            btnEnviar.Size = new Size(119, 36);
+            btnEnviar.TabIndex = 28;
+            btnEnviar.Text = "Enviar";
+            btnEnviar.UseVisualStyleBackColor = false;
+            btnEnviar.Click += btnEnviar_Click;
+            // 
             // UC_EsqueciSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnEnviar);
+            Controls.Add(txtCodigo);
             Controls.Add(lblEspecial);
             Controls.Add(lblMinuscula);
             Controls.Add(linkLogin);
@@ -266,5 +293,7 @@
         private Label lblMinuscula;
         private Label lblMaiuscula;
         private Label lblTamanho;
+        private TextBox txtCodigo;
+        private Button btnEnviar;
     }
 }
