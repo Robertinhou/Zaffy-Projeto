@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZaffyStore.UserControls;
+using System.Net.Mail;
+using System.Net;
 
 namespace ZaffyStore.UserControls
 {
@@ -54,12 +56,55 @@ namespace ZaffyStore.UserControls
                     {
                         if (!usuarios.verificarEmailExistente())
                         {
-                            usuarios.MudarSenha();
-                            MessageBox.Show("Senha atualizada");
+                            MailMessage mail = new MailMessage();
+                            mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
+                            mail.To.Add(new MailAddress("0001082383@senaimgaluno.com.br", "Matheus"));
 
-                            UC_Login login = new UC_Login();
-                            this.Controls.Clear();
-                            this.Controls.Add(login);
+                            Random r = new Random();
+
+
+                            string codigo = "";
+
+                            for (int i = 0; i < 9; i++)
+                            {
+
+
+                                codigo += r.Next(6).ToString();
+
+                            }
+
+                            MessageBox.Show(codigo);
+
+                            mail.Subject = "Redefinição de Senha";
+                            mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
+
+                            using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+                            {
+
+                                smtp.UseDefaultCredentials = false;
+                                smtp.EnableSsl = true;
+                                smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "");
+
+                                try
+                                {
+                                    smtp.Send(mail);
+                                    MessageBox.Show("Enviado!");
+
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Não mandou");
+                                }
+
+
+                                //usuarios.MudarSenha();
+                                //MessageBox.Show("Senha atualizada");
+
+                                //UC_Login login = new UC_Login();
+                                //this.Controls.Clear();
+                                //this.Controls.Add(login);
+                            }
                         }
                         else
                         {
@@ -106,5 +151,9 @@ namespace ZaffyStore.UserControls
             lblEspecial.ForeColor = (temNumero && temEspecial) ? Color.Green : Color.Red;
         }
 
+        private void UC_EsqueciSenha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
