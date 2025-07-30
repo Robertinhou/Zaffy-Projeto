@@ -41,6 +41,10 @@
             label1 = new Label();
             pbEyeOpen = new PictureBox();
             pictureBox3 = new PictureBox();
+            lblEspecial = new Label();
+            lblMinuscula = new Label();
+            lblMaiuscula = new Label();
+            lblTamanho = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
@@ -74,7 +78,7 @@
             linkLogin.AutoSize = true;
             linkLogin.Font = new Font("Segoe UI", 11F);
             linkLogin.LinkColor = Color.Indigo;
-            linkLogin.Location = new Point(164, 372);
+            linkLogin.Location = new Point(165, 412);
             linkLogin.Name = "linkLogin";
             linkLogin.Size = new Size(46, 20);
             linkLogin.TabIndex = 5;
@@ -86,7 +90,7 @@
             // 
             pbEyeClosed.Cursor = Cursors.Hand;
             pbEyeClosed.Image = Properties.Resources.icons8_invisível_32;
-            pbEyeClosed.Location = new Point(318, 252);
+            pbEyeClosed.Location = new Point(318, 230);
             pbEyeClosed.Name = "pbEyeClosed";
             pbEyeClosed.Size = new Size(31, 28);
             pbEyeClosed.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -100,7 +104,7 @@
             btnMudarSenha.FlatStyle = FlatStyle.Popup;
             btnMudarSenha.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnMudarSenha.ForeColor = Color.White;
-            btnMudarSenha.Location = new Point(127, 333);
+            btnMudarSenha.Location = new Point(128, 373);
             btnMudarSenha.Name = "btnMudarSenha";
             btnMudarSenha.Size = new Size(119, 36);
             btnMudarSenha.TabIndex = 4;
@@ -111,7 +115,7 @@
             // txtNovaSenha
             // 
             txtNovaSenha.Font = new Font("Segoe UI", 12F);
-            txtNovaSenha.Location = new Point(58, 255);
+            txtNovaSenha.Location = new Point(58, 233);
             txtNovaSenha.Name = "txtNovaSenha";
             txtNovaSenha.Size = new Size(251, 29);
             txtNovaSenha.TabIndex = 2;
@@ -121,7 +125,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             label3.ForeColor = Color.Indigo;
-            label3.Location = new Point(58, 229);
+            label3.Location = new Point(58, 207);
             label3.Name = "label3";
             label3.Size = new Size(67, 23);
             label3.TabIndex = 3;
@@ -130,7 +134,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 12F);
-            txtEmail.Location = new Point(58, 181);
+            txtEmail.Location = new Point(58, 159);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(251, 29);
             txtEmail.TabIndex = 1;
@@ -140,7 +144,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             label2.ForeColor = Color.Indigo;
-            label2.Location = new Point(58, 155);
+            label2.Location = new Point(58, 133);
             label2.Name = "label2";
             label2.Size = new Size(61, 23);
             label2.TabIndex = 1;
@@ -161,7 +165,7 @@
             // 
             pbEyeOpen.Cursor = Cursors.Hand;
             pbEyeOpen.Image = Properties.Resources.icons8_visível_32;
-            pbEyeOpen.Location = new Point(318, 252);
+            pbEyeOpen.Location = new Point(318, 230);
             pbEyeOpen.Name = "pbEyeOpen";
             pbEyeOpen.Size = new Size(31, 28);
             pbEyeOpen.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -180,10 +184,46 @@
             pictureBox3.TabIndex = 22;
             pictureBox3.TabStop = false;
             // 
+            // lblEspecial
+            // 
+            lblEspecial.AutoSize = true;
+            lblEspecial.Location = new Point(59, 337);
+            lblEspecial.Name = "lblEspecial";
+            lblEspecial.Size = new Size(0, 15);
+            lblEspecial.TabIndex = 26;
+            // 
+            // lblMinuscula
+            // 
+            lblMinuscula.AutoSize = true;
+            lblMinuscula.Location = new Point(59, 316);
+            lblMinuscula.Name = "lblMinuscula";
+            lblMinuscula.Size = new Size(0, 15);
+            lblMinuscula.TabIndex = 25;
+            // 
+            // lblMaiuscula
+            // 
+            lblMaiuscula.AutoSize = true;
+            lblMaiuscula.Location = new Point(59, 294);
+            lblMaiuscula.Name = "lblMaiuscula";
+            lblMaiuscula.Size = new Size(0, 15);
+            lblMaiuscula.TabIndex = 24;
+            // 
+            // lblTamanho
+            // 
+            lblTamanho.AutoSize = true;
+            lblTamanho.Location = new Point(59, 272);
+            lblTamanho.Name = "lblTamanho";
+            lblTamanho.Size = new Size(0, 15);
+            lblTamanho.TabIndex = 23;
+            // 
             // UC_EsqueciSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lblEspecial);
+            Controls.Add(lblMinuscula);
+            Controls.Add(lblMaiuscula);
+            Controls.Add(lblTamanho);
             Controls.Add(pbEyeClosed);
             Controls.Add(linkLogin);
             Controls.Add(panel1);
@@ -221,5 +261,9 @@
         private PictureBox pictureBox3;
         private Label label5;
         private PictureBox pictureBox1;
+        private Label lblEspecial;
+        private Label lblMinuscula;
+        private Label lblMaiuscula;
+        private Label lblTamanho;
     }
 }

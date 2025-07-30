@@ -76,7 +76,7 @@ namespace ZaffyStore.UserControls
                             }
                             else
                             {
-                                MessageBox.Show("Mínimo 8 caracteres, pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial");
+                                MessageBox.Show("Senha não corresponde os requisitos");
                             }
 
                         }

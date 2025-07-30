@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            lblEspecial = new Label();
+            lblMinuscula = new Label();
+            lblMaiuscula = new Label();
+            lblTamanho = new Label();
             linkLogin = new LinkLabel();
             txtSenha = new TextBox();
             label4 = new Label();
@@ -43,10 +47,6 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            lblTamanho = new Label();
-            lblMaiuscula = new Label();
-            lblMinuscula = new Label();
-            lblEspecial = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeOpen).BeginInit();
@@ -79,12 +79,44 @@
             panel1.Size = new Size(405, 501);
             panel1.TabIndex = 5;
             // 
+            // lblEspecial
+            // 
+            lblEspecial.AutoSize = true;
+            lblEspecial.Location = new Point(73, 389);
+            lblEspecial.Name = "lblEspecial";
+            lblEspecial.Size = new Size(0, 15);
+            lblEspecial.TabIndex = 21;
+            // 
+            // lblMinuscula
+            // 
+            lblMinuscula.AutoSize = true;
+            lblMinuscula.Location = new Point(73, 368);
+            lblMinuscula.Name = "lblMinuscula";
+            lblMinuscula.Size = new Size(0, 15);
+            lblMinuscula.TabIndex = 20;
+            // 
+            // lblMaiuscula
+            // 
+            lblMaiuscula.AutoSize = true;
+            lblMaiuscula.Location = new Point(73, 346);
+            lblMaiuscula.Name = "lblMaiuscula";
+            lblMaiuscula.Size = new Size(0, 15);
+            lblMaiuscula.TabIndex = 19;
+            // 
+            // lblTamanho
+            // 
+            lblTamanho.AutoSize = true;
+            lblTamanho.Location = new Point(73, 324);
+            lblTamanho.Name = "lblTamanho";
+            lblTamanho.Size = new Size(0, 15);
+            lblTamanho.TabIndex = 9;
+            // 
             // linkLogin
             // 
             linkLogin.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkLogin.AutoSize = true;
             linkLogin.LinkColor = Color.White;
-            linkLogin.Location = new Point(217, 458);
+            linkLogin.Location = new Point(157, 458);
             linkLogin.Name = "linkLogin";
             linkLogin.Size = new Size(91, 15);
             linkLogin.TabIndex = 5;
@@ -95,7 +127,7 @@
             // txtSenha
             // 
             txtSenha.Font = new Font("Segoe UI", 12F);
-            txtSenha.Location = new Point(73, 312);
+            txtSenha.Location = new Point(73, 288);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(251, 29);
             txtSenha.TabIndex = 3;
@@ -105,7 +137,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(73, 290);
+            label4.Location = new Point(73, 266);
             label4.Name = "label4";
             label4.Size = new Size(67, 23);
             label4.TabIndex = 18;
@@ -115,7 +147,7 @@
             // 
             pbEyeClosed.Cursor = Cursors.Hand;
             pbEyeClosed.Image = Properties.Resources.icons8_invisível_32;
-            pbEyeClosed.Location = new Point(330, 313);
+            pbEyeClosed.Location = new Point(330, 289);
             pbEyeClosed.Name = "pbEyeClosed";
             pbEyeClosed.Size = new Size(31, 28);
             pbEyeClosed.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -129,7 +161,7 @@
             btnCadastrar.FlatStyle = FlatStyle.Popup;
             btnCadastrar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(200, 419);
+            btnCadastrar.Location = new Point(140, 419);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(124, 36);
             btnCadastrar.TabIndex = 4;
@@ -140,7 +172,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 12F);
-            txtEmail.Location = new Point(73, 232);
+            txtEmail.Location = new Point(73, 208);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(251, 29);
             txtEmail.TabIndex = 2;
@@ -150,7 +182,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(73, 209);
+            label3.Location = new Point(73, 185);
             label3.Name = "label3";
             label3.Size = new Size(61, 23);
             label3.TabIndex = 3;
@@ -159,7 +191,7 @@
             // txtNomeUsuario
             // 
             txtNomeUsuario.Font = new Font("Segoe UI", 12F);
-            txtNomeUsuario.Location = new Point(73, 158);
+            txtNomeUsuario.Location = new Point(73, 134);
             txtNomeUsuario.Name = "txtNomeUsuario";
             txtNomeUsuario.Size = new Size(251, 29);
             txtNomeUsuario.TabIndex = 1;
@@ -169,7 +201,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(73, 132);
+            label2.Location = new Point(73, 108);
             label2.Name = "label2";
             label2.Size = new Size(169, 23);
             label2.TabIndex = 1;
@@ -180,7 +212,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 19F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(96, 63);
+            label1.Location = new Point(96, 39);
             label1.Name = "label1";
             label1.Size = new Size(204, 30);
             label1.TabIndex = 0;
@@ -190,7 +222,7 @@
             // 
             pbEyeOpen.Cursor = Cursors.Hand;
             pbEyeOpen.Image = Properties.Resources.icons8_visível_32;
-            pbEyeOpen.Location = new Point(330, 313);
+            pbEyeOpen.Location = new Point(330, 289);
             pbEyeOpen.Name = "pbEyeOpen";
             pbEyeOpen.Size = new Size(31, 28);
             pbEyeOpen.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -227,38 +259,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
-            // 
-            // lblTamanho
-            // 
-            lblTamanho.AutoSize = true;
-            lblTamanho.Location = new Point(73, 344);
-            lblTamanho.Name = "lblTamanho";
-            lblTamanho.Size = new Size(0, 15);
-            lblTamanho.TabIndex = 9;
-            // 
-            // lblMaiuscula
-            // 
-            lblMaiuscula.AutoSize = true;
-            lblMaiuscula.Location = new Point(73, 366);
-            lblMaiuscula.Name = "lblMaiuscula";
-            lblMaiuscula.Size = new Size(0, 15);
-            lblMaiuscula.TabIndex = 19;
-            // 
-            // lblMinuscula
-            // 
-            lblMinuscula.AutoSize = true;
-            lblMinuscula.Location = new Point(73, 388);
-            lblMinuscula.Name = "lblMinuscula";
-            lblMinuscula.Size = new Size(0, 15);
-            lblMinuscula.TabIndex = 20;
-            // 
-            // lblEspecial
-            // 
-            lblEspecial.AutoSize = true;
-            lblEspecial.Location = new Point(73, 409);
-            lblEspecial.Name = "lblEspecial";
-            lblEspecial.Size = new Size(0, 15);
-            lblEspecial.TabIndex = 21;
             // 
             // UC_Cadastro
             // 

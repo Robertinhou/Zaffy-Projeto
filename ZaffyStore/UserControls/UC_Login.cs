@@ -35,17 +35,18 @@ namespace ZaffyStore.UserControls
                         usuarios.Senha = txtSenha.Text;
 
 
-                        if (usuarios.verificarEmailExistente())
+                        if (!usuarios.verificarEmailExistente())
                         {
                             if (usuarios.verificarLogin())
                             {
                                 string nomeLogado = usuarios.BuscarNome();
 
-                                MessageBox.Show("LOGIN REALIZADO PAIZAO");
+                                MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             }
                             else
                             {
-                                MessageBox.Show("Erro ao efetuar login");
+                                MessageBox.Show("Email e/ou senha incorreto(s)");
                             }
                         }
                         else
@@ -55,7 +56,7 @@ namespace ZaffyStore.UserControls
                     }
                     else
                     {
-                        MessageBox.Show("Email inválido");
+                        MessageBox.Show("O e-mail informado é inválido. Verifique e tente novamente.", "E-mail inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -69,6 +70,9 @@ namespace ZaffyStore.UserControls
             }
 
         }
+
+
+
 
         private void linkEsqueciSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

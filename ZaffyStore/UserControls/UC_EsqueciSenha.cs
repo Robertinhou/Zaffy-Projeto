@@ -17,6 +17,7 @@ namespace ZaffyStore.UserControls
         {
             InitializeComponent();
             txtNovaSenha.UseSystemPasswordChar = true;
+            txtNovaSenha.TextChanged += txtNovaSenha_TextChanged;
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -81,5 +82,29 @@ namespace ZaffyStore.UserControls
             }
 
         }
+
+        private void txtNovaSenha_TextChanged(object sender, EventArgs e)
+        {
+            string senha = txtNovaSenha.Text;
+
+            bool temTamanhoMinimo = senha.Length >= 8;
+            bool temMaiuscula = senha.Any(char.IsUpper);
+            bool temMinuscula = senha.Any(char.IsLower);
+            bool temNumero = senha.Any(char.IsDigit);
+            bool temEspecial = senha.Any(ch => !char.IsLetterOrDigit(ch));
+
+            lblTamanho.Text = temTamanhoMinimo ? "✔ Mínimo 8 caracteres" : "✘ Mínimo 8 caracteres";
+            lblTamanho.ForeColor = temTamanhoMinimo ? Color.Green : Color.Red;
+
+            lblMaiuscula.Text = temMaiuscula ? "✔ Letra maiúscula" : "✘ Letra maiúscula";
+            lblMaiuscula.ForeColor = temMaiuscula ? Color.Green : Color.Red;
+
+            lblMinuscula.Text = temMinuscula ? "✔ Letra minúscula" : "✘ Letra minúscula";
+            lblMinuscula.ForeColor = temMinuscula ? Color.Green : Color.Red;
+
+            lblEspecial.Text = (temNumero && temEspecial) ? "✔ Número e caractere especial" : "✘ Número e caractere especial";
+            lblEspecial.ForeColor = (temNumero && temEspecial) ? Color.Green : Color.Red;
+        }
+
     }
 }
