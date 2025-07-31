@@ -277,7 +277,6 @@
             Controls.Add(txtNovaSenha);
             Name = "UC_EsqueciSenha";
             Size = new Size(801, 493);
-            Load += UC_EsqueciSenha_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).EndInit();

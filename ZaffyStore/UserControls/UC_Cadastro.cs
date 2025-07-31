@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using ZaffyStore.UserControls;
 using ZaffyStore;
+using System.Net.Mail;
+using System.Net;
 
 namespace ZaffyStore.UserControls
 {
@@ -63,6 +65,30 @@ namespace ZaffyStore.UserControls
                             {
                                 if (usuarios.CadastrarUsuario())
                                 {
+                                    MailMessage mail = new MailMessage();
+                                    mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
+                                    mail.To.Add(new MailAddress(txtEmail.Text));                                
+
+                                    mail.Subject = "Bem-Vindo(a) à Zaffy!";
+                                    mail.Body = $"Seu cadastro na Zaffy foi concluído com sucesso! " +
+                                        $"" +
+                                        $"Comece a anunciar já!";
+
+                                    using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+                                    {
+                                        smtp.UseDefaultCredentials = false;
+                                        smtp.EnableSsl = true;
+                                        smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "yjjfaiiwulmsuieu");
+
+                                        try
+                                        {
+                                            smtp.Send(mail);
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            MessageBox.Show(ex.Message, "Não mandou");
+                                        }
+                                    }
                                     MessageBox.Show("Cadastro realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     UC_Login login = new UC_Login();

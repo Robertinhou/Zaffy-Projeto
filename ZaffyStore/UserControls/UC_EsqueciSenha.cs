@@ -123,11 +123,6 @@ namespace ZaffyStore.UserControls
             lblEspecial.ForeColor = (temNumero && temEspecial) ? Color.Green : Color.Red;
         }
 
-        private void UC_EsqueciSenha_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             try
@@ -151,9 +146,11 @@ namespace ZaffyStore.UserControls
 
                                 string codigo = "";
 
+                                // for define o tamanho 
                                 for (int i = 0; i < 6; i++)
                                 {
-                                    codigo += r.Next(6).ToString();
+                                    // random define de 0 a 9
+                                    codigo += r.Next(9).ToString();
                                 }
 
                                 // MessageBox.Show(codigo);
@@ -197,26 +194,7 @@ namespace ZaffyStore.UserControls
                         MessageBox.Show("Preencha os campos");
                     }
                 }
-                else // se for verdadeiro vai mandar email senao o txt senha ativa e redefine a senha
-                {
-                    if (!txtNovaSenha.Text.Equals(""))
-                    {
-                        usuarios.Email = txtEmail.Text;
-                        usuarios.Senha = txtNovaSenha.Text;
-
-                        if (usuarios.MudarSenha())
-                        {
-                            MessageBox.Show("Senha atualizada");
-                            UC_Login login = new UC_Login();
-                            this.Controls.Clear();
-                            this.Controls.Add(login);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Não atualizou a senha mas chegou aqui");
-                        }
-                    }
-                }
+                
             }
             catch (Exception ex)
             {
