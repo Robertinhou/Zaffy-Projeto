@@ -47,7 +47,7 @@
             lblTamanho = new Label();
             txtCodigo = new TextBox();
             btnEnviar = new Button();
-            label4 = new Label();
+            lblCodigo = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
@@ -79,6 +79,7 @@
             // 
             linkLogin.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkLogin.AutoSize = true;
+            linkLogin.Cursor = Cursors.Hand;
             linkLogin.Font = new Font("Segoe UI", 11F);
             linkLogin.LinkColor = Color.Indigo;
             linkLogin.Location = new Point(166, 426);
@@ -118,6 +119,7 @@
             // 
             // txtNovaSenha
             // 
+            txtNovaSenha.Cursor = Cursors.IBeam;
             txtNovaSenha.Font = new Font("Segoe UI", 12F);
             txtNovaSenha.Location = new Point(61, 238);
             txtNovaSenha.Name = "txtNovaSenha";
@@ -137,6 +139,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Cursor = Cursors.IBeam;
             txtEmail.Font = new Font("Segoe UI", 12F);
             txtEmail.Location = new Point(61, 164);
             txtEmail.Name = "txtEmail";
@@ -222,15 +225,18 @@
             // 
             // txtCodigo
             // 
+            txtCodigo.Cursor = Cursors.IBeam;
             txtCodigo.Font = new Font("Segoe UI", 12F);
             txtCodigo.Location = new Point(61, 341);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(251, 29);
             txtCodigo.TabIndex = 27;
+            txtCodigo.Visible = false;
             // 
             // btnEnviar
             // 
             btnEnviar.BackColor = Color.Indigo;
+            btnEnviar.Cursor = Cursors.Hand;
             btnEnviar.FlatStyle = FlatStyle.Popup;
             btnEnviar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnEnviar.ForeColor = Color.White;
@@ -242,22 +248,23 @@
             btnEnviar.UseVisualStyleBackColor = false;
             btnEnviar.Click += btnEnviar_Click;
             // 
-            // label4
+            // lblCodigo
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
-            label4.ForeColor = Color.Indigo;
-            label4.Location = new Point(64, 315);
-            label4.Name = "label4";
-            label4.Size = new Size(85, 23);
-            label4.TabIndex = 29;
-            label4.Text = "Código:";
+            lblCodigo.AutoSize = true;
+            lblCodigo.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
+            lblCodigo.ForeColor = Color.Indigo;
+            lblCodigo.Location = new Point(64, 315);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(85, 23);
+            lblCodigo.TabIndex = 29;
+            lblCodigo.Text = "Código:";
+            lblCodigo.Visible = false;
             // 
             // UC_EsqueciSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label4);
+            Controls.Add(lblCodigo);
             Controls.Add(btnEnviar);
             Controls.Add(txtCodigo);
             Controls.Add(lblEspecial);
@@ -307,6 +314,6 @@
         private Label lblTamanho;
         private TextBox txtCodigo;
         private Button btnEnviar;
-        private Label label4;
+        private Label lblCodigo;
     }
 }

@@ -115,6 +115,7 @@
             // 
             linkLogin.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkLogin.AutoSize = true;
+            linkLogin.Cursor = Cursors.Hand;
             linkLogin.LinkColor = Color.White;
             linkLogin.Location = new Point(154, 455);
             linkLogin.Name = "linkLogin";
@@ -126,6 +127,7 @@
             // 
             // txtSenha
             // 
+            txtSenha.Cursor = Cursors.IBeam;
             txtSenha.Font = new Font("Segoe UI", 12F);
             txtSenha.Location = new Point(73, 288);
             txtSenha.Name = "txtSenha";
@@ -158,6 +160,7 @@
             // btnCadastrar
             // 
             btnCadastrar.BackColor = Color.Black;
+            btnCadastrar.Cursor = Cursors.Hand;
             btnCadastrar.FlatStyle = FlatStyle.Popup;
             btnCadastrar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.White;
@@ -171,6 +174,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Cursor = Cursors.IBeam;
             txtEmail.Font = new Font("Segoe UI", 12F);
             txtEmail.Location = new Point(73, 208);
             txtEmail.Name = "txtEmail";
@@ -190,6 +194,7 @@
             // 
             // txtNomeUsuario
             // 
+            txtNomeUsuario.Cursor = Cursors.IBeam;
             txtNomeUsuario.Font = new Font("Segoe UI", 12F);
             txtNomeUsuario.Location = new Point(73, 134);
             txtNomeUsuario.Name = "txtNomeUsuario";

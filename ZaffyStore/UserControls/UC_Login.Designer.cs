@@ -86,6 +86,7 @@
             // 
             linkCadastro.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkCadastro.AutoSize = true;
+            linkCadastro.Cursor = Cursors.Hand;
             linkCadastro.Font = new Font("Segoe UI", 12F);
             linkCadastro.LinkColor = Color.White;
             linkCadastro.Location = new Point(157, 404);
@@ -100,6 +101,7 @@
             // 
             linkEsqueciSenha.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkEsqueciSenha.AutoSize = true;
+            linkEsqueciSenha.Cursor = Cursors.Hand;
             linkEsqueciSenha.LinkColor = Color.White;
             linkEsqueciSenha.Location = new Point(78, 299);
             linkEsqueciSenha.Name = "linkEsqueciSenha";
@@ -125,6 +127,7 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.Black;
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatStyle = FlatStyle.Popup;
             btnLogin.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
@@ -139,6 +142,7 @@
             // txtSenha
             // 
             txtSenha.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtSenha.Cursor = Cursors.IBeam;
             txtSenha.Font = new Font("Segoe UI", 12F);
             txtSenha.Location = new Point(78, 267);
             txtSenha.Name = "txtSenha";
@@ -159,6 +163,7 @@
             // txtLogin
             // 
             txtLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtLogin.Cursor = Cursors.IBeam;
             txtLogin.Font = new Font("Segoe UI", 12F);
             txtLogin.Location = new Point(78, 193);
             txtLogin.Name = "txtLogin";

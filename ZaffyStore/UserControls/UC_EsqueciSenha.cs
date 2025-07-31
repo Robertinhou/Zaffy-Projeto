@@ -22,6 +22,8 @@ namespace ZaffyStore.UserControls
             txtNovaSenha.TextChanged += txtNovaSenha_TextChanged;
             txtNovaSenha.Enabled = false;
             btnMudarSenha.Visible = false;
+            txtCodigo.Visible = false;
+            lblCodigo.Visible = false;
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -172,6 +174,9 @@ namespace ZaffyStore.UserControls
                                         txtNovaSenha.Enabled = true;
                                         btnEnviar.Visible = false;
                                         btnMudarSenha.Visible = true;
+                                        txtCodigo.Visible = true;
+                                        lblCodigo.Visible = true;
+                                        txtEmail.Enabled = false;
                                     }
                                     catch (Exception ex)
                                     {
