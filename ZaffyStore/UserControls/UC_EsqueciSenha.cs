@@ -207,7 +207,7 @@ namespace ZaffyStore.UserControls
                                 {
                                     smtp.UseDefaultCredentials = false;
                                     smtp.EnableSsl = true;
-                                    smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "bsjykctzdcwxumhn");
+                                    smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "yjjfaiiwulmsuieu");
 
                                     try
                                     {
