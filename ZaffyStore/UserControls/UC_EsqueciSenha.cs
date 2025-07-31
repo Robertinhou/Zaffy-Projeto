@@ -52,51 +52,28 @@ namespace ZaffyStore.UserControls
                 {
                     if (!txtEmail.Text.Equals(""))
                     {
-
-
                         usuarios.Email = txtEmail.Text;
-
-
+                        usuarios.BuscarNome();
 
                         if (Usuarios.ValidarEmail(txtEmail.Text))
                         {
                             if (!usuarios.verificarEmailExistente())
                             {
-                                MailMessage mail = new MailMessage();
-                                mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
-                                mail.To.Add(new MailAddress("0001082383@senaimgaluno.com.br", "Matheus"));
-
-                                Random r = new Random();
-
-                                string codigo = "";
-
-                                for (int i = 0; i < 9; i++)
+                                if (!txtNovaSenha.Text.Equals(""))
                                 {
-                                    codigo += r.Next(6).ToString();
-                                }
+                                    usuarios.Email = txtEmail.Text;
+                                    usuarios.Senha = txtNovaSenha.Text;
 
-                                MessageBox.Show(codigo);
-
-                                mail.Subject = "Redefinição de Senha";
-                                mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
-
-                                using (var smtp = new SmtpClient("smtp.gmail.com", 587))
-                                {
-                                    smtp.UseDefaultCredentials = false;
-                                    smtp.EnableSsl = true;
-                                    smtp.Credentials = new NetworkCredential("robertmenezesp9@gmail.com", "bsjykctzdcwxumhn");
-
-                                    try
+                                    if (usuarios.MudarSenha())
                                     {
-                                        smtp.Send(mail);
-                                        MessageBox.Show("Enviado!");
-                                        txtNovaSenha.Enabled = true;
-                                        btnEnviar.Visible = false;
-                                        btnMudarSenha.Visible = true;
+                                        MessageBox.Show("Senha atualizada");
+                                        UC_Login login = new UC_Login();
+                                        this.Controls.Clear();
+                                        this.Controls.Add(login);
                                     }
-                                    catch (Exception ex)
+                                    else
                                     {
-                                        MessageBox.Show(ex.Message, "Não mandou");
+                                        MessageBox.Show("Não atualizou a senha mas chegou aqui");
                                     }
                                 }
                             }
@@ -115,26 +92,7 @@ namespace ZaffyStore.UserControls
                         MessageBox.Show("Preencha os campos");
                     }
                 }
-                else // se for verdadeiro vai mandar email senao o txt senha ativa e redefine a senha
-                {
-                    if (!txtNovaSenha.Text.Equals(""))
-                    {
-                        usuarios.Email = txtEmail.Text;
-                        usuarios.Senha = txtNovaSenha.Text;
-
-                        if (usuarios.MudarSenha())
-                        {
-                            MessageBox.Show("Senha atualizada");
-                            UC_Login login = new UC_Login();
-                            this.Controls.Clear();
-                            this.Controls.Add(login);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Não atualizou a senha mas chegou aqui");
-                        }
-                    }
-                }
+               
             }
             catch (Exception ex)
             {
@@ -187,18 +145,18 @@ namespace ZaffyStore.UserControls
                             {
                                 MailMessage mail = new MailMessage();
                                 mail.From = new MailAddress("noreply@gmail.com", "Zaffy");
-                                mail.To.Add(new MailAddress("0001082383@senaimgaluno.com.br", "Matheus"));
+                                mail.To.Add(new MailAddress(txtEmail.Text));
 
                                 Random r = new Random();
 
                                 string codigo = "";
 
-                                for (int i = 0; i < 9; i++)
+                                for (int i = 0; i < 6; i++)
                                 {
                                     codigo += r.Next(6).ToString();
                                 }
 
-                               // MessageBox.Show(codigo);
+                                // MessageBox.Show(codigo);
 
                                 mail.Subject = "Redefinição de Senha";
                                 mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
