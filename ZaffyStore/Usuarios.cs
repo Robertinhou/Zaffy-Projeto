@@ -15,7 +15,7 @@ namespace ZaffyStore
         private string nome;
         private string email;
         private string senha;
-
+        private int cep;
         public string Nome
         {
             get { return nome; }
@@ -32,7 +32,12 @@ namespace ZaffyStore
             set { senha = value; }
         }
 
-
+        public int Cep
+        {
+            get { return cep; }
+            set { cep = value; }
+        }
+        
         public bool CadastrarUsuario()
         {
             try
@@ -169,9 +174,6 @@ namespace ZaffyStore
                 return false;
             }
         }
-
-
-
 
         // FUNCÕES DE SEGURANÇA
         public static string CriptografarSenha(string senha)

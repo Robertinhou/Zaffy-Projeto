@@ -67,7 +67,6 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(115, 76, 191);
-            panel1.Controls.Add(linkCadastro);
             panel1.Controls.Add(linkEsqueciSenha);
             panel1.Controls.Add(pbEyeClosed);
             panel1.Controls.Add(btnLogin);
@@ -77,6 +76,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pbEyeOpen);
+            panel1.Controls.Add(linkCadastro);
             panel1.Location = new Point(398, -4);
             panel1.Name = "panel1";
             panel1.Size = new Size(405, 501);
@@ -86,10 +86,11 @@
             // 
             linkCadastro.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkCadastro.AutoSize = true;
+            linkCadastro.Font = new Font("Segoe UI", 12F);
             linkCadastro.LinkColor = Color.White;
-            linkCadastro.Location = new Point(170, 408);
+            linkCadastro.Location = new Point(157, 404);
             linkCadastro.Name = "linkCadastro";
-            linkCadastro.Size = new Size(69, 15);
+            linkCadastro.Size = new Size(92, 21);
             linkCadastro.TabIndex = 5;
             linkCadastro.TabStop = true;
             linkCadastro.Text = "Cadastre-se";
@@ -180,11 +181,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 19F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(74, 79);
+            label1.Location = new Point(59, 78);
             label1.Name = "label1";
-            label1.Size = new Size(259, 30);
+            label1.Size = new Size(306, 30);
             label1.TabIndex = 0;
-            label1.Text = "Seja bem-vindo(a)!";
+            label1.Text = "Bem-vindo(a) de volta!";
             // 
             // pbEyeOpen
             // 

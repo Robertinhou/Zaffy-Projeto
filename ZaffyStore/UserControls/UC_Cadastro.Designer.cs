@@ -116,7 +116,7 @@
             linkLogin.ActiveLinkColor = Color.FromArgb(192, 255, 255);
             linkLogin.AutoSize = true;
             linkLogin.LinkColor = Color.White;
-            linkLogin.Location = new Point(157, 458);
+            linkLogin.Location = new Point(154, 455);
             linkLogin.Name = "linkLogin";
             linkLogin.Size = new Size(91, 15);
             linkLogin.TabIndex = 5;
@@ -161,7 +161,7 @@
             btnCadastrar.FlatStyle = FlatStyle.Popup;
             btnCadastrar.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(140, 419);
+            btnCadastrar.Location = new Point(137, 416);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(124, 36);
             btnCadastrar.TabIndex = 4;
