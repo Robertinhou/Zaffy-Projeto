@@ -86,7 +86,7 @@ namespace ZaffyStore.UserControls
                                         }
                                         catch (Exception ex)
                                         {
-                                            MessageBox.Show(ex.Message, "Não mandou");
+                                            MessageBox.Show(ex.Message, "Email não enviado");
                                         }
                                     }
                                     MessageBox.Show("Cadastro realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);

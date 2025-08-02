@@ -24,6 +24,8 @@ namespace ZaffyStore.UserControls
             btnMudarSenha.Visible = false;
             txtCodigo.Visible = false;
             lblCodigo.Visible = false;
+            linkLogin.Visible = false;
+            panelSenha.Visible = false;
         }
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -45,15 +47,27 @@ namespace ZaffyStore.UserControls
             pbEyeClosed.Visible = true;
         }
 
+        private string codigoGerado;
+
         private void btnMudarSenha_Click(object sender, EventArgs e)
         {
             try
             {
-                Usuarios usuarios = new Usuarios();
-                if (txtNovaSenha.Enabled == false)
+                if (txtNovaSenha.Enabled == true)
                 {
+                    if (txtCodigo.Text != codigoGerado)
+                    {
+                        MessageBox.Show("Código inválido. Verifique o código enviado para seu email.");
+                        return;
+                    }
+                    else
+                    {
+
+                    }
+
                     if (!txtEmail.Text.Equals(""))
                     {
+                        Usuarios usuarios = new Usuarios();
                         usuarios.Email = txtEmail.Text;
                         usuarios.BuscarNome();
 
@@ -63,20 +77,31 @@ namespace ZaffyStore.UserControls
                             {
                                 if (!txtNovaSenha.Text.Equals(""))
                                 {
-                                    usuarios.Email = txtEmail.Text;
                                     usuarios.Senha = txtNovaSenha.Text;
-
-                                    if (usuarios.MudarSenha())
+                                    if (Usuarios.ValidarSenha(txtNovaSenha.Text))
                                     {
-                                        MessageBox.Show("Senha atualizada");
-                                        UC_Login login = new UC_Login();
-                                        this.Controls.Clear();
-                                        this.Controls.Add(login);
+                                        if (usuarios.MudarSenha())
+                                        {
+                                            MessageBox.Show("Senha atualizada");
+                                            UC_Login login = new UC_Login();
+                                            this.Controls.Clear();
+                                            this.Controls.Add(login);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Não atualizou a senha mas chegou aqui");
+                                        }
+
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Não atualizou a senha mas chegou aqui");
+                                        MessageBox.Show("Senha não corresponde os requisitos");
                                     }
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Preencha a senha!");
                                 }
                             }
                             else
@@ -94,7 +119,6 @@ namespace ZaffyStore.UserControls
                         MessageBox.Show("Preencha os campos");
                     }
                 }
-               
             }
             catch (Exception ex)
             {
@@ -102,28 +126,8 @@ namespace ZaffyStore.UserControls
             }
         }
 
-        private void txtNovaSenha_TextChanged(object sender, EventArgs e)
-        {
-            string senha = txtNovaSenha.Text;
 
-            bool temTamanhoMinimo = senha.Length >= 8;
-            bool temMaiuscula = senha.Any(char.IsUpper);
-            bool temMinuscula = senha.Any(char.IsLower);
-            bool temNumero = senha.Any(char.IsDigit);
-            bool temEspecial = senha.Any(ch => !char.IsLetterOrDigit(ch));
 
-            lblTamanho.Text = temTamanhoMinimo ? "✔ Mínimo 8 caracteres" : "✘ Mínimo 8 caracteres";
-            lblTamanho.ForeColor = temTamanhoMinimo ? Color.Green : Color.Red;
-
-            lblMaiuscula.Text = temMaiuscula ? "✔ Letra maiúscula" : "✘ Letra maiúscula";
-            lblMaiuscula.ForeColor = temMaiuscula ? Color.Green : Color.Red;
-
-            lblMinuscula.Text = temMinuscula ? "✔ Letra minúscula" : "✘ Letra minúscula";
-            lblMinuscula.ForeColor = temMinuscula ? Color.Green : Color.Red;
-
-            lblEspecial.Text = (temNumero && temEspecial) ? "✔ Número e caractere especial" : "✘ Número e caractere especial";
-            lblEspecial.ForeColor = (temNumero && temEspecial) ? Color.Green : Color.Red;
-        }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
@@ -155,7 +159,8 @@ namespace ZaffyStore.UserControls
                                     codigo += r.Next(9).ToString();
                                 }
 
-                                // MessageBox.Show(codigo);
+                                codigoGerado = codigo;
+                                txtCodigo.Text = "";  // limpa para o usuário digitar o código recebido no email
 
                                 mail.Subject = "Redefinição de Senha";
                                 mail.Body = $"Foi solicitada a mudança de senha para sua conta Zaffy! O seu código é {codigo}";
@@ -169,18 +174,20 @@ namespace ZaffyStore.UserControls
                                     try
                                     {
                                         smtp.Send(mail);
-                                        MessageBox.Show("Enviado!");
-                                        txtCodigo.Text = codigo;
+                                        MessageBox.Show("Código enviado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        //txtCodigo.Text = codigo;
                                         txtNovaSenha.Enabled = true;
+                                        panelSenha.Visible = true;
                                         btnEnviar.Visible = false;
                                         btnMudarSenha.Visible = true;
                                         txtCodigo.Visible = true;
                                         lblCodigo.Visible = true;
+                                        linkLogin.Visible = true;
                                         txtEmail.Enabled = false;
                                     }
                                     catch (Exception ex)
                                     {
-                                        MessageBox.Show(ex.Message, "Não mandou");
+                                        MessageBox.Show(ex.Message, "Email não enviado");
                                     }
                                 }
                             }
@@ -199,12 +206,35 @@ namespace ZaffyStore.UserControls
                         MessageBox.Show("Preencha os campos");
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro:" + ex.Message);
             }
+        }
+
+        private void txtNovaSenha_TextChanged(object sender, EventArgs e)
+        {
+            string senha = txtNovaSenha.Text;
+
+            bool temTamanhoMinimo = senha.Length >= 8;
+            bool temMaiuscula = senha.Any(char.IsUpper);
+            bool temMinuscula = senha.Any(char.IsLower);
+            bool temNumero = senha.Any(char.IsDigit);
+            bool temEspecial = senha.Any(ch => !char.IsLetterOrDigit(ch));
+
+            lblTamanho.Text = temTamanhoMinimo ? "✔ Mínimo 8 caracteres" : "✘ Mínimo 8 caracteres";
+            lblTamanho.ForeColor = temTamanhoMinimo ? Color.Green : Color.Red;
+
+            lblMaiuscula.Text = temMaiuscula ? "✔ Letra maiúscula" : "✘ Letra maiúscula";
+            lblMaiuscula.ForeColor = temMaiuscula ? Color.Green : Color.Red;
+
+            lblMinuscula.Text = temMinuscula ? "✔ Letra minúscula" : "✘ Letra minúscula";
+            lblMinuscula.ForeColor = temMinuscula ? Color.Green : Color.Red;
+
+            lblEspecial.Text = (temNumero && temEspecial) ? "✔ Número e caractere especial" : "✘ Número e caractere especial";
+            lblEspecial.ForeColor = (temNumero && temEspecial) ? Color.Green : Color.Red;
         }
     }
 }

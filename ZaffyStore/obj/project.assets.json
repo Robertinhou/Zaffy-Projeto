@@ -1609,23 +1609,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno_Manha\\.nuget\\packages\\": {},
+    "C:\\Users\\Matheus\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
       "projectName": "ZaffyStore",
-      "projectPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
-      "packagesPath": "C:\\Users\\Aluno_Manha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-Projeto\\ZaffyStore\\obj\\",
+      "projectPath": "C:\\Users\\Matheus\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+      "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matheus\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aluno_Manha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1674,6 +1674,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.13, 8.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.13, 8.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.13, 8.0.13]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.13, 8.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
