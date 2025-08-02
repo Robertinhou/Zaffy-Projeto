@@ -60,10 +60,7 @@ namespace ZaffyStore.UserControls
                         MessageBox.Show("Código inválido. Verifique o código enviado para seu email.");
                         return;
                     }
-                    else
-                    {
 
-                    }
 
                     if (!txtEmail.Text.Equals(""))
                     {
@@ -175,12 +172,14 @@ namespace ZaffyStore.UserControls
                                     {
                                         smtp.Send(mail);
                                         MessageBox.Show("Código enviado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        //txtCodigo.Text = codigo;
-                                        txtNovaSenha.Enabled = true;
+                                        // txtCodigo.Text = codigo;
+
+
+                                        txtCodigo.Visible = true;
                                         panelSenha.Visible = true;
                                         btnEnviar.Visible = false;
                                         btnMudarSenha.Visible = true;
-                                        txtCodigo.Visible = true;
+
                                         lblCodigo.Visible = true;
                                         linkLogin.Visible = true;
                                         txtEmail.Enabled = false;
@@ -235,6 +234,19 @@ namespace ZaffyStore.UserControls
 
             lblEspecial.Text = (temNumero && temEspecial) ? "✔ Número e caractere especial" : "✘ Número e caractere especial";
             lblEspecial.ForeColor = (temNumero && temEspecial) ? Color.Green : Color.Red;
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == codigoGerado)
+            {
+                txtNovaSenha.Enabled = true;
+
+            }
+            else
+            {
+                txtNovaSenha.Enabled = false;
+            }
         }
     }
 }

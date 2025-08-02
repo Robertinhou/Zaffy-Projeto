@@ -229,11 +229,12 @@
             // 
             txtCodigo.Cursor = Cursors.IBeam;
             txtCodigo.Font = new Font("Segoe UI", 12F);
-            txtCodigo.Location = new Point(64, 342);
+            txtCodigo.Location = new Point(61, 230);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(103, 29);
             txtCodigo.TabIndex = 27;
             txtCodigo.Visible = false;
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
             // 
             // btnEnviar
             // 
@@ -242,9 +243,9 @@
             btnEnviar.FlatStyle = FlatStyle.Popup;
             btnEnviar.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
             btnEnviar.ForeColor = Color.White;
-            btnEnviar.Location = new Point(117, 173);
+            btnEnviar.Location = new Point(166, 169);
             btnEnviar.Name = "btnEnviar";
-            btnEnviar.Size = new Size(153, 36);
+            btnEnviar.Size = new Size(146, 36);
             btnEnviar.TabIndex = 28;
             btnEnviar.Text = "Enviar Código";
             btnEnviar.UseVisualStyleBackColor = false;
@@ -255,7 +256,7 @@
             lblCodigo.AutoSize = true;
             lblCodigo.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
             lblCodigo.ForeColor = Color.Indigo;
-            lblCodigo.Location = new Point(64, 315);
+            lblCodigo.Location = new Point(61, 203);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(83, 24);
             lblCodigo.TabIndex = 29;
@@ -272,7 +273,7 @@
             panelSenha.Controls.Add(label3);
             panelSenha.Controls.Add(pbEyeOpen);
             panelSenha.Controls.Add(txtNovaSenha);
-            panelSenha.Location = new Point(46, 207);
+            panelSenha.Location = new Point(47, 267);
             panelSenha.Name = "panelSenha";
             panelSenha.Size = new Size(328, 111);
             panelSenha.TabIndex = 30;
