@@ -19,5 +19,8 @@
     <Compile Update="UserControls\UC_EsqueciSenha.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\UC_Perfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
