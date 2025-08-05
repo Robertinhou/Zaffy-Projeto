@@ -124,10 +124,6 @@ namespace ZaffyStore.UserControls
             }
         }
 
-
-
-
-
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             try
@@ -185,6 +181,9 @@ namespace ZaffyStore.UserControls
                                         lblCodigo.Visible = true;
                                         linkLogin.Visible = true;
                                         txtEmail.Enabled = false;
+
+                                        linkLogin2.Visible = false;
+
                                     }
                                     catch (Exception ex)
                                     {
@@ -249,6 +248,18 @@ namespace ZaffyStore.UserControls
             {
                 txtNovaSenha.Enabled = false;
             }
+        }
+
+        private void UC_EsqueciSenha_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLogin2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Login login = new UC_Login();
+            this.Controls.Clear();
+            this.Controls.Add(login);
         }
     }
 }

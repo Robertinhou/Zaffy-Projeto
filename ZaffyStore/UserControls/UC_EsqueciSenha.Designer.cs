@@ -49,6 +49,7 @@
             btnEnviar = new Button();
             lblCodigo = new Label();
             panelSenha = new Panel();
+            linkLogin2 = new LinkLabel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
@@ -278,10 +279,26 @@
             panelSenha.Size = new Size(328, 111);
             panelSenha.TabIndex = 30;
             // 
+            // linkLogin2
+            // 
+            linkLogin2.ActiveLinkColor = Color.FromArgb(192, 255, 255);
+            linkLogin2.AutoSize = true;
+            linkLogin2.Cursor = Cursors.Hand;
+            linkLogin2.Font = new Font("Segoe UI", 11F);
+            linkLogin2.LinkColor = Color.Indigo;
+            linkLogin2.Location = new Point(267, 207);
+            linkLogin2.Name = "linkLogin2";
+            linkLogin2.Size = new Size(46, 20);
+            linkLogin2.TabIndex = 31;
+            linkLogin2.TabStop = true;
+            linkLogin2.Text = "Login";
+            linkLogin2.LinkClicked += linkLogin2_LinkClicked;
+            // 
             // UC_EsqueciSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(linkLogin2);
             Controls.Add(btnEnviar);
             Controls.Add(panelSenha);
             Controls.Add(lblCodigo);
@@ -329,5 +346,6 @@
         private Button btnEnviar;
         private Label lblCodigo;
         private Panel panelSenha;
+        private LinkLabel linkLogin2;
     }
 }

@@ -4,6 +4,9 @@
     <Compile Update="Conteudo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ConteudoLogged.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControls\UC_Cadastro.cs">
       <SubType>UserControl</SubType>
     </Compile>

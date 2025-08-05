@@ -55,7 +55,8 @@ namespace ZaffyStore.UserControls
 
         private void CarregarBanners()
         {
-            string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\";
+            //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\"; Robert
+            string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\"; 
 
             if (Directory.Exists(caminhoDasImagens))
             {
