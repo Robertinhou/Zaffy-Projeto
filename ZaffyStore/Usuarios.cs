@@ -174,7 +174,7 @@ namespace ZaffyStore
                                 
                             };
 
-                            sessao.listaLogados.Add(usuario);
+                            Sessao.listaLogados.Add(usuario);
                             return true; // ✅ Login bem-sucedido
 
                         }

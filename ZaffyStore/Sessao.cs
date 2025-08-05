@@ -32,7 +32,7 @@ namespace ZaffyStore
         }
 
 
-        public List<Usuarios> listaLogados = new List<Usuarios>();
+        public static List<Usuarios> listaLogados = new List<Usuarios>();
             
 
 

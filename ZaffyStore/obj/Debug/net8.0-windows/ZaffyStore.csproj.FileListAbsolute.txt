@@ -198,3 +198,4 @@ C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\obj\Debug\net8.0
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.pdb
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.genruntimeconfig.cache
 C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\obj\Debug\net8.0-windows\ref\ZaffyStore.dll
+C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\obj\Debug\net8.0-windows\ZaffyStore.UserControls.UC_Perfil.resources

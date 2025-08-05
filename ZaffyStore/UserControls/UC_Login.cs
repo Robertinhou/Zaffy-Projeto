@@ -46,6 +46,11 @@ namespace ZaffyStore.UserControls
                                 if (usuarios.Login())
                                 {
                                     MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    
+
+                                   
+
                                     UC_Home home = new UC_Home();
                                     this.Controls.Clear();
                                     this.Controls.Add(home);
@@ -54,10 +59,7 @@ namespace ZaffyStore.UserControls
                                 {
                                    MessageBox.Show("Não logou zé! Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                   
-                                }
-
-                                    
-
+                                }  
                             }
                             else
                             {

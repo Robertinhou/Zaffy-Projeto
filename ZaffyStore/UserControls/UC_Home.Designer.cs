@@ -28,6 +28,7 @@
             pictureBox1 = new PictureBox();
             conteinerCards = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            linkperfil = new LinkLabel();
             panelFotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             conteinerCards.SuspendLayout();
@@ -77,10 +78,22 @@
             tableLayoutPanel1.Size = new Size(10, 10);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // linkperfil
+            // 
+            linkperfil.AutoSize = true;
+            linkperfil.Location = new Point(417, 27);
+            linkperfil.Name = "linkperfil";
+            linkperfil.Size = new Size(34, 15);
+            linkperfil.TabIndex = 2;
+            linkperfil.TabStop = true;
+            linkperfil.Text = "perfil";
+            linkperfil.LinkClicked += linkperfil_LinkClicked;
+            // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(linkperfil);
             Controls.Add(conteinerCards);
             Controls.Add(panelFotos);
             Name = "UC_Home";
@@ -91,6 +104,7 @@
             conteinerCards.ResumeLayout(false);
             conteinerCards.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -100,5 +114,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel conteinerCards;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private LinkLabel linkperfil;
     }
 }

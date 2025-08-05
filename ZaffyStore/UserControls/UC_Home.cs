@@ -56,7 +56,7 @@ namespace ZaffyStore.UserControls
         private void CarregarBanners()
         {
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\"; Robert
-            string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\"; 
+            string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\";
 
             if (Directory.Exists(caminhoDasImagens))
             {
@@ -150,6 +150,14 @@ namespace ZaffyStore.UserControls
 
                 cardsCarregados++;
             }
+        }
+
+        private void linkperfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Perfil perfil = new UC_Perfil();
+            this.Controls.Clear();
+            this.Controls.Add(perfil);
+
         }
     }
 }
