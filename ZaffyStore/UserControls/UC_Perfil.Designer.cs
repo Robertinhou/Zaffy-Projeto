@@ -49,6 +49,8 @@
             textBox8 = new TextBox();
             pbFotoUsuario = new PictureBox();
             btnEnvFoto = new Button();
+            btnSalvar = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).BeginInit();
             SuspendLayout();
             // 
@@ -66,7 +68,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(27, 59);
+            label1.Location = new Point(27, 50);
             label1.Name = "label1";
             label1.Size = new Size(197, 23);
             label1.TabIndex = 1;
@@ -75,10 +77,10 @@
             // lblNomeUser
             // 
             lblNomeUser.AutoSize = true;
-            lblNomeUser.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNomeUser.Location = new Point(193, 138);
+            lblNomeUser.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
+            lblNomeUser.Location = new Point(202, 129);
             lblNomeUser.Name = "lblNomeUser";
-            lblNomeUser.Size = new Size(0, 23);
+            lblNomeUser.Size = new Size(0, 28);
             lblNomeUser.TabIndex = 2;
             lblNomeUser.Click += lblNomeUser_Click;
             // 
@@ -86,7 +88,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(41, 263);
+            label3.Location = new Point(41, 254);
             label3.Name = "label3";
             label3.Size = new Size(68, 23);
             label3.TabIndex = 3;
@@ -96,76 +98,76 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(41, 345);
+            label4.Location = new Point(41, 329);
             label4.Name = "label4";
-            label4.Size = new Size(68, 23);
+            label4.Size = new Size(86, 23);
             label4.TabIndex = 4;
-            label4.Text = "Email:";
+            label4.Text = "Celular:";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(41, 407);
+            label5.Location = new Point(41, 391);
             label5.Name = "label5";
-            label5.Size = new Size(68, 23);
+            label5.Size = new Size(53, 23);
             label5.TabIndex = 5;
-            label5.Text = "Email:";
+            label5.Text = "CPF:";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(41, 470);
+            label6.Location = new Point(41, 454);
             label6.Name = "label6";
-            label6.Size = new Size(68, 23);
+            label6.Size = new Size(218, 23);
             label6.TabIndex = 6;
-            label6.Text = "Email:";
+            label6.Text = "Data de Nascimento:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(358, 263);
+            label7.Location = new Point(358, 254);
             label7.Name = "label7";
-            label7.Size = new Size(68, 23);
+            label7.Size = new Size(53, 23);
             label7.TabIndex = 7;
-            label7.Text = "Email:";
+            label7.Text = "CEP:";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(358, 407);
+            label8.Location = new Point(358, 391);
             label8.Name = "label8";
-            label8.Size = new Size(68, 23);
+            label8.Size = new Size(89, 23);
             label8.TabIndex = 8;
-            label8.Text = "Email:";
+            label8.Text = "Cidade:";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(358, 470);
+            label9.Location = new Point(358, 454);
             label9.Name = "label9";
-            label9.Size = new Size(68, 23);
+            label9.Size = new Size(80, 23);
             label9.TabIndex = 9;
-            label9.Text = "Email:";
+            label9.Text = "Estado:";
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(358, 345);
+            label10.Location = new Point(358, 329);
             label10.Name = "label10";
-            label10.Size = new Size(68, 23);
+            label10.Size = new Size(47, 23);
             label10.TabIndex = 10;
-            label10.Text = "Email:";
+            label10.Text = "Rua";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(41, 289);
+            textBox1.Location = new Point(41, 280);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(274, 29);
             textBox1.TabIndex = 11;
@@ -173,7 +175,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(41, 371);
+            textBox2.Location = new Point(41, 355);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(274, 29);
             textBox2.TabIndex = 12;
@@ -181,7 +183,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(41, 433);
+            textBox3.Location = new Point(41, 417);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(274, 29);
             textBox3.TabIndex = 13;
@@ -189,7 +191,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 12F);
-            textBox4.Location = new Point(41, 496);
+            textBox4.Location = new Point(41, 480);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(274, 29);
             textBox4.TabIndex = 14;
@@ -197,7 +199,7 @@
             // textBox5
             // 
             textBox5.Font = new Font("Segoe UI", 12F);
-            textBox5.Location = new Point(358, 289);
+            textBox5.Location = new Point(358, 280);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(274, 29);
             textBox5.TabIndex = 15;
@@ -205,7 +207,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 12F);
-            textBox6.Location = new Point(358, 371);
+            textBox6.Location = new Point(358, 355);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(274, 29);
             textBox6.TabIndex = 16;
@@ -213,7 +215,7 @@
             // textBox7
             // 
             textBox7.Font = new Font("Segoe UI", 12F);
-            textBox7.Location = new Point(358, 433);
+            textBox7.Location = new Point(358, 417);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(274, 29);
             textBox7.TabIndex = 17;
@@ -221,7 +223,7 @@
             // textBox8
             // 
             textBox8.Font = new Font("Segoe UI", 12F);
-            textBox8.Location = new Point(358, 496);
+            textBox8.Location = new Point(358, 480);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(274, 29);
             textBox8.TabIndex = 18;
@@ -231,7 +233,7 @@
             pbFotoUsuario.Enabled = false;
             pbFotoUsuario.ErrorImage = Properties.Resources.icons8_usuário_30;
             pbFotoUsuario.InitialImage = Properties.Resources.icons8_usuário_30;
-            pbFotoUsuario.Location = new Point(27, 94);
+            pbFotoUsuario.Location = new Point(36, 85);
             pbFotoUsuario.Name = "pbFotoUsuario";
             pbFotoUsuario.Size = new Size(142, 119);
             pbFotoUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -240,7 +242,7 @@
             // 
             // btnEnvFoto
             // 
-            btnEnvFoto.Location = new Point(62, 219);
+            btnEnvFoto.Location = new Point(71, 210);
             btnEnvFoto.Name = "btnEnvFoto";
             btnEnvFoto.Size = new Size(75, 23);
             btnEnvFoto.TabIndex = 20;
@@ -248,10 +250,34 @@
             btnEnvFoto.UseVisualStyleBackColor = true;
             btnEnvFoto.Click += btnEnvFoto_Click;
             // 
+            // btnSalvar
+            // 
+            btnSalvar.BackColor = Color.Indigo;
+            btnSalvar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.ForeColor = Color.White;
+            btnSalvar.Location = new Point(668, 391);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(105, 42);
+            btnSalvar.TabIndex = 21;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(358, 210);
+            label2.Name = "label2";
+            label2.Size = new Size(264, 23);
+            label2.TabIndex = 22;
+            label2.Text = "Informações de Endereço";
+            // 
             // UC_Perfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label2);
+            Controls.Add(btnSalvar);
             Controls.Add(btnEnvFoto);
             Controls.Add(pbFotoUsuario);
             Controls.Add(textBox8);
@@ -306,5 +332,7 @@
         private TextBox textBox8;
         private PictureBox pbFotoUsuario;
         private Button btnEnvFoto;
+        private Button btnSalvar;
+        private Label label2;
     }
 }
