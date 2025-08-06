@@ -16,7 +16,16 @@ namespace ZaffyStore
         private string nome;
         private string email;
         private string senha;
-        private int cep;
+
+        private string cep;
+        private string celular;
+        private string cpf;
+        private DateOnly data_nascimento;
+        private string rua;
+        private string cidade;
+        private string bairro;
+        private string estado;
+        private string caminho_Foto;
         public string Nome
         {
             get { return nome; }
@@ -33,12 +42,61 @@ namespace ZaffyStore
             set { senha = value; }
         }
 
-        public int Cep
+        public string Cep
         {
             get { return cep; }
             set { cep = value; }
         }
-        
+
+        public string Celular
+        {
+            get { return celular; }
+            set { celular = value; }
+        }
+
+        public string Cpf
+        {
+            get { return cpf; }
+            set { cpf = value; }
+        }
+
+        public DateOnly Data_Nascimento
+        {
+            get { return data_nascimento; }
+            set { data_nascimento = value; }
+        }
+
+        public string Rua
+        {
+            get { return rua; }
+            set { rua = value; }
+        }
+
+        public string Cidade
+        {
+            get { return cidade; }
+            set { cidade = value; }
+        }
+
+        public string Bairro
+        {
+            get { return bairro; }
+            set { bairro = value; }
+        }
+
+        public string Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+
+        public string Caminho_Foto
+        {
+            get { return caminho_Foto; }
+            set { caminho_Foto = value; }
+        }
+
+
         public bool CadastrarUsuario()
         {
             try
@@ -74,6 +132,43 @@ namespace ZaffyStore
 
         }
 
+        public bool CadastroInformacoes(string caminho)
+        {
+            try
+            {
+                using (MySqlConnection conexaoBanco = new ConexaoBD().Conectar())
+                {
+                    string sqlInsert = "INSERT into usuarios (celular, cpf, data_nascimento, cep, rua, cidade, bairro, estado, caminho_Foto) VALUES (@celular, @cpf, @data_nascimento, @cep, @rua, @cidade, @bairro, @estado, @caminho_Foto)";
+
+                    MySqlCommand comando = new MySqlCommand(sqlInsert, conexaoBanco);
+                    // C:\Users\Aluno_Tarde\Pictures\Screenshots
+                    comando.Parameters.AddWithValue("@celular", Celular);
+                    comando.Parameters.AddWithValue("@cpf", Cpf);
+                    comando.Parameters.AddWithValue("@data_nascimento", Data_Nascimento.ToString("yyyy-MM-dd"));
+                    comando.Parameters.AddWithValue("@rua", Rua);
+                    comando.Parameters.AddWithValue("@cidade", Cidade);
+                    comando.Parameters.AddWithValue("@bairro", Bairro);
+                    comando.Parameters.AddWithValue("@estado", Estado);
+                    comando.Parameters.AddWithValue("caminho_Foto", caminho);
+
+
+                    int resultado = comando.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
         public bool verificarLogin()
         {
             try
@@ -159,11 +254,11 @@ namespace ZaffyStore
 
                     using (MySqlDataReader reader = comando.ExecuteReader())
                     {
-                        
+
                         if (reader.Read())
                         {
 
-                            Sessao sessao  = new Sessao();
+                            Sessao sessao = new Sessao();
 
                             Usuarios usuario = new Usuarios
                             {
@@ -171,7 +266,7 @@ namespace ZaffyStore
                                 Nome = reader["nome"].ToString(),
                                 Email = reader["email"].ToString(),
                                 Senha = reader["senha"].ToString(),
-                                
+
                             };
 
                             Sessao.listaLogados.Add(usuario);
@@ -182,19 +277,17 @@ namespace ZaffyStore
                         {
                             return false; // ❌ Login falhou, email ou senha incorretos
                         }
-                    } 
+                    }
                 }
-                
+
             }
             catch (Exception ex)
             {
 
-               MessageBox.Show("Não foi possível buscar os dados do usuário!" + ex.Message);
-               return false; // ❌ Falha no login
+                MessageBox.Show("Não foi possível buscar os dados do usuário!" + ex.Message);
+                return false; // ❌ Falha no login
             }
         }
-
-
 
         public bool MudarSenha()
         {
@@ -228,7 +321,8 @@ namespace ZaffyStore
         }
 
 
-        // FUNCÕES DE SEGURANÇA
+        //  ==================================== FUNCÕES DE SEGURANÇA ========================================
+
         public static string CriptografarSenha(string senha)
         {
             if (string.IsNullOrEmpty(senha))
@@ -292,6 +386,41 @@ namespace ZaffyStore
             }
         }
 
+        public static bool IsCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
 
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
+        }
     }
 }

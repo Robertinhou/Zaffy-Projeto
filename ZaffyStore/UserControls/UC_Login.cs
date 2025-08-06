@@ -49,7 +49,7 @@ namespace ZaffyStore.UserControls
                                     var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
                                     if (formPrincipal != null)
                                     {
-                                        formPrincipal.Size = new Size(801, 567); // ou o tamanho que desejar
+                                        formPrincipal.Size = new Size(1129, 945); // ou o tamanho que desejar
                                     }
                                     UC_Home home = new UC_Home();
                                     this.Controls.Clear();

@@ -1650,23 +1650,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno_Manha\\.nuget\\packages\\": {},
+    "C:\\Users\\Aluno_Tarde\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno_Tarde\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
       "projectName": "ZaffyStore",
-      "projectPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj",
-      "packagesPath": "C:\\Users\\Aluno_Manha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\obj\\",
+      "projectPath": "C:\\Users\\Aluno_Tarde\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+      "packagesPath": "C:\\Users\\Aluno_Tarde\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aluno_Tarde\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aluno_Manha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aluno_Tarde\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1727,7 +1727,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
