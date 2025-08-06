@@ -17,8 +17,8 @@ namespace ZaffyStore.UserControls
             InitializeComponent();
 
             Usuarios usuarios = new Usuarios();
+            txtEmail.Text = usuarios.Email;
 
-            
 
             usuarios.Nome = Sessao.listaLogados[0].Nome;
             lblNomeUser.Text = usuarios.Nome;
@@ -47,11 +47,50 @@ namespace ZaffyStore.UserControls
             }
         }
 
-        private void lblNomeUser_Click(object sender, EventArgs e)
+
+
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
         {
-            
+            txtEmail.Enabled = true;
+            mskdCep.Enabled = true;
+
+            mskdCelular.Enabled = true;
+            mskdCpf.Enabled = true;
+            mskdDataNascimento.Enabled = true;
+        }
 
 
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarCep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Endereco endereco = ApiCep.BuscarCep(mskdCep.Text); // Certifique-se de que isso retorna corretamente
+
+                if (endereco != null)
+                {
+                    txtRua.Text = endereco.Logradouro;
+                    txtCidade.Text = endereco.Localidade;
+                    txtEstado.Text = endereco.Uf;
+                    txtBairro.Text = endereco.Bairro;
+                    txtRua.Enabled = true; txtCidade.Enabled = true; txtEstado.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("CEP não encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao buscar CEP: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
+

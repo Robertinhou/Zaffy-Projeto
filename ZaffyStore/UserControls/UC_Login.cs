@@ -45,12 +45,12 @@ namespace ZaffyStore.UserControls
 
                                 if (usuarios.Login())
                                 {
-                                    MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                    
-
-                                   
-
+                                    // MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
+                                    if (formPrincipal != null)
+                                    {
+                                        formPrincipal.Size = new Size(801, 567); // ou o tamanho que desejar
+                                    }
                                     UC_Home home = new UC_Home();
                                     this.Controls.Clear();
                                     this.Controls.Add(home);
