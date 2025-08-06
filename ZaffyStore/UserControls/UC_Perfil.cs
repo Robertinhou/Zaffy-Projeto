@@ -123,7 +123,7 @@ namespace ZaffyStore.UserControls
                         }
                         else
                         {
-                            MessageBox.Show("nÃO CADAStra nao sei pq")
+                            MessageBox.Show("nÃO CADAStra nao sei pq");
                         }
                     }
                     else
