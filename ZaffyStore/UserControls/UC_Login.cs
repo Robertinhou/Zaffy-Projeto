@@ -41,8 +41,6 @@ namespace ZaffyStore.UserControls
                             {
                                 string nomeLogado = usuarios.BuscarNome();
 
-                                
-
                                 if (usuarios.Login())
                                 {
                                     // MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);

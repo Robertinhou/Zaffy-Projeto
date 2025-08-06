@@ -15,5 +15,5 @@ cidade varchar(200),
 bairro varchar(200),
 estado varchar(2), 
 
-foto_perfil_usuario mediumblob	
+caminho_Foto varchar(255)	
 );

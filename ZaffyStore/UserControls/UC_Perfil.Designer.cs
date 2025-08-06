@@ -371,13 +371,12 @@
             // lblCaminhoFoto
             // 
             lblCaminhoFoto.AutoSize = true;
-            lblCaminhoFoto.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCaminhoFoto.Location = new Point(39, 135);
+            lblCaminhoFoto.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            lblCaminhoFoto.Location = new Point(76, 383);
             lblCaminhoFoto.Margin = new Padding(4, 0, 4, 0);
             lblCaminhoFoto.Name = "lblCaminhoFoto";
-            lblCaminhoFoto.Size = new Size(0, 37);
+            lblCaminhoFoto.Size = new Size(0, 22);
             lblCaminhoFoto.TabIndex = 31;
-            lblCaminhoFoto.Visible = false;
             // 
             // UC_Perfil
             // 

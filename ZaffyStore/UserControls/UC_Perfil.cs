@@ -24,7 +24,6 @@ namespace ZaffyStore.UserControls
             usuarios.Email = Sessao.listaLogados[0].Email;
             lblNomeUser.Text = usuarios.Nome;
             txtEmail.Text = usuarios.Email;
-            MessageBox.Show(usuarios.Email);
         }
 
         private void UC_Perfil_Load(object sender, EventArgs e)
@@ -51,12 +50,22 @@ namespace ZaffyStore.UserControls
             openFileDialog.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.gif";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                try
+                {
+                    pbFotoUsuario.Image = new Bitmap(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
+                }
                 // Caminho original da imagem selecionada
                 string caminhoOriginal = openFileDialog.FileName;
 
                 // Define o novo caminho para salvar a imagem
                 string nomeImagem = Path.GetFileName(caminhoOriginal);
                 string caminhoDestino = Path.Combine(pastaImagens, nomeImagem);
+
+                lblCaminhoFoto.Text = caminhoDestino;
 
                 // Copia a imagem para a pasta
                 File.Copy(caminhoOriginal, caminhoDestino, true);
@@ -66,15 +75,16 @@ namespace ZaffyStore.UserControls
                 usuarios.CadastroInformacoes(caminhoDestino);
             }
         }
-        
+
         private void btnEditarPerfil_Click(object sender, EventArgs e)
         {
             txtEmail.Enabled = true;
             mskdCep.Enabled = true;
-
             mskdCelular.Enabled = true;
             mskdCpf.Enabled = true;
             mskdDataNascimento.Enabled = true;
+
+            btnSalvar.Enabled = true;
             btnEnvFoto.Enabled = true;
         }
 
@@ -84,8 +94,14 @@ namespace ZaffyStore.UserControls
         {
             try
             {
-                if (!txtBairro.Text.Equals("") && !txtCidade.Text.Equals("") && !txtEstado.Text.Equals("") &&
-                    !txtRua.Text.Equals("") && mskdCelular.Text.Equals("") && mskdCep.Text.Equals("") && mskdCpf.Text.Equals("") && mskdDataNascimento.Text.Equals(""))
+                if (!string.IsNullOrWhiteSpace(txtBairro.Text) &&
+                    !string.IsNullOrWhiteSpace(txtCidade.Text) &&
+                    !string.IsNullOrWhiteSpace(txtEstado.Text) &&
+                    !string.IsNullOrWhiteSpace(txtRua.Text) &&
+                    !string.IsNullOrWhiteSpace(mskdCelular.Text) &&
+                    !string.IsNullOrWhiteSpace(mskdCep.Text) &&
+                    !string.IsNullOrWhiteSpace(mskdCpf.Text) &&
+                    !string.IsNullOrWhiteSpace(mskdDataNascimento.Text))
                 {
                     Usuarios usuarios = new Usuarios();
                     usuarios.Bairro = txtBairro.Text;
@@ -100,15 +116,14 @@ namespace ZaffyStore.UserControls
 
                     if (Usuarios.IsCpf(mskdCpf.Text))
                     {
-                        btnSalvar.Enabled = true;
 
                         if (usuarios.CadastroInformacoes(lblCaminhoFoto.Text))
                         {
                             MessageBox.Show("INFOS SALVAS");
                         }
-                        else 
+                        else
                         {
-                            MessageBox.Show("Erro ao cadastrar");
+                            MessageBox.Show("nÃO CADAStra nao sei pq")
                         }
                     }
                     else
