@@ -36,7 +36,7 @@ namespace ZaffyStore.UserControls
 
             if (Sessao.UsuarioAtual != null)
             {
-                lblBoasVindas.Text = $"Olá, {Sessao.UsuarioAtual.Nome}, {Sessao.UsuarioAtual.Email}, {Sessao.UsuarioAtual.Senha}";
+                MessageBox.Show($"Bem-vindoou, {Sessao.UsuarioAtual.Nome}!");
             }
 
             if (imagens == null || imagens.Length == 0)
