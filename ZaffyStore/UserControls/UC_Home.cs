@@ -49,6 +49,12 @@ namespace ZaffyStore.UserControls
             pictureBox1.Image = imagens[imagemAtual];
 
             _ = TrocarBannersAsync();
+
+            // Carregar os anúncios
+
+            Anuncios anuncios = new Anuncios();
+            anuncios.ListarAnuncios(dgvAnuncios);
+
         }
 
         private void CarregarBanners()

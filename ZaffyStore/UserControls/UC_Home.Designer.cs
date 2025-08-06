@@ -27,13 +27,14 @@
             panelFotos = new Panel();
             pictureBox1 = new PictureBox();
             pnlNavBar = new Panel();
-            lblBoasVindas = new Label();
             lnkLogout = new LinkLabel();
             lnkPerfil = new LinkLabel();
             lnkHome = new LinkLabel();
+            dgvAnuncios = new DataGridView();
             panelFotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlNavBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAnuncios).BeginInit();
             SuspendLayout();
             // 
             // panelFotos
@@ -65,15 +66,6 @@
             pnlNavBar.Name = "pnlNavBar";
             pnlNavBar.Size = new Size(785, 32);
             pnlNavBar.TabIndex = 1;
-            // 
-            // lblBoasVindas
-            // 
-            lblBoasVindas.AutoSize = true;
-            lblBoasVindas.Location = new Point(357, 44);
-            lblBoasVindas.Name = "lblBoasVindas";
-            lblBoasVindas.Size = new Size(38, 15);
-            lblBoasVindas.TabIndex = 2;
-            lblBoasVindas.Text = "label1";
             // 
             // lnkLogout
             // 
@@ -112,11 +104,25 @@
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
             // 
+            // dgvAnuncios
+            // 
+            dgvAnuncios.AllowUserToAddRows = false;
+            dgvAnuncios.AllowUserToDeleteRows = false;
+            dgvAnuncios.AllowUserToResizeColumns = false;
+            dgvAnuncios.AllowUserToResizeRows = false;
+            dgvAnuncios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAnuncios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvAnuncios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAnuncios.Location = new Point(76, 255);
+            dgvAnuncios.Name = "dgvAnuncios";
+            dgvAnuncios.Size = new Size(624, 249);
+            dgvAnuncios.TabIndex = 3;
+            // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(lblBoasVindas);
+            Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
             Controls.Add(panelFotos);
             Name = "UC_Home";
@@ -126,8 +132,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAnuncios).EndInit();
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
@@ -136,9 +142,9 @@
         private System.Windows.Forms.Panel panelFotos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Panel pnlNavBar;
-        private Label lblBoasVindas;
         private LinkLabel lnkLogout;
         private LinkLabel lnkPerfil;
         private LinkLabel lnkHome;
+        private DataGridView dgvAnuncios;
     }
 }
