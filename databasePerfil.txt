@@ -1,4 +1,7 @@
-create database zaffy;
+create database if not exists zaffy;
+
+use zaffy;
+
 
 create table usuarios(
 id_usuario int not null auto_increment primary key,
@@ -17,3 +20,27 @@ estado varchar(2),
 
 caminho_Foto varchar(255)	
 );
+
+create table anuncios(
+
+id_anuncio int auto_increment primary key,
+nome varchar(255),
+descricao text, 
+categoria varchar(255), 
+preco double, 
+dataPost date,
+horario time,
+localidade varchar(255), 
+contato varchar(30), 
+id_user int, 
+foto varchar(255),
+foreign key (id_user) references usuarios(id_usuario)
+
+);
+
+insert into anuncios
+(nome, descricao, categoria, preco, dataPost, horario, localidade, contato, id_user, foto) values 
+('PS4', 'Ps4 novo edição pro do Cristiano Ronaldo (Jr)', 'Eletrônicos', '2500', '2025-08-07', '18:04:54', 'Mangabeiras', '(31) 98293-5937', '1', 'C:\\Users\\Robert\\source\\repos\\Zaffy-Projetoas\\ZaffyStore\\bin\\Debug\\net8.0-windows\\imagens_anuncios\\download (1).jpeg'
+);
+
+select * from anuncios;
