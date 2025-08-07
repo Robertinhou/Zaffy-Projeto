@@ -63,21 +63,19 @@
             // 
             pnlNavBar.Dock = DockStyle.Top;
             pnlNavBar.Location = new Point(0, 0);
-            pnlNavBar.Margin = new Padding(4, 5, 4, 5);
-            pnlNavBar.MaximumSize = new Size(1121, 70);
-            pnlNavBar.MinimumSize = new Size(1121, 70);
+            pnlNavBar.MaximumSize = new Size(785, 42);
+            pnlNavBar.MinimumSize = new Size(785, 42);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1121, 70);
+            pnlNavBar.Size = new Size(785, 42);
             pnlNavBar.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 77);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(27, 46);
             label1.Name = "label1";
-            label1.Size = new Size(290, 37);
+            label1.Size = new Size(197, 23);
             label1.TabIndex = 1;
             label1.Text = "PERFIL DO USUÁRIO";
             // 
@@ -85,20 +83,18 @@
             // 
             lblNomeUser.AutoSize = true;
             lblNomeUser.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
-            lblNomeUser.Location = new Point(289, 208);
-            lblNomeUser.Margin = new Padding(4, 0, 4, 0);
+            lblNomeUser.Location = new Point(202, 125);
             lblNomeUser.Name = "lblNomeUser";
-            lblNomeUser.Size = new Size(0, 43);
+            lblNomeUser.Size = new Size(0, 28);
             lblNomeUser.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(59, 437);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(41, 262);
             label3.Name = "label3";
-            label3.Size = new Size(103, 37);
+            label3.Size = new Size(68, 23);
             label3.TabIndex = 3;
             label3.Text = "Email:";
             // 
@@ -106,10 +102,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(59, 553);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(41, 332);
             label4.Name = "label4";
-            label4.Size = new Size(129, 37);
+            label4.Size = new Size(86, 23);
             label4.TabIndex = 4;
             label4.Text = "Celular:";
             // 
@@ -117,10 +112,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(59, 662);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(41, 397);
             label5.Name = "label5";
-            label5.Size = new Size(79, 37);
+            label5.Size = new Size(53, 23);
             label5.TabIndex = 5;
             label5.Text = "CPF:";
             // 
@@ -128,10 +122,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(54, 772);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(38, 463);
             label6.Name = "label6";
-            label6.Size = new Size(324, 37);
+            label6.Size = new Size(218, 23);
             label6.TabIndex = 6;
             label6.Text = "Data de Nascimento:";
             // 
@@ -139,10 +132,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(556, 437);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(389, 262);
             label7.Name = "label7";
-            label7.Size = new Size(81, 37);
+            label7.Size = new Size(53, 23);
             label7.TabIndex = 7;
             label7.Text = "CEP:";
             // 
@@ -150,10 +142,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(556, 662);
-            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Location = new Point(389, 397);
             label8.Name = "label8";
-            label8.Size = new Size(134, 37);
+            label8.Size = new Size(89, 23);
             label8.TabIndex = 8;
             label8.Text = "Cidade:";
             // 
@@ -161,10 +152,9 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(790, 770);
-            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Location = new Point(553, 462);
             label9.Name = "label9";
-            label9.Size = new Size(122, 37);
+            label9.Size = new Size(80, 23);
             label9.TabIndex = 9;
             label9.Text = "Estado:";
             // 
@@ -172,10 +162,9 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(556, 553);
-            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Location = new Point(389, 332);
             label10.Name = "label10";
-            label10.Size = new Size(80, 37);
+            label10.Size = new Size(53, 23);
             label10.TabIndex = 10;
             label10.Text = "Rua:";
             // 
@@ -183,40 +172,36 @@
             // 
             txtEmail.Enabled = false;
             txtEmail.Font = new Font("Segoe UI", 12F);
-            txtEmail.Location = new Point(59, 480);
-            txtEmail.Margin = new Padding(4, 5, 4, 5);
+            txtEmail.Location = new Point(41, 288);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(353, 39);
+            txtEmail.Size = new Size(248, 29);
             txtEmail.TabIndex = 11;
             // 
             // txtRua
             // 
             txtRua.Enabled = false;
             txtRua.Font = new Font("Segoe UI", 12F);
-            txtRua.Location = new Point(556, 597);
-            txtRua.Margin = new Padding(4, 5, 4, 5);
+            txtRua.Location = new Point(389, 358);
             txtRua.Name = "txtRua";
-            txtRua.Size = new Size(351, 39);
+            txtRua.Size = new Size(247, 29);
             txtRua.TabIndex = 16;
             // 
             // txtCidade
             // 
             txtCidade.Enabled = false;
             txtCidade.Font = new Font("Segoe UI", 12F);
-            txtCidade.Location = new Point(556, 705);
-            txtCidade.Margin = new Padding(4, 5, 4, 5);
+            txtCidade.Location = new Point(389, 423);
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(351, 39);
+            txtCidade.Size = new Size(247, 29);
             txtCidade.TabIndex = 17;
             // 
             // txtEstado
             // 
             txtEstado.Enabled = false;
             txtEstado.Font = new Font("Segoe UI", 12F);
-            txtEstado.Location = new Point(794, 813);
-            txtEstado.Margin = new Padding(4, 5, 4, 5);
+            txtEstado.Location = new Point(556, 488);
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(113, 39);
+            txtEstado.Size = new Size(80, 29);
             txtEstado.TabIndex = 18;
             // 
             // pbFotoUsuario
@@ -225,10 +210,9 @@
             pbFotoUsuario.ErrorImage = Properties.Resources.icons8_usuário_30;
             pbFotoUsuario.Image = Properties.Resources.icons8_usuário_96;
             pbFotoUsuario.InitialImage = Properties.Resources.icons8_usuário_30;
-            pbFotoUsuario.Location = new Point(51, 135);
-            pbFotoUsuario.Margin = new Padding(4, 5, 4, 5);
+            pbFotoUsuario.Location = new Point(36, 81);
             pbFotoUsuario.Name = "pbFotoUsuario";
-            pbFotoUsuario.Size = new Size(203, 198);
+            pbFotoUsuario.Size = new Size(142, 119);
             pbFotoUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoUsuario.TabIndex = 19;
             pbFotoUsuario.TabStop = false;
@@ -239,10 +223,9 @@
             btnEnvFoto.Enabled = false;
             btnEnvFoto.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEnvFoto.ForeColor = Color.White;
-            btnEnvFoto.Location = new Point(89, 343);
-            btnEnvFoto.Margin = new Padding(4, 5, 4, 5);
+            btnEnvFoto.Location = new Point(62, 206);
             btnEnvFoto.Name = "btnEnvFoto";
-            btnEnvFoto.Size = new Size(129, 38);
+            btnEnvFoto.Size = new Size(90, 23);
             btnEnvFoto.TabIndex = 20;
             btnEnvFoto.Text = "Enviar Foto";
             btnEnvFoto.UseVisualStyleBackColor = false;
@@ -254,10 +237,9 @@
             btnSalvar.Enabled = false;
             btnSalvar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(947, 103);
-            btnSalvar.Margin = new Padding(4, 5, 4, 5);
+            btnSalvar.Location = new Point(663, 62);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(150, 70);
+            btnSalvar.Size = new Size(105, 42);
             btnSalvar.TabIndex = 21;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
@@ -267,10 +249,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(554, 343);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(388, 206);
             label2.Name = "label2";
-            label2.Size = new Size(393, 37);
+            label2.Size = new Size(264, 23);
             label2.TabIndex = 22;
             label2.Text = "Informações de Endereço";
             // 
@@ -279,10 +260,9 @@
             btnEditarPerfil.BackColor = Color.Indigo;
             btnEditarPerfil.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditarPerfil.ForeColor = Color.White;
-            btnEditarPerfil.Location = new Point(774, 103);
-            btnEditarPerfil.Margin = new Padding(4, 5, 4, 5);
+            btnEditarPerfil.Location = new Point(542, 62);
             btnEditarPerfil.Name = "btnEditarPerfil";
-            btnEditarPerfil.Size = new Size(150, 70);
+            btnEditarPerfil.Size = new Size(105, 42);
             btnEditarPerfil.TabIndex = 23;
             btnEditarPerfil.Text = "Editar";
             btnEditarPerfil.UseVisualStyleBackColor = false;
@@ -292,33 +272,30 @@
             // 
             mskdCelular.Enabled = false;
             mskdCelular.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mskdCelular.Location = new Point(59, 597);
-            mskdCelular.Margin = new Padding(4, 5, 4, 5);
+            mskdCelular.Location = new Point(41, 358);
             mskdCelular.Mask = "(00) 00000-0000";
             mskdCelular.Name = "mskdCelular";
-            mskdCelular.Size = new Size(194, 39);
+            mskdCelular.Size = new Size(137, 29);
             mskdCelular.TabIndex = 24;
             // 
             // mskdCpf
             // 
             mskdCpf.Enabled = false;
             mskdCpf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mskdCpf.Location = new Point(59, 705);
-            mskdCpf.Margin = new Padding(4, 5, 4, 5);
+            mskdCpf.Location = new Point(41, 423);
             mskdCpf.Mask = "000,000,000-00";
             mskdCpf.Name = "mskdCpf";
-            mskdCpf.Size = new Size(194, 39);
+            mskdCpf.Size = new Size(137, 29);
             mskdCpf.TabIndex = 25;
             // 
             // mskdDataNascimento
             // 
             mskdDataNascimento.Enabled = false;
             mskdDataNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mskdDataNascimento.Location = new Point(59, 815);
-            mskdDataNascimento.Margin = new Padding(4, 5, 4, 5);
+            mskdDataNascimento.Location = new Point(41, 489);
             mskdDataNascimento.Mask = "00/00/0000";
             mskdDataNascimento.Name = "mskdDataNascimento";
-            mskdDataNascimento.Size = new Size(187, 39);
+            mskdDataNascimento.Size = new Size(132, 29);
             mskdDataNascimento.TabIndex = 26;
             mskdDataNascimento.ValidatingType = typeof(DateTime);
             // 
@@ -326,11 +303,10 @@
             // 
             mskdCep.Enabled = false;
             mskdCep.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mskdCep.Location = new Point(556, 480);
-            mskdCep.Margin = new Padding(4, 5, 4, 5);
+            mskdCep.Location = new Point(389, 288);
             mskdCep.Mask = "00000-000";
             mskdCep.Name = "mskdCep";
-            mskdCep.Size = new Size(194, 39);
+            mskdCep.Size = new Size(137, 29);
             mskdCep.TabIndex = 27;
             // 
             // btnBuscarCep
@@ -338,10 +314,9 @@
             btnBuscarCep.BackColor = Color.Indigo;
             btnBuscarCep.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBuscarCep.ForeColor = Color.White;
-            btnBuscarCep.Location = new Point(774, 472);
-            btnBuscarCep.Margin = new Padding(4, 5, 4, 5);
+            btnBuscarCep.Location = new Point(542, 283);
             btnBuscarCep.Name = "btnBuscarCep";
-            btnBuscarCep.Size = new Size(133, 56);
+            btnBuscarCep.Size = new Size(93, 34);
             btnBuscarCep.TabIndex = 28;
             btnBuscarCep.Text = "Buscar";
             btnBuscarCep.UseVisualStyleBackColor = false;
@@ -351,20 +326,18 @@
             // 
             txtBairro.Enabled = false;
             txtBairro.Font = new Font("Segoe UI", 12F);
-            txtBairro.Location = new Point(556, 813);
-            txtBairro.Margin = new Padding(4, 5, 4, 5);
+            txtBairro.Location = new Point(389, 488);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(208, 39);
+            txtBairro.Size = new Size(147, 29);
             txtBairro.TabIndex = 30;
             // 
             // Bairro
             // 
             Bairro.AutoSize = true;
             Bairro.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Bairro.Location = new Point(556, 770);
-            Bairro.Margin = new Padding(4, 0, 4, 0);
+            Bairro.Location = new Point(389, 462);
             Bairro.Name = "Bairro";
-            Bairro.Size = new Size(108, 37);
+            Bairro.Size = new Size(71, 23);
             Bairro.TabIndex = 29;
             Bairro.Text = "Bairro:";
             // 
@@ -372,16 +345,16 @@
             // 
             lblCaminhoFoto.AutoSize = true;
             lblCaminhoFoto.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            lblCaminhoFoto.Location = new Point(76, 383);
-            lblCaminhoFoto.Margin = new Padding(4, 0, 4, 0);
+            lblCaminhoFoto.Location = new Point(53, 230);
             lblCaminhoFoto.Name = "lblCaminhoFoto";
-            lblCaminhoFoto.Size = new Size(0, 22);
+            lblCaminhoFoto.Size = new Size(0, 16);
             lblCaminhoFoto.TabIndex = 31;
             // 
             // UC_Perfil
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.White;
             Controls.Add(lblCaminhoFoto);
             Controls.Add(txtBairro);
@@ -411,9 +384,8 @@
             Controls.Add(lblNomeUser);
             Controls.Add(label1);
             Controls.Add(pnlNavBar);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "UC_Perfil";
-            Size = new Size(1123, 945);
+            Size = new Size(786, 567);
             Load += UC_Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).EndInit();
             ResumeLayout(false);
