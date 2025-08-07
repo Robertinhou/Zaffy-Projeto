@@ -134,6 +134,10 @@ namespace ZaffyStore.UserControls
 
                         MessageBox.Show("Anúncio cadastrado", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        UC_Home home = new UC_Home();
+                        this.Controls.Clear();
+                        this.Controls.Add(home);
+
                     }
                     else
                     {

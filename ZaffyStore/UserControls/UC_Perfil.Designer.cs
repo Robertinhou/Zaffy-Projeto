@@ -210,6 +210,7 @@
             pbFotoUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoUsuario.TabIndex = 19;
             pbFotoUsuario.TabStop = false;
+            pbFotoUsuario.Click += pbFotoUsuario_Click;
             // 
             // btnEnvFoto
             // 

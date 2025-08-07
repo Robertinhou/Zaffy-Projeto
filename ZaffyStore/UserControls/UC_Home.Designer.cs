@@ -27,16 +27,24 @@
             panelFotos = new Panel();
             pictureBox1 = new PictureBox();
             pnlNavBar = new Panel();
+            lnkMeuAnuncio = new LinkLabel();
+            lnkCadAnuncios = new LinkLabel();
             lnkLogout = new LinkLabel();
             lnkPerfil = new LinkLabel();
             lnkHome = new LinkLabel();
             dgvAnuncios = new DataGridView();
             lblWelcome = new Label();
-            lnkCadAnuncios = new LinkLabel();
+            panel1 = new Panel();
+            lblPrice = new Label();
+            btnVisualizar = new Button();
+            lblProductName = new Label();
+            cardFoto = new PictureBox();
             panelFotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)cardFoto).BeginInit();
             SuspendLayout();
             // 
             // panelFotos
@@ -61,6 +69,7 @@
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(lnkMeuAnuncio);
             pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Controls.Add(lnkLogout);
             pnlNavBar.Controls.Add(lnkPerfil);
@@ -70,6 +79,32 @@
             pnlNavBar.Size = new Size(785, 32);
             pnlNavBar.TabIndex = 1;
             pnlNavBar.Paint += pnlNavBar_Paint;
+            // 
+            // lnkMeuAnuncio
+            // 
+            lnkMeuAnuncio.AutoSize = true;
+            lnkMeuAnuncio.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkMeuAnuncio.LinkColor = Color.White;
+            lnkMeuAnuncio.Location = new Point(551, 9);
+            lnkMeuAnuncio.Name = "lnkMeuAnuncio";
+            lnkMeuAnuncio.Size = new Size(101, 15);
+            lnkMeuAnuncio.TabIndex = 8;
+            lnkMeuAnuncio.TabStop = true;
+            lnkMeuAnuncio.Text = "MEUS ANÚNCIOS";
+            lnkMeuAnuncio.LinkClicked += lnkMeuAnuncio_LinkClicked;
+            // 
+            // lnkCadAnuncios
+            // 
+            lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkCadAnuncios.LinkColor = Color.White;
+            lnkCadAnuncios.Location = new Point(89, 9);
+            lnkCadAnuncios.Name = "lnkCadAnuncios";
+            lnkCadAnuncios.Size = new Size(67, 15);
+            lnkCadAnuncios.TabIndex = 7;
+            lnkCadAnuncios.TabStop = true;
+            lnkCadAnuncios.Text = "ANUNCIAR";
+            lnkCadAnuncios.LinkClicked += lnkCadAnuncios_LinkClicked;
             // 
             // lnkLogout
             // 
@@ -108,7 +143,6 @@
             lnkHome.TabIndex = 4;
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
-          //  lnkHome.LinkClicked += this.lnkHome_LinkClicked;
             // 
             // dgvAnuncios
             // 
@@ -119,9 +153,9 @@
             dgvAnuncios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAnuncios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAnuncios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAnuncios.Location = new Point(76, 255);
+            dgvAnuncios.Location = new Point(107, 468);
             dgvAnuncios.Name = "dgvAnuncios";
-            dgvAnuncios.Size = new Size(624, 249);
+            dgvAnuncios.Size = new Size(576, 211);
             dgvAnuncios.TabIndex = 3;
             dgvAnuncios.CellContentClick += dgvAnuncios_CellContentClick;
             // 
@@ -133,36 +167,86 @@
             lblWelcome.Size = new Size(38, 15);
             lblWelcome.TabIndex = 4;
             lblWelcome.Text = "label1";
+            lblWelcome.TextAlign = ContentAlignment.TopCenter;
             // 
-            // lnkCadAnuncios
+            // panel1
             // 
-            lnkCadAnuncios.AutoSize = true;
-            lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
-            lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(89, 9);
-            lnkCadAnuncios.Name = "lnkCadAnuncios";
-            lnkCadAnuncios.Size = new Size(67, 15);
-            lnkCadAnuncios.TabIndex = 7;
-            lnkCadAnuncios.TabStop = true;
-            lnkCadAnuncios.Text = "ANUNCIAR";
-            lnkCadAnuncios.LinkClicked += lnkCadAnuncios_LinkClicked;
+            panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(lblPrice);
+            panel1.Controls.Add(btnVisualizar);
+            panel1.Controls.Add(lblProductName);
+            panel1.Controls.Add(cardFoto);
+            panel1.Location = new Point(305, 243);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(156, 219);
+            panel1.TabIndex = 5;
+            panel1.MouseEnter += panel1_MouseEnter;
+            panel1.MouseLeave += panel1_MouseLeave;
+            // 
+            // lblPrice
+            // 
+            lblPrice.AutoSize = true;
+            lblPrice.Location = new Point(96, 162);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(56, 15);
+            lblPrice.TabIndex = 3;
+            lblPrice.Text = "R$ 8000.7";
+            // 
+            // btnVisualizar
+            // 
+            btnVisualizar.BackColor = Color.FromArgb(115, 76, 191);
+            btnVisualizar.ForeColor = Color.White;
+            btnVisualizar.Location = new Point(11, 180);
+            btnVisualizar.Name = "btnVisualizar";
+            btnVisualizar.Size = new Size(136, 30);
+            btnVisualizar.TabIndex = 2;
+            btnVisualizar.Text = "Visualizar";
+            btnVisualizar.UseVisualStyleBackColor = false;
+            btnVisualizar.Click += btnVisualizar_Click;
+            // 
+            // lblProductName
+            // 
+            lblProductName.AutoSize = true;
+            lblProductName.Location = new Point(4, 137);
+            lblProductName.Name = "lblProductName";
+            lblProductName.Size = new Size(122, 30);
+            lblProductName.TabIndex = 1;
+            lblProductName.Text = "PS4 SLIM do Cristiano\r\n Ronaldo (Jr)";
+            // 
+            // cardFoto
+            // 
+            cardFoto.Image = Properties.Resources.download__1_;
+            cardFoto.Location = new Point(4, 5);
+            cardFoto.Name = "cardFoto";
+            cardFoto.Size = new Size(148, 129);
+            cardFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            cardFoto.TabIndex = 0;
+            cardFoto.TabStop = false;
+            cardFoto.Click += cardFoto_Click;
+            cardFoto.MouseLeave += cardFoto_MouseLeave;
+            cardFoto.MouseHover += cardFoto_MouseHover;
             // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            Controls.Add(panel1);
             Controls.Add(lblWelcome);
             Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
             Controls.Add(panelFotos);
             Name = "UC_Home";
-            Size = new Size(785, 537);
+            Size = new Size(785, 693);
             Load += UC_Home_Load;
             panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)cardFoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -181,5 +265,11 @@
         private DataGridView dgvAnuncios;
         private Label lblWelcome;
         private LinkLabel lnkCadAnuncios;
+        private LinkLabel lnkMeuAnuncio;
+        private Panel panel1;
+        private Button btnVisualizar;
+        private Label lblProductName;
+        private PictureBox cardFoto;
+        private Label lblPrice;
     }
 }

@@ -22,7 +22,7 @@ namespace ZaffyStore.UserControls
             // UC_Home cresce com conteúdo
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            
+
 
 
 
@@ -32,6 +32,8 @@ namespace ZaffyStore.UserControls
         {
 
             HorizontalScroll.Enabled = false;
+            VerticalScroll.Enabled = true;
+            this.Dock = DockStyle.Fill;
 
             var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
             if (formPrincipal != null)
@@ -181,6 +183,52 @@ namespace ZaffyStore.UserControls
             this.Controls.Clear();
             this.Controls.Add(anunciar);
 
+        }
+
+        private void lnkMeuAnuncio_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            UC_MeusAnuncios meusAnuncios = new UC_MeusAnuncios();
+
+            this.Controls.Clear();
+            this.Controls.Add(meusAnuncios);
+
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+        }
+
+        private void cardFoto_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void cardFoto_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+        }
+
+        private void cardFoto_Click(object sender, EventArgs e)
+        {
+
+            UC_paginaCompra comprar = new UC_paginaCompra();
+            this.Controls.Clear();
+            this.Controls.Add(comprar);
+
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            UC_paginaCompra comprar = new UC_paginaCompra();
+            this.Controls.Clear();
+            this.Controls.Add(comprar);
         }
     }
 }

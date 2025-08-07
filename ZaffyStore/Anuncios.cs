@@ -137,6 +137,60 @@ namespace ZaffyStore
 
         }
 
+        public bool AtualizarAnuncio()
+        {
+            using (MySqlConnection conexao = new ConexaoBD().Conectar())
+            {
+                string sql = @"UPDATE anuncios SET 
+                        nome = @nome,
+                        descricao = @descricao,
+                        categoria = @categoria,
+                        preco = @preco,
+                        localidade = @localidade,
+                        contato = @contato,
+                        foto = @foto,
+                        horario = @horario
+                       WHERE id_anuncio = @id";
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+                comando.Parameters.AddWithValue("@nome", this.Nome);
+                comando.Parameters.AddWithValue("@descricao", this.Descricao);
+                comando.Parameters.AddWithValue("@categoria", this.Categoria);
+                comando.Parameters.AddWithValue("@preco", this.Preco);
+                comando.Parameters.AddWithValue("@localidade", this.Localidade);
+                comando.Parameters.AddWithValue("@contato", this.Contato);
+                comando.Parameters.AddWithValue("@foto", this.Foto ?? "");
+                comando.Parameters.AddWithValue("@horario", this.Horario);
+                comando.Parameters.AddWithValue("@id", this.Id_Anuncio);
+
+                return comando.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public bool DeletarAnuncio()
+        {
+            try
+            {
+                using (MySqlConnection conexao = new ConexaoBD().Conectar())
+                {
+                    string sql = "DELETE FROM anuncios WHERE id_anuncio = @id";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    cmd.Parameters.AddWithValue("@id", Id_Anuncio);
+
+                    int result = cmd.ExecuteNonQuery();
+
+                    return result > 0;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro fatal! Verifique sua conexão!");
+                return false;
+            }
+        }
+
+
         public void ListarAnuncios(DataGridView dgv)
         {
             try
@@ -157,6 +211,110 @@ namespace ZaffyStore
             {
                 MessageBox.Show("Erro ao carregar os dados.");
             }
+        }
+
+
+        public void ListarMeusAnuncios(DataGridView dgv)
+        {
+            try
+            {
+               
+
+                using (MySqlConnection conexao = new ConexaoBD().Conectar())
+                {
+                    string query = "SELECT * FROM anuncios WHERE id_user = @id";
+
+                    using (MySqlCommand comando = new MySqlCommand(query, conexao))
+                    {
+                        comando.Parameters.AddWithValue("@id",Convert.ToInt32(Sessao.UsuarioAtual.Id));
+
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(comando))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            dgv.DataSource = dt;
+                            dgv.AllowUserToAddRows = false;
+                            dgv.ClearSelection();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar os dados: " + ex.Message);
+            }
+        }
+
+        public bool BuscarInformaçõesAnuncio()
+        {
+            try
+            {
+                using (MySqlConnection conexao = new ConexaoBD().Conectar())
+                {
+                  
+
+                    string buscarNome = "SELECT * FROM anuncios WHERE nome = @nome and id = @id";
+                    MySqlCommand comando = new MySqlCommand(buscarNome, conexao);
+
+                    comando.Parameters.AddWithValue("@nome", nome);
+                    //comando.Parameters.AddWithValue("@id", id);
+
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+
+
+                        if (reader.Read())
+                        {
+
+                            
+
+
+                            Anuncios anuncio = new Anuncios
+                            {
+
+                                Nome = reader["nome"].ToString(),
+                                Descricao = reader["descricao"].ToString(),
+
+
+
+                            };
+
+
+
+
+
+                            
+
+
+
+
+
+
+                            return true; // ✅ Login bem-sucedido
+
+                        }
+                        else
+                        {
+                            return false; // ❌ Login falhou, email ou senha incorretos
+                        }
+
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                
+
+                        
+                            return false; // ❌ Login falhou, email ou senha incorretos
+                        
+                    
+                
+            }
+            
         }
 
 

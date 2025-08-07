@@ -209,6 +209,11 @@ namespace ZaffyStore.UserControls
             this.Controls.Clear();
             this.Controls.Add(login);
         }
+
+        private void pbFotoUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
