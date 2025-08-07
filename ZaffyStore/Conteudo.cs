@@ -61,5 +61,10 @@ namespace ZaffyStore
             mouseDown = true;
             lastLocation = e.Location;
         }
+
+        private void Conteudo_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }

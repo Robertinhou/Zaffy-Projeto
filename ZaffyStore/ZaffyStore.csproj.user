@@ -7,6 +7,9 @@
     <Compile Update="ConteudoLogged.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControls\UC_CadAnuncios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\UC_Cadastro.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\UC_EsqueciSenha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_MeusAnuncios.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\UC_Perfil.cs">

@@ -138,37 +138,32 @@ namespace ZaffyStore
             {
                 using (MySqlConnection conexaoBanco = new ConexaoBD().Conectar())
                 {
-                    string sqlInsert = "INSERT into usuarios (celular, cpf, data_nascimento, cep, rua, cidade, bairro, estado, caminho_Foto) VALUES (@celular, @cpf, @data_nascimento, @cep, @rua, @cidade, @bairro, @estado, @caminho_Foto)";
+                    string sqlInsert = "UPDATE usuarios SET celular = @celular, cpf = @cpf, data_nascimento = @data_nascimento, cep = @cep, rua = @rua, cidade = @cidade, bairro = @bairro, estado = @estado, caminho_Foto = @caminho_Foto WHERE email = @Email";
 
                     MySqlCommand comando = new MySqlCommand(sqlInsert, conexaoBanco);
-                    // C:\Users\Aluno_Tarde\Pictures\Screenshots
+
                     comando.Parameters.AddWithValue("@celular", Celular);
                     comando.Parameters.AddWithValue("@cpf", Cpf);
                     comando.Parameters.AddWithValue("@data_nascimento", Data_Nascimento.ToString("yyyy-MM-dd"));
+                    comando.Parameters.AddWithValue("@cep", Cep);
                     comando.Parameters.AddWithValue("@rua", Rua);
                     comando.Parameters.AddWithValue("@cidade", Cidade);
                     comando.Parameters.AddWithValue("@bairro", Bairro);
                     comando.Parameters.AddWithValue("@estado", Estado);
-                    comando.Parameters.AddWithValue("caminho_Foto", caminho);
-
+                    comando.Parameters.AddWithValue("@caminho_Foto", caminho);
+                    comando.Parameters.AddWithValue("@Email", Email); // Muito importante!
 
                     int resultado = comando.ExecuteNonQuery();
-                    if (resultado > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return resultado > 0;
                 }
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Erro no método: " + ex.Message);
                 return false;
             }
         }
+
         public bool verificarLogin()
         {
             try

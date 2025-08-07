@@ -26,12 +26,6 @@ namespace ZaffyStore.UserControls
             txtEmail.Text = usuarios.Email;
         }
 
-        private void UC_Perfil_Load(object sender, EventArgs e)
-        {
-            Usuarios usuarios = new Usuarios();
-
-
-        }
 
         private void btnEnvFoto_Click(object sender, EventArgs e)
         {
@@ -48,6 +42,7 @@ namespace ZaffyStore.UserControls
             // Abre o dialog para o usuário selecionar a imagem
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.gif";
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -106,6 +101,7 @@ namespace ZaffyStore.UserControls
                     Usuarios usuarios = new Usuarios();
                     usuarios.Bairro = txtBairro.Text;
                     usuarios.Rua = txtRua.Text;
+                    usuarios.Email = txtEmail.Text;
                     usuarios.Cidade = txtCidade.Text;
                     usuarios.Estado = txtEstado.Text;
                     usuarios.Cpf = mskdCpf.Text;

@@ -386,7 +386,6 @@
             Controls.Add(pnlNavBar);
             Name = "UC_Perfil";
             Size = new Size(786, 567);
-            Load += UC_Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).EndInit();
             ResumeLayout(false);
             PerformLayout();
