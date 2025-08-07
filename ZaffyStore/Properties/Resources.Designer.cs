@@ -203,6 +203,26 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ondaBaixo {
+            get {
+                object obj = ResourceManager.GetObject("ondaBaixo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ondaBaixo1 {
+            get {
+                object obj = ResourceManager.GetObject("ondaBaixo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade", resourceCulture);
@@ -246,6 +266,16 @@ namespace ZaffyStore.Properties {
         internal static System.Drawing.Bitmap waves___Copia {
             get {
                 object obj = ResourceManager.GetObject("waves - Copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zaffyBranco {
+            get {
+                object obj = ResourceManager.GetObject("zaffyBranco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

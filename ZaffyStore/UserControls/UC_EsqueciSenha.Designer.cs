@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_EsqueciSenha));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             linkLogin = new LinkLabel();
@@ -70,8 +69,8 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(42, 99);
+            pictureBox1.Image = Properties.Resources.zaffyBranco;
+            pictureBox1.Location = new Point(39, 99);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(336, 310);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -185,11 +184,11 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(0, 428);
+            pictureBox3.Image = Properties.Resources.ondaBaixo1;
+            pictureBox3.Location = new Point(-1, 354);
             pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(400, 74);
+            pictureBox3.Size = new Size(400, 144);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 22;
             pictureBox3.TabStop = false;
@@ -306,10 +305,10 @@
             Controls.Add(linkLogin);
             Controls.Add(panel1);
             Controls.Add(btnMudarSenha);
-            Controls.Add(pictureBox3);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(txtEmail);
+            Controls.Add(pictureBox3);
             Name = "UC_EsqueciSenha";
             Size = new Size(801, 493);
             panel1.ResumeLayout(false);
