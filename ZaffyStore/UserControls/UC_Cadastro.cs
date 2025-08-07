@@ -59,7 +59,11 @@ namespace ZaffyStore.UserControls
                     if (Usuarios.ValidarEmail(txtEmail.Text))
                     {
 
+
                         if (!usuarios.verificarEmailExistente())
+
+                   
+
                         {
                             if (Usuarios.ValidarSenha(txtSenha.Text))
                             {

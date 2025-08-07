@@ -27,6 +27,7 @@
             panelFotos = new Panel();
             pictureBox1 = new PictureBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             conteinerCards = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             linkperfil = new LinkLabel();
@@ -34,6 +35,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             conteinerCards.SuspendLayout();
 =======
+=======
+>>>>>>> homeNavBar
             pnlNavBar = new Panel();
             lnkLogout = new LinkLabel();
             lnkPerfil = new LinkLabel();
@@ -43,6 +46,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).BeginInit();
+<<<<<<< HEAD
+>>>>>>> homeNavBar
+=======
 >>>>>>> homeNavBar
             SuspendLayout();
             // 
@@ -50,7 +56,11 @@
             // 
             panelFotos.Controls.Add(pictureBox1);
 <<<<<<< HEAD
+<<<<<<< HEAD
             panelFotos.Location = new Point(87, 56);
+=======
+            panelFotos.Location = new Point(76, 74);
+>>>>>>> homeNavBar
 =======
             panelFotos.Location = new Point(76, 74);
 >>>>>>> homeNavBar
@@ -69,6 +79,7 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // conteinerCards
             // 
@@ -106,6 +117,8 @@
             linkperfil.Text = "perfil";
             linkperfil.LinkClicked += linkperfil_LinkClicked;
 =======
+=======
+>>>>>>> homeNavBar
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
@@ -167,6 +180,9 @@
             dgvAnuncios.Name = "dgvAnuncios";
             dgvAnuncios.Size = new Size(624, 249);
             dgvAnuncios.TabIndex = 3;
+<<<<<<< HEAD
+>>>>>>> homeNavBar
+=======
 >>>>>>> homeNavBar
             // 
             // UC_Home
@@ -174,8 +190,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
 <<<<<<< HEAD
+<<<<<<< HEAD
             Controls.Add(linkperfil);
             Controls.Add(conteinerCards);
+=======
+            Controls.Add(dgvAnuncios);
+            Controls.Add(pnlNavBar);
+>>>>>>> homeNavBar
 =======
             Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
@@ -187,15 +208,21 @@
             panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             conteinerCards.ResumeLayout(false);
             conteinerCards.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
 =======
+=======
+>>>>>>> homeNavBar
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).EndInit();
             ResumeLayout(false);
+<<<<<<< HEAD
+>>>>>>> homeNavBar
+=======
 >>>>>>> homeNavBar
 
         }
@@ -205,15 +232,21 @@
         private System.Windows.Forms.Panel panelFotos;
         private System.Windows.Forms.PictureBox pictureBox1;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Panel conteinerCards;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private LinkLabel linkperfil;
 =======
+=======
+>>>>>>> homeNavBar
         private Panel pnlNavBar;
         private LinkLabel lnkLogout;
         private LinkLabel lnkPerfil;
         private LinkLabel lnkHome;
         private DataGridView dgvAnuncios;
+<<<<<<< HEAD
+>>>>>>> homeNavBar
+=======
 >>>>>>> homeNavBar
     }
 }

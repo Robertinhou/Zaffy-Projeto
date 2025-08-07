@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_EsqueciSenha));
+>>>>>>> homeNavBar
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             linkLogin = new LinkLabel();
@@ -49,7 +53,10 @@
             lblCodigo = new Label();
             panelSenha = new Panel();
 <<<<<<< HEAD
+<<<<<<< HEAD
             linkLogin2 = new LinkLabel();
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
             panel1.SuspendLayout();
@@ -72,8 +79,13 @@
             // 
             // pictureBox1
             // 
+<<<<<<< HEAD
             pictureBox1.Image = Properties.Resources.zaffyBranco;
             pictureBox1.Location = new Point(39, 99);
+=======
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(42, 99);
+>>>>>>> homeNavBar
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(336, 310);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -187,11 +199,19 @@
             // 
             // pictureBox3
             // 
+<<<<<<< HEAD
             pictureBox3.Image = Properties.Resources.ondaBaixo1;
             pictureBox3.Location = new Point(-1, 354);
             pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(400, 144);
+=======
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(0, 428);
+            pictureBox3.Margin = new Padding(2);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(400, 74);
+>>>>>>> homeNavBar
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 22;
             pictureBox3.TabStop = false;
@@ -282,6 +302,7 @@
             panelSenha.TabIndex = 30;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // linkLogin2
             // 
             linkLogin2.ActiveLinkColor = Color.FromArgb(192, 255, 255);
@@ -299,12 +320,17 @@
             // 
 =======
 >>>>>>> homeNavBar
+=======
+>>>>>>> homeNavBar
             // UC_EsqueciSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
 <<<<<<< HEAD
+<<<<<<< HEAD
             Controls.Add(linkLogin2);
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
             Controls.Add(btnEnviar);
@@ -314,10 +340,17 @@
             Controls.Add(linkLogin);
             Controls.Add(panel1);
             Controls.Add(btnMudarSenha);
+<<<<<<< HEAD
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(txtEmail);
             Controls.Add(pictureBox3);
+=======
+            Controls.Add(pictureBox3);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(txtEmail);
+>>>>>>> homeNavBar
             Name = "UC_EsqueciSenha";
             Size = new Size(801, 493);
             panel1.ResumeLayout(false);
@@ -355,7 +388,10 @@
         private Label lblCodigo;
         private Panel panelSenha;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private LinkLabel linkLogin2;
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
     }

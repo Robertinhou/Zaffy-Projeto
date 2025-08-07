@@ -9,6 +9,10 @@ namespace ZaffyStore
         Point lastLocation;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> homeNavBar
 =======
 
 >>>>>>> homeNavBar
@@ -24,6 +28,12 @@ namespace ZaffyStore
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        
+
+>>>>>>> homeNavBar
 =======
 
         
@@ -72,11 +82,14 @@ namespace ZaffyStore
             lastLocation = e.Location;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         private void Conteudo_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
     }

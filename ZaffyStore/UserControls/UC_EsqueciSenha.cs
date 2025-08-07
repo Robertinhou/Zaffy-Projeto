@@ -124,13 +124,8 @@ namespace ZaffyStore.UserControls
             }
         }
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> homeNavBar
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             try
@@ -188,12 +183,10 @@ namespace ZaffyStore.UserControls
                                         lblCodigo.Visible = true;
                                         linkLogin.Visible = true;
                                         txtEmail.Enabled = false;
-<<<<<<< HEAD
 
                                         linkLogin2.Visible = false;
 
-=======
->>>>>>> homeNavBar
+
                                     }
                                     catch (Exception ex)
                                     {
@@ -259,7 +252,7 @@ namespace ZaffyStore.UserControls
                 txtNovaSenha.Enabled = false;
             }
         }
-<<<<<<< HEAD
+
 
         private void UC_EsqueciSenha_Load(object sender, EventArgs e)
         {
@@ -272,7 +265,6 @@ namespace ZaffyStore.UserControls
             this.Controls.Clear();
             this.Controls.Add(login);
         }
-=======
->>>>>>> homeNavBar
+
     }
 }

@@ -18,6 +18,7 @@ namespace ZaffyStore
         private string senha;
 
 
+
         private string cep;
         private string celular;
         private string cpf;
@@ -28,6 +29,7 @@ namespace ZaffyStore
         private string estado;
         private string caminho_Foto;
 
+        
 
         public string Nome
         {
@@ -46,14 +48,15 @@ namespace ZaffyStore
         }
 
 
+
       
 
         public string Cep
-
         {
             get { return cep; }
             set { cep = value; }
         }
+
 
 
         public string Celular
@@ -103,6 +106,7 @@ namespace ZaffyStore
             get { return caminho_Foto; }
             set { caminho_Foto = value; }
         }
+
 
         public bool CadastrarUsuario()
         {
@@ -259,8 +263,6 @@ namespace ZaffyStore
                     using (MySqlDataReader reader = comando.ExecuteReader())
                     {
 
-
-                       
                         
                         if (reader.Read())
                         {
@@ -276,6 +278,7 @@ namespace ZaffyStore
                                 Senha = reader["senha"].ToString(),
 
 
+
                             };
 
 
@@ -285,6 +288,13 @@ namespace ZaffyStore
                             Sessao.UsuarioAtual = usuario;
                            
  
+
+                                
+                            
+
+                            Sessao.UsuarioAtual = usuario;
+                           
+
                             Sessao.listaLogados.Add(usuario);
                             return true; // ✅ Login bem-sucedido
 
@@ -293,6 +303,7 @@ namespace ZaffyStore
                         {
                             return false; // ❌ Login falhou, email ou senha incorretos
                         }
+
  }
                     }
                 
@@ -302,18 +313,28 @@ namespace ZaffyStore
                 
                 
 
+            
+                
+                
+
             }
             catch (Exception ex)
             {
 
 
+
                 MessageBox.Show("Não foi possível buscar os dados do usuário!" + ex.Message);
                 return false; // ❌ Falha no login
+
+          
+
             }
         }
 
 
+
             
+
 
 
 
@@ -350,12 +371,10 @@ namespace ZaffyStore
         }
 
 
-
         public static string CriptografarSenha(string senha)
         {
-            if (string.IsNullOrEmpty(senha))
-                throw new ArgumentNullException(nameof(senha), "A senha não pode ser nula ou vazia antes de criptografar.");
-
+            
+                
             try
             {
                 using (SHA256 sha256Hash = SHA256.Create())
@@ -415,6 +434,7 @@ namespace ZaffyStore
         }
 
 
+
         public static bool IsCpf(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -451,6 +471,7 @@ namespace ZaffyStore
             digito = digito + resto.ToString();
             return cpf.EndsWith(digito);
         }
+
 
     }
 }

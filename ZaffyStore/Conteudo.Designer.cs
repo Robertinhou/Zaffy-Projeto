@@ -87,7 +87,11 @@
             // panelCentral
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             panelCentral.AutoScroll = true;
+=======
+            panelCentral.AutoSize = true;
+>>>>>>> homeNavBar
 =======
             panelCentral.AutoSize = true;
 >>>>>>> homeNavBar
@@ -102,7 +106,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
 <<<<<<< HEAD
+<<<<<<< HEAD
             AutoScroll = true;
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
             ClientSize = new Size(801, 525);
@@ -112,8 +119,11 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
 <<<<<<< HEAD
+<<<<<<< HEAD
             MaximumSize = new Size(801, 700);
             MinimumSize = new Size(801, 525);
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
             Name = "Conteudo";
@@ -121,7 +131,10 @@
             Text = "Form1";
             Load += Conteudo_Load;
 <<<<<<< HEAD
+<<<<<<< HEAD
             Scroll += Conteudo_Scroll;
+=======
+>>>>>>> homeNavBar
 =======
 >>>>>>> homeNavBar
             panelTop.ResumeLayout(false);
@@ -129,6 +142,10 @@
             ((System.ComponentModel.ISupportInitialize)pbClose).EndInit();
             ResumeLayout(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            PerformLayout();
+>>>>>>> homeNavBar
 =======
             PerformLayout();
 >>>>>>> homeNavBar

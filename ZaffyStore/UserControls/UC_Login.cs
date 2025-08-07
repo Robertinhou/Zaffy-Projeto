@@ -25,17 +25,7 @@ namespace ZaffyStore.UserControls
         {
             try
             {
-<<<<<<< HEAD
-                if (!txtLogin.Text.Equals("") && !txtLogin.Text.Equals(""))
-                {
-
-                    if (Usuarios.ValidarEmail(txtLogin.Text))
-                    {
-                        Usuarios usuarios = new Usuarios();
-                        usuarios.Email = txtLogin.Text;
-                        usuarios.Senha = txtSenha.Text;
-
-=======
+               
                 if (!string.IsNullOrWhiteSpace(txtLogin.Text) && !string.IsNullOrWhiteSpace(txtSenha.Text))
                 {
                     if (Usuarios.ValidarEmail(txtLogin.Text))
@@ -45,7 +35,6 @@ namespace ZaffyStore.UserControls
                             Email = txtLogin.Text,
                             Senha = txtSenha.Text
                         };
->>>>>>> homeNavBar
 
                         if (usuarios.verificarEmailExistente())
                         {
@@ -55,32 +44,29 @@ namespace ZaffyStore.UserControls
 
                                 if (usuarios.Login())
                                 {
-<<<<<<< HEAD
+
                                     // MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
                                     if (formPrincipal != null)
                                     {
                                         formPrincipal.Size = new Size(1138, 945); // ou o tamanho que desejar
                                     }
+
                                     UC_Home home = new UC_Home();
-=======
+
                                     MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    UC_Home home = new UC_Home();
-                                    
->>>>>>> homeNavBar
+ 
                                     this.Controls.Clear();
                                     this.Controls.Add(home);
                                 }
                                 else
                                 {
-<<<<<<< HEAD
+
                                    MessageBox.Show("Não logou zé! Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                   
                                 }  
-=======
-                                    MessageBox.Show("Não logou zé! Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
->>>>>>> homeNavBar
+
+
                             }
                             else
                             {
@@ -106,10 +92,7 @@ namespace ZaffyStore.UserControls
             {
                 MessageBox.Show("Erro:" + ex.Message);
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> homeNavBar
         }
 
 

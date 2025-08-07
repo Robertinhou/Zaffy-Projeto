@@ -93,6 +93,19 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+=======
+        internal static System.Drawing.Bitmap icons8_excluir_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-excluir-48 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+>>>>>>> homeNavBar
         internal static System.Drawing.Bitmap icons8_excluir_481 {
             get {
                 object obj = ResourceManager.GetObject("icons8-excluir-481", resourceCulture);
@@ -133,6 +146,19 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+=======
+        internal static System.Drawing.Bitmap icons8_visível_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-visível-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+>>>>>>> homeNavBar
         internal static System.Drawing.Bitmap linhas {
             get {
                 object obj = ResourceManager.GetObject("linhas", resourceCulture);
@@ -164,7 +190,10 @@ namespace ZaffyStore.Properties {
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> homeNavBar
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
@@ -175,6 +204,7 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap ondaBaixo {
             get {
                 object obj = ResourceManager.GetObject("ondaBaixo", resourceCulture);
@@ -196,6 +226,8 @@ namespace ZaffyStore.Properties {
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
 >>>>>>> perfil
+=======
+>>>>>>> homeNavBar
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade", resourceCulture);
@@ -216,6 +248,19 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+=======
+        internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade11 {
+            get {
+                object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+>>>>>>> homeNavBar
         internal static System.Drawing.Bitmap waves {
             get {
                 object obj = ResourceManager.GetObject("waves", resourceCulture);
@@ -232,6 +277,7 @@ namespace ZaffyStore.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+<<<<<<< HEAD
         
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
@@ -242,5 +288,7 @@ namespace ZaffyStore.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+=======
+>>>>>>> homeNavBar
     }
 }
