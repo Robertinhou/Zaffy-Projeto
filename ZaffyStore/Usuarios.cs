@@ -17,12 +17,12 @@ namespace ZaffyStore
         private string email;
         private string senha;
 
-
+        private string id;
 
         private string cep;
         private string celular;
         private string cpf;
-        private DateOnly data_nascimento;
+        private DateTime data_nascimento;
         private string rua;
         private string cidade;
         private string bairro;
@@ -49,7 +49,11 @@ namespace ZaffyStore
 
 
 
-      
+       public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         public string Cep
         {
@@ -71,7 +75,7 @@ namespace ZaffyStore
             set { cpf = value; }
         }
 
-        public DateOnly Data_Nascimento
+        public DateTime Data_Nascimento
         {
             get { return data_nascimento; }
             set { data_nascimento = value; }
@@ -263,11 +267,11 @@ namespace ZaffyStore
                     using (MySqlDataReader reader = comando.ExecuteReader())
                     {
 
-                        
+
                         if (reader.Read())
                         {
 
-                            Sessao sessao  = new Sessao();
+                            Sessao sessao = new Sessao();
 
 
                             Usuarios usuario = new Usuarios
@@ -276,24 +280,34 @@ namespace ZaffyStore
                                 Nome = reader["nome"].ToString(),
                                 Email = reader["email"].ToString(),
                                 Senha = reader["senha"].ToString(),
+                                Id = reader["id_usuario"].ToString(),
+                                Celular = reader["celular"].ToString(),
+                                Cpf = reader["cpf"].ToString(),
+                                Data_Nascimento = DateTime.Parse(reader["data_nascimento"].ToString()),
+                                Cep = reader["cep"].ToString(),
+                                Bairro = reader["bairro"].ToString(),
+                                Rua = reader["rua"].ToString(),
+                                Cidade = reader["cidade"].ToString(),
+                                Estado = reader["estado"].ToString(),
+                                Caminho_Foto = reader["caminho_Foto"].ToString(),
 
 
 
                             };
 
 
-                                
-                           
+
+
 
                             Sessao.UsuarioAtual = usuario;
-                           
- 
 
-                                
-                            
+
+
+
+
 
                             Sessao.UsuarioAtual = usuario;
-                           
+
 
                             Sessao.listaLogados.Add(usuario);
                             return true; // ✅ Login bem-sucedido
@@ -304,29 +318,79 @@ namespace ZaffyStore
                             return false; // ❌ Login falhou, email ou senha incorretos
                         }
 
- }
                     }
-                
+                }
 
-
-                    
-                
-                
-
-            
-                
-                
 
             }
             catch (Exception ex)
             {
+                using (MySqlConnection conexao = new ConexaoBD().Conectar())
+                {
+                    string senhaCripto = CriptografarSenha(Senha);
+
+                    string buscarNome = "SELECT * FROM usuarios WHERE email = @email and senha = @senha";
+                    MySqlCommand comando = new MySqlCommand(buscarNome, conexao);
+
+                    comando.Parameters.AddWithValue("@email", Email);
+                    comando.Parameters.AddWithValue("@senha", senhaCripto);
+
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+
+
+                        if (reader.Read())
+                        {
+
+                            Sessao sessao = new Sessao();
+
+
+                            Usuarios usuario = new Usuarios
+                            {
+
+                                Nome = reader["nome"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Senha = reader["senha"].ToString(),
+                                
 
 
 
-                MessageBox.Show("Não foi possível buscar os dados do usuário!" + ex.Message);
+                            };
+
+
+
+
+
+                            Sessao.UsuarioAtual = usuario;
+
+
+
+
+
+
+                            Sessao.UsuarioAtual = usuario;
+
+
+                            Sessao.listaLogados.Add(usuario);
+                            return true; // ✅ Login bem-sucedido
+
+                        }
+                        else
+                        {
+                            return false; // ❌ Login falhou, email ou senha incorretos
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+
+
+                MessageBox.Show("Não foi possível buscar os dados do usuário!");
                 return false; // ❌ Falha no login
 
-          
+
 
             }
         }

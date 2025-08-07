@@ -25,7 +25,7 @@ namespace ZaffyStore.UserControls
         {
             try
             {
-               
+
                 if (!string.IsNullOrWhiteSpace(txtLogin.Text) && !string.IsNullOrWhiteSpace(txtSenha.Text))
                 {
                     if (Usuarios.ValidarEmail(txtLogin.Text))
@@ -46,25 +46,22 @@ namespace ZaffyStore.UserControls
                                 {
 
                                     // MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
-                                    if (formPrincipal != null)
-                                    {
-                                        formPrincipal.Size = new Size(1138, 945); // ou o tamanho que desejar
-                                    }
+
 
                                     UC_Home home = new UC_Home();
 
-                                    MessageBox.Show($"Bem-vindo, {nomeLogado}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
- 
+
                                     this.Controls.Clear();
+
                                     this.Controls.Add(home);
+
                                 }
                                 else
                                 {
 
-                                   MessageBox.Show("Não logou zé! Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                  
-                                }  
+                                    MessageBox.Show("Não logou zé! Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                }
 
 
                             }
@@ -121,6 +118,24 @@ namespace ZaffyStore.UserControls
             UC_Cadastro cadastro = new UC_Cadastro();
             this.Controls.Clear();
             this.Controls.Add(cadastro);
+        }
+
+        private void lnkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            UC_Cadastro cadastro = new UC_Cadastro();
+            this.Controls.Clear();
+            this.Controls.Add(cadastro);
+
+        }
+
+        private void UC_Login_Load(object sender, EventArgs e)
+        {
+            var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
+            if (formPrincipal != null)
+            {
+                formPrincipal.Size = new Size(801, 525); // ou o tamanho que desejar
+            }
         }
     }
 }

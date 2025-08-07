@@ -1656,11 +1656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robert\\Desktop\\ZaffyP\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+      "projectUniqueName": "C:\\Users\\Robert\\source\\repos\\Zaffy-Projetoas\\ZaffyStore\\ZaffyStore.csproj",
       "projectName": "ZaffyStore",
-      "projectPath": "C:\\Users\\Robert\\Desktop\\ZaffyP\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+      "projectPath": "C:\\Users\\Robert\\source\\repos\\Zaffy-Projetoas\\ZaffyStore\\ZaffyStore.csproj",
       "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robert\\Desktop\\ZaffyP\\Zaffy-Projeto\\ZaffyStore\\obj\\",
+      "outputPath": "C:\\Users\\Robert\\source\\repos\\Zaffy-Projetoas\\ZaffyStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

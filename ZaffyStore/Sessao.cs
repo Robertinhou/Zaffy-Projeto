@@ -30,7 +30,7 @@ namespace ZaffyStore
 
                 if (IndexUser != null)
                 {
-                    MessageBox.Show($"Usuário {UsuarioAtual.Nome} removido com sucesso!", "Usuário removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Até logo, {UsuarioAtual.Nome}!", "Usuário deslogado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     listaLogados.Remove(UsuarioAtual);
                     UsuarioAtual = null; // Limpa a sessão do usuário atual
 
@@ -82,12 +82,20 @@ namespace ZaffyStore
                                 Nome = reader["nome"].ToString(),
                                 Email = reader["email"].ToString(),
                                 Senha = reader["senha"].ToString(),
+                                Id = reader["id_usuario"].ToString(),
+                                Celular = reader["celular"].ToString(),
+                                Cpf = reader["cpf"].ToString(),
+                                Data_Nascimento = DateTime.Parse(reader["data_nascimento"].ToString()),
+                                Cep = reader["cep"].ToString(),
+                                Bairro = reader["bairro"].ToString(),
+                                Rua = reader["rua"].ToString(),
+                                Cidade = reader["cidade"].ToString(),
+                                Estado = reader["estado"].ToString(),
+                                Caminho_Foto = reader["caminho_Foto"].ToString(),
                             };
 
                             // Atualiza o objeto passado com os dados encontrados
-                            userLogged.Nome = usuario.Nome;
-                            userLogged.Email = usuario.Email;
-                            userLogged.Senha = usuario.Senha;
+                            UsuarioAtual = usuario;
 
                             return true;
                         }

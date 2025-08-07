@@ -8,14 +8,6 @@ namespace ZaffyStore
         bool mouseDown;
         Point lastLocation;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> homeNavBar
-=======
-
->>>>>>> homeNavBar
         public Conteudo()
         {
             InitializeComponent();
@@ -27,18 +19,7 @@ namespace ZaffyStore
             adicionarUserControl(login);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-        
-
->>>>>>> homeNavBar
-=======
-
-        
-
->>>>>>> homeNavBar
         private void adicionarUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -81,16 +62,11 @@ namespace ZaffyStore
             mouseDown = true;
             lastLocation = e.Location;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         private void Conteudo_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
-=======
->>>>>>> homeNavBar
-=======
->>>>>>> homeNavBar
     }
 }

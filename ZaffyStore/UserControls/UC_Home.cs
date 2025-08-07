@@ -22,22 +22,26 @@ namespace ZaffyStore.UserControls
             // UC_Home cresce com conteúdo
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            
 
 
 
-          
         }
 
         private void UC_Home_Load(object sender, EventArgs e)
         {
 
-           
-           
+            HorizontalScroll.Enabled = false;
 
-            if (Sessao.UsuarioAtual != null)
+            var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
+            if (formPrincipal != null)
             {
-                MessageBox.Show($"Bem-vindoou, {Sessao.UsuarioAtual.Nome}!");
+                formPrincipal.Size = new Size(1138, 945); // ou o tamanho que desejar
             }
+
+            CarregarBanners();
+
+            lblWelcome.Text = $"Bem-vindo, {Sessao.UsuarioAtual.Nome}!";
 
             if (imagens == null || imagens.Length == 0)
             {
@@ -62,12 +66,12 @@ namespace ZaffyStore.UserControls
 
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\"; Robert
             //string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\";//  Matheus pc senai
-           // string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
+            // string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
 
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\";
 
 
-            string caminhoDasImagens = @"C:\Users\Robert\Desktop\ZaffyP\Zaffy-Projeto\ZaffyStore\Resources\banners\";
+            string caminhoDasImagens = @"C:\Users\Robert\source\repos\Zaffy-Projetoas\ZaffyStore\Resources\banners\";
 
 
             if (Directory.Exists(caminhoDasImagens))
@@ -130,7 +134,7 @@ namespace ZaffyStore.UserControls
 
 
 
-        
+
 
         private void linkperfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -142,7 +146,7 @@ namespace ZaffyStore.UserControls
 
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+
             Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
 
             UC_Login login = new UC_Login();
@@ -150,6 +154,32 @@ namespace ZaffyStore.UserControls
             this.Controls.Clear();
             this.Controls.Add(login);
 
+
+        }
+
+        private void lnkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Perfil perfil = new UC_Perfil();
+            this.Controls.Clear();
+            this.Controls.Add(perfil);
+        }
+
+        private void pnlNavBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvAnuncios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lnkCadAnuncios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            UC_CadAnuncios anunciar = new UC_CadAnuncios();
+            this.Controls.Clear();
+            this.Controls.Add(anunciar);
 
         }
     }

@@ -17,13 +17,27 @@ namespace ZaffyStore.UserControls
         {
             InitializeComponent();
 
-            Usuarios usuarios = new Usuarios();
+            this.HorizontalScroll.Enabled = false;
 
 
-            usuarios.Nome = Sessao.listaLogados[0].Nome;
-            usuarios.Email = Sessao.listaLogados[0].Email;
-            lblNomeUser.Text = usuarios.Nome;
-            txtEmail.Text = usuarios.Email;
+
+            lblNomeUser.Text = Sessao.UsuarioAtual.Nome;
+            txtEmail.Text = Sessao.UsuarioAtual.Email;
+            mskdCep.Text = Sessao.UsuarioAtual.Cep;
+            mskdCelular.Text = Sessao.UsuarioAtual.Celular;
+            mskdCpf.Text = Sessao.listaLogados[0].Cpf;
+            mskdDataNascimento.Text = Sessao.UsuarioAtual.Data_Nascimento.ToString("dd/MM/yyyy");
+            txtBairro.Text = Sessao.UsuarioAtual.Bairro;
+            txtCidade.Text = Sessao.UsuarioAtual.Cidade;
+            txtEstado.Text = Sessao.UsuarioAtual.Estado;
+            txtRua.Text = Sessao.UsuarioAtual.Rua;
+            if (!string.IsNullOrEmpty(Sessao.UsuarioAtual.Caminho_Foto) && File.Exists(Sessao.UsuarioAtual.Caminho_Foto))
+            {
+                pbFotoUsuario.Image = Image.FromFile(Sessao.UsuarioAtual.Caminho_Foto);
+            }
+
+
+
         }
 
 
@@ -68,6 +82,7 @@ namespace ZaffyStore.UserControls
                 // Salva o caminho da imagem no banco de dados
                 Usuarios usuarios = new Usuarios();
                 usuarios.CadastroInformacoes(caminhoDestino);
+                Sessao.UsuarioAtual.Caminho_Foto = caminhoDestino;
             }
         }
 
@@ -107,8 +122,8 @@ namespace ZaffyStore.UserControls
                     usuarios.Cpf = mskdCpf.Text;
                     usuarios.Cep = mskdCep.Text;
                     usuarios.Celular = mskdCelular.Text;
-                    usuarios.Data_Nascimento = DateOnly.Parse(mskdDataNascimento.Text);
-
+                    usuarios.Data_Nascimento = DateTime.Parse(mskdDataNascimento.Text);
+                    usuarios.Caminho_Foto = lblCaminhoFoto.Text;
 
                     if (Usuarios.IsCpf(mskdCpf.Text))
                     {
@@ -148,11 +163,19 @@ namespace ZaffyStore.UserControls
 
                 if (endereco != null)
                 {
-                    txtRua.Text = endereco.Logradouro;
-                    txtCidade.Text = endereco.Localidade;
-                    txtEstado.Text = endereco.Uf;
-                    txtBairro.Text = endereco.Bairro;
-                    txtRua.Enabled = true; txtCidade.Enabled = true; txtEstado.Enabled = true;
+                    if (endereco.Localidade != "Belo Horizonte")
+                    {
+                        MessageBox.Show("CEP não pertence a Belo Horizonte.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        txtRua.Text = endereco.Logradouro;
+                        txtCidade.Text = endereco.Localidade;
+                        txtEstado.Text = endereco.Uf;
+                        txtBairro.Text = endereco.Bairro;
+                        txtRua.Enabled = true; txtCidade.Enabled = true; txtEstado.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -163,6 +186,28 @@ namespace ZaffyStore.UserControls
             {
                 MessageBox.Show("Erro ao buscar CEP: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lnkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Home home = new UC_Home();
+            this.Controls.Clear();
+            this.Controls.Add(home);
+        }
+
+        private void UC_Perfil_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
+
+            UC_Login login = new UC_Login();
+
+            this.Controls.Clear();
+            this.Controls.Add(login);
         }
     }
 }

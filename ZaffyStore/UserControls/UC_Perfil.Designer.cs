@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlNavBar = new Panel();
             label1 = new Label();
             lblNomeUser = new Label();
             label3 = new Label();
@@ -56,115 +55,110 @@
             txtBairro = new TextBox();
             Bairro = new Label();
             lblCaminhoFoto = new Label();
+            pnlNavBar = new Panel();
+            lnkLogout = new LinkLabel();
+            lnkPerfil = new LinkLabel();
+            lnkHome = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).BeginInit();
+            pnlNavBar.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlNavBar
-            // 
-            pnlNavBar.Dock = DockStyle.Top;
-            pnlNavBar.Location = new Point(0, 0);
-            pnlNavBar.MaximumSize = new Size(785, 42);
-            pnlNavBar.MinimumSize = new Size(785, 42);
-            pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(785, 42);
-            pnlNavBar.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(27, 46);
             label1.Name = "label1";
-            label1.Size = new Size(197, 23);
+            label1.Size = new Size(226, 25);
             label1.TabIndex = 1;
             label1.Text = "PERFIL DO USUÁRIO";
             // 
             // lblNomeUser
             // 
             lblNomeUser.AutoSize = true;
-            lblNomeUser.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
+            lblNomeUser.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
             lblNomeUser.Location = new Point(202, 125);
             lblNomeUser.Name = "lblNomeUser";
-            lblNomeUser.Size = new Size(0, 28);
+            lblNomeUser.Size = new Size(0, 29);
             lblNomeUser.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(41, 262);
             label3.Name = "label3";
-            label3.Size = new Size(68, 23);
+            label3.Size = new Size(72, 25);
             label3.TabIndex = 3;
             label3.Text = "Email:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(41, 332);
             label4.Name = "label4";
-            label4.Size = new Size(86, 23);
+            label4.Size = new Size(88, 25);
             label4.TabIndex = 4;
             label4.Text = "Celular:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(41, 397);
             label5.Name = "label5";
-            label5.Size = new Size(53, 23);
+            label5.Size = new Size(62, 25);
             label5.TabIndex = 5;
             label5.Text = "CPF:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(38, 463);
             label6.Name = "label6";
-            label6.Size = new Size(218, 23);
+            label6.Size = new Size(213, 25);
             label6.TabIndex = 6;
             label6.Text = "Data de Nascimento:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.Location = new Point(389, 262);
             label7.Name = "label7";
-            label7.Size = new Size(53, 23);
+            label7.Size = new Size(63, 25);
             label7.TabIndex = 7;
             label7.Text = "CEP:";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(389, 397);
             label8.Name = "label8";
-            label8.Size = new Size(89, 23);
+            label8.Size = new Size(88, 25);
             label8.TabIndex = 8;
             label8.Text = "Cidade:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(553, 462);
             label9.Name = "label9";
-            label9.Size = new Size(80, 23);
+            label9.Size = new Size(86, 25);
             label9.TabIndex = 9;
             label9.Text = "Estado:";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.Location = new Point(389, 332);
             label10.Name = "label10";
-            label10.Size = new Size(53, 23);
+            label10.Size = new Size(57, 25);
             label10.TabIndex = 10;
             label10.Text = "Rua:";
             // 
@@ -248,10 +242,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(388, 206);
             label2.Name = "label2";
-            label2.Size = new Size(264, 23);
+            label2.Size = new Size(258, 25);
             label2.TabIndex = 22;
             label2.Text = "Informações de Endereço";
             // 
@@ -334,21 +328,71 @@
             // Bairro
             // 
             Bairro.AutoSize = true;
-            Bairro.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Bairro.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Bairro.Location = new Point(389, 462);
             Bairro.Name = "Bairro";
-            Bairro.Size = new Size(71, 23);
+            Bairro.Size = new Size(76, 25);
             Bairro.TabIndex = 29;
             Bairro.Text = "Bairro:";
             // 
             // lblCaminhoFoto
             // 
             lblCaminhoFoto.AutoSize = true;
-            lblCaminhoFoto.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            lblCaminhoFoto.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             lblCaminhoFoto.Location = new Point(53, 230);
             lblCaminhoFoto.Name = "lblCaminhoFoto";
-            lblCaminhoFoto.Size = new Size(0, 16);
+            lblCaminhoFoto.Size = new Size(0, 15);
             lblCaminhoFoto.TabIndex = 31;
+            // 
+            // pnlNavBar
+            // 
+            pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(lnkLogout);
+            pnlNavBar.Controls.Add(lnkPerfil);
+            pnlNavBar.Controls.Add(lnkHome);
+            pnlNavBar.Dock = DockStyle.Top;
+            pnlNavBar.Location = new Point(0, 0);
+            pnlNavBar.Name = "pnlNavBar";
+            pnlNavBar.Size = new Size(786, 32);
+            pnlNavBar.TabIndex = 2;
+            // 
+            // lnkLogout
+            // 
+            lnkLogout.AutoSize = true;
+            lnkLogout.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkLogout.LinkColor = Color.White;
+            lnkLogout.Location = new Point(715, 9);
+            lnkLogout.Name = "lnkLogout";
+            lnkLogout.Size = new Size(47, 15);
+            lnkLogout.TabIndex = 6;
+            lnkLogout.TabStop = true;
+            lnkLogout.Text = "LogOut";
+            lnkLogout.LinkClicked += lnkLogout_LinkClicked;
+            // 
+            // lnkPerfil
+            // 
+            lnkPerfil.AutoSize = true;
+            lnkPerfil.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkPerfil.LinkColor = Color.White;
+            lnkPerfil.Location = new Point(360, 9);
+            lnkPerfil.Name = "lnkPerfil";
+            lnkPerfil.Size = new Size(42, 15);
+            lnkPerfil.TabIndex = 5;
+            lnkPerfil.TabStop = true;
+            lnkPerfil.Text = "PERFIL";
+            // 
+            // lnkHome
+            // 
+            lnkHome.AutoSize = true;
+            lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkHome.LinkColor = Color.White;
+            lnkHome.Location = new Point(23, 9);
+            lnkHome.Name = "lnkHome";
+            lnkHome.Size = new Size(42, 15);
+            lnkHome.TabIndex = 4;
+            lnkHome.TabStop = true;
+            lnkHome.Text = "HOME";
+            lnkHome.LinkClicked += lnkHome_LinkClicked;
             // 
             // UC_Perfil
             // 
@@ -356,6 +400,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.White;
+            Controls.Add(pnlNavBar);
             Controls.Add(lblCaminhoFoto);
             Controls.Add(txtBairro);
             Controls.Add(Bairro);
@@ -383,17 +428,17 @@
             Controls.Add(label3);
             Controls.Add(lblNomeUser);
             Controls.Add(label1);
-            Controls.Add(pnlNavBar);
             Name = "UC_Perfil";
             Size = new Size(786, 567);
+            Load += UC_Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).EndInit();
+            pnlNavBar.ResumeLayout(false);
+            pnlNavBar.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel pnlNavBar;
         private Label label1;
         private Label lblNomeUser;
         private Label label3;
@@ -421,5 +466,9 @@
         private TextBox txtBairro;
         private Label Bairro;
         private Label lblCaminhoFoto;
+        private Panel pnlNavBar;
+        private LinkLabel lnkLogout;
+        private LinkLabel lnkPerfil;
+        private LinkLabel lnkHome;
     }
 }

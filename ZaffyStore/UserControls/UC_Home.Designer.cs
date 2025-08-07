@@ -26,44 +26,23 @@
         {
             panelFotos = new Panel();
             pictureBox1 = new PictureBox();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            conteinerCards = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            linkperfil = new LinkLabel();
-            panelFotos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            conteinerCards.SuspendLayout();
-=======
-=======
->>>>>>> homeNavBar
             pnlNavBar = new Panel();
             lnkLogout = new LinkLabel();
             lnkPerfil = new LinkLabel();
             lnkHome = new LinkLabel();
             dgvAnuncios = new DataGridView();
+            lblWelcome = new Label();
+            lnkCadAnuncios = new LinkLabel();
             panelFotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).BeginInit();
-<<<<<<< HEAD
->>>>>>> homeNavBar
-=======
->>>>>>> homeNavBar
             SuspendLayout();
             // 
             // panelFotos
             // 
             panelFotos.Controls.Add(pictureBox1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-            panelFotos.Location = new Point(87, 56);
-=======
             panelFotos.Location = new Point(76, 74);
->>>>>>> homeNavBar
-=======
-            panelFotos.Location = new Point(76, 74);
->>>>>>> homeNavBar
             panelFotos.Name = "panelFotos";
             panelFotos.Size = new Size(624, 163);
             panelFotos.TabIndex = 0;
@@ -79,49 +58,10 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // conteinerCards
-            // 
-            conteinerCards.AutoScroll = true;
-            conteinerCards.Controls.Add(tableLayoutPanel1);
-            conteinerCards.Location = new Point(77, 257);
-            conteinerCards.Margin = new Padding(5);
-            conteinerCards.Name = "conteinerCards";
-            conteinerCards.Size = new Size(665, 275);
-            conteinerCards.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.32051F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.67949F));
-            tableLayoutPanel1.Location = new Point(21, 23);
-            tableLayoutPanel1.Margin = new Padding(5);
-            tableLayoutPanel1.MaximumSize = new Size(200, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(5);
-            tableLayoutPanel1.Size = new Size(10, 10);
-            tableLayoutPanel1.TabIndex = 0;
-            // 
-            // linkperfil
-            // 
-            linkperfil.AutoSize = true;
-            linkperfil.Location = new Point(417, 27);
-            linkperfil.Name = "linkperfil";
-            linkperfil.Size = new Size(34, 15);
-            linkperfil.TabIndex = 2;
-            linkperfil.TabStop = true;
-            linkperfil.Text = "perfil";
-            linkperfil.LinkClicked += linkperfil_LinkClicked;
-=======
-=======
->>>>>>> homeNavBar
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Controls.Add(lnkLogout);
             pnlNavBar.Controls.Add(lnkPerfil);
             pnlNavBar.Controls.Add(lnkHome);
@@ -129,6 +69,7 @@
             pnlNavBar.Name = "pnlNavBar";
             pnlNavBar.Size = new Size(785, 32);
             pnlNavBar.TabIndex = 1;
+            pnlNavBar.Paint += pnlNavBar_Paint;
             // 
             // lnkLogout
             // 
@@ -148,12 +89,13 @@
             lnkPerfil.AutoSize = true;
             lnkPerfil.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkPerfil.LinkColor = Color.White;
-            lnkPerfil.Location = new Point(360, 9);
+            lnkPerfil.Location = new Point(658, 9);
             lnkPerfil.Name = "lnkPerfil";
             lnkPerfil.Size = new Size(42, 15);
             lnkPerfil.TabIndex = 5;
             lnkPerfil.TabStop = true;
             lnkPerfil.Text = "PERFIL";
+            lnkPerfil.LinkClicked += lnkPerfil_LinkClicked;
             // 
             // lnkHome
             // 
@@ -166,6 +108,7 @@
             lnkHome.TabIndex = 4;
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
+          //  lnkHome.LinkClicked += this.lnkHome_LinkClicked;
             // 
             // dgvAnuncios
             // 
@@ -180,50 +123,49 @@
             dgvAnuncios.Name = "dgvAnuncios";
             dgvAnuncios.Size = new Size(624, 249);
             dgvAnuncios.TabIndex = 3;
-<<<<<<< HEAD
->>>>>>> homeNavBar
-=======
->>>>>>> homeNavBar
+            dgvAnuncios.CellContentClick += dgvAnuncios_CellContentClick;
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Location = new Point(360, 46);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(38, 15);
+            lblWelcome.TabIndex = 4;
+            lblWelcome.Text = "label1";
+            // 
+            // lnkCadAnuncios
+            // 
+            lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkCadAnuncios.LinkColor = Color.White;
+            lnkCadAnuncios.Location = new Point(89, 9);
+            lnkCadAnuncios.Name = "lnkCadAnuncios";
+            lnkCadAnuncios.Size = new Size(67, 15);
+            lnkCadAnuncios.TabIndex = 7;
+            lnkCadAnuncios.TabStop = true;
+            lnkCadAnuncios.Text = "ANUNCIAR";
+            lnkCadAnuncios.LinkClicked += lnkCadAnuncios_LinkClicked;
             // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Controls.Add(linkperfil);
-            Controls.Add(conteinerCards);
-=======
+            Controls.Add(lblWelcome);
             Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
->>>>>>> homeNavBar
-=======
-            Controls.Add(dgvAnuncios);
-            Controls.Add(pnlNavBar);
->>>>>>> homeNavBar
             Controls.Add(panelFotos);
             Name = "UC_Home";
             Size = new Size(785, 537);
             Load += UC_Home_Load;
             panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            conteinerCards.ResumeLayout(false);
-            conteinerCards.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
-=======
-=======
->>>>>>> homeNavBar
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).EndInit();
             ResumeLayout(false);
-<<<<<<< HEAD
->>>>>>> homeNavBar
-=======
->>>>>>> homeNavBar
+            PerformLayout();
+
 
         }
 
@@ -231,22 +173,13 @@
 
         private System.Windows.Forms.Panel panelFotos;
         private System.Windows.Forms.PictureBox pictureBox1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        private System.Windows.Forms.Panel conteinerCards;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private LinkLabel linkperfil;
-=======
-=======
->>>>>>> homeNavBar
+
         private Panel pnlNavBar;
         private LinkLabel lnkLogout;
         private LinkLabel lnkPerfil;
         private LinkLabel lnkHome;
         private DataGridView dgvAnuncios;
-<<<<<<< HEAD
->>>>>>> homeNavBar
-=======
->>>>>>> homeNavBar
+        private Label lblWelcome;
+        private LinkLabel lnkCadAnuncios;
     }
 }

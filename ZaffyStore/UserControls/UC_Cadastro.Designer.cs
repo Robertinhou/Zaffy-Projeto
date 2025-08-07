@@ -257,7 +257,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.waves___Copia;
+            
             pictureBox3.Location = new Point(347, -14);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(304, 187);
