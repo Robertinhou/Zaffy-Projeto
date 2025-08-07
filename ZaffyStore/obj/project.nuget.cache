@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BgAI7J73FN8=",
+  "dgSpecHash": "zH5n/zWfan4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj",
+  "projectFilePath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno_Manha\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Aluno_Manha\\.nuget\\packages\\google.protobuf\\3.30.0\\google.protobuf.3.30.0.nupkg.sha512",

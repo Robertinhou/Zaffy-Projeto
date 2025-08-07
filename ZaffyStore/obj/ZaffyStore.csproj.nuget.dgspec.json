@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj": {}
+    "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj": {
+    "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
         "projectName": "ZaffyStore",
-        "projectPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\ZaffyStore.csproj",
+        "projectPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
         "packagesPath": "C:\\Users\\Aluno_Manha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\Zaffy-ProjetoAtual\\ZaffyStore\\obj\\",
+        "outputPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
