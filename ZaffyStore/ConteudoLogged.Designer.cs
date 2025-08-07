@@ -34,10 +34,18 @@ namespace ZaffyStore
             pbClose = new PictureBox();
             pictureBox1 = new PictureBox();
             pnlContentLogged = new Panel();
+<<<<<<< HEAD
+=======
+            lblNomeLogado = new Label();
+>>>>>>> homeNavBar
             pnlTopL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbMinimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+<<<<<<< HEAD
+=======
+            pnlContentLogged.SuspendLayout();
+>>>>>>> homeNavBar
             SuspendLayout();
             // 
             // pnlTopL
@@ -90,12 +98,27 @@ namespace ZaffyStore
             // 
             // pnlContentLogged
             // 
+<<<<<<< HEAD
+=======
+            pnlContentLogged.Controls.Add(lblNomeLogado);
+>>>>>>> homeNavBar
             pnlContentLogged.Dock = DockStyle.Fill;
             pnlContentLogged.Location = new Point(0, 32);
             pnlContentLogged.Name = "pnlContentLogged";
             pnlContentLogged.Size = new Size(785, 454);
             pnlContentLogged.TabIndex = 2;
             // 
+<<<<<<< HEAD
+=======
+            // lblNomeLogado
+            // 
+            lblNomeLogado.AutoSize = true;
+            lblNomeLogado.Location = new Point(388, 13);
+            lblNomeLogado.Name = "lblNomeLogado";
+            lblNomeLogado.Size = new Size(0, 15);
+            lblNomeLogado.TabIndex = 0;
+            // 
+>>>>>>> homeNavBar
             // ConteudoLogged
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -111,6 +134,11 @@ namespace ZaffyStore
             ((System.ComponentModel.ISupportInitialize)pbMinimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+<<<<<<< HEAD
+=======
+            pnlContentLogged.ResumeLayout(false);
+            pnlContentLogged.PerformLayout();
+>>>>>>> homeNavBar
             ResumeLayout(false);
         }
 
@@ -125,5 +153,9 @@ namespace ZaffyStore
         private PictureBox pbClose;
         private PictureBox pictureBox1;
         private PictureBox pbMinimize;
+<<<<<<< HEAD
+=======
+        private Label lblNomeLogado;
+>>>>>>> homeNavBar
     }
 }

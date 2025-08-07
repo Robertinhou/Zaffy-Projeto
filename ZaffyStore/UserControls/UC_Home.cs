@@ -23,23 +23,24 @@ namespace ZaffyStore.UserControls
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
-            // conteinerCards cresce com conteúdo
-            conteinerCards.AutoScroll = false;
-            conteinerCards.AutoSize = true;
-            conteinerCards.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
-            // tableLayoutPanel1 cresce com os cards
-            tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
             CarregarBanners();
         }
 
         private void UC_Home_Load(object sender, EventArgs e)
         {
-            tableLayoutPanel1.MaximumSize = new Size(conteinerCards.ClientSize.Width - 20, 0);
 
-            CarregarMaisCards();
+
+
+           
+           
+
+            if (Sessao.UsuarioAtual != null)
+            {
+                MessageBox.Show($"Bem-vindoou, {Sessao.UsuarioAtual.Nome}!");
+            }
+
 
             if (imagens == null || imagens.Length == 0)
             {
@@ -51,6 +52,13 @@ namespace ZaffyStore.UserControls
             pictureBox1.Image = imagens[imagemAtual];
 
             _ = TrocarBannersAsync();
+
+
+            // Carregar os anúncios
+
+            Anuncios anuncios = new Anuncios();
+            //anuncios.ListarAnuncios(dgvAnuncios);
+
         }
 
         private void CarregarBanners()
@@ -58,6 +66,9 @@ namespace ZaffyStore.UserControls
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\"; Robert
             string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\";//  Matheus pc senai
            // string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
+
+            //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\";
+
 
             if (Directory.Exists(caminhoDasImagens))
             {
@@ -117,6 +128,7 @@ namespace ZaffyStore.UserControls
             }
         }
 
+
         private void CarregarMaisCards()
         {
             for (int i = 0; i < CARDS_POR_CARGA; i++)
@@ -158,6 +170,18 @@ namespace ZaffyStore.UserControls
             UC_Perfil perfil = new UC_Perfil();
             this.Controls.Clear();
             this.Controls.Add(perfil);
+        }
+
+        private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
+
+            UC_Login login = new UC_Login();
+
+            this.Controls.Clear();
+            this.Controls.Add(login);
+
 
         }
     }

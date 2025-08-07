@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+using Org.BouncyCastle.Crypto.Macs;
+>>>>>>> homeNavBar
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,6 +13,7 @@ namespace ZaffyStore
     {
         bool mouseDown;
         Point lastLocation;
+<<<<<<< HEAD
 
         
         public ConteudoLogged()
@@ -16,6 +21,28 @@ namespace ZaffyStore
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             pnlTopL.MouseMove += pnlTopL_MouseMove;
+=======
+        public Usuarios userLogado = new Usuarios();
+        
+        public ConteudoLogged(Usuarios user)
+        {
+
+            InitializeComponent();
+
+            Sessao session = new Sessao();
+            userLogado.Email = user.Email;
+         
+            userLogado.Senha = Usuarios.CriptografarSenha(user.Senha);
+
+            session.BuscarLogado(userLogado);
+
+
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            pnlTopL.MouseMove += pnlTopL_MouseMove;
+            
+
+>>>>>>> homeNavBar
         }
 
 
@@ -25,6 +52,10 @@ namespace ZaffyStore
         {
             UC_Home home = new UC_Home();
             pnlContentLogged.Controls.Add(home);
+<<<<<<< HEAD
+=======
+            
+>>>>>>> homeNavBar
         }
 
         

@@ -93,16 +93,6 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_excluir_48__1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-excluir-48 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_excluir_481 {
             get {
                 object obj = ResourceManager.GetObject("icons8-excluir-481", resourceCulture);
@@ -143,26 +133,6 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_usuário_96 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-usuário-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_visível_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-visível-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap linhas {
             get {
                 object obj = ResourceManager.GetObject("linhas", resourceCulture);
@@ -193,16 +163,6 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minimize {
-            get {
-                object obj = ResourceManager.GetObject("minimize", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade", resourceCulture);
@@ -216,16 +176,6 @@ namespace ZaffyStore.Properties {
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade1 {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade11 {
-            get {
-                object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -49,7 +49,10 @@
             btnEnviar = new Button();
             lblCodigo = new Label();
             panelSenha = new Panel();
+<<<<<<< HEAD
             linkLogin2 = new LinkLabel();
+=======
+>>>>>>> homeNavBar
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbEyeClosed).BeginInit();
@@ -279,6 +282,7 @@
             panelSenha.Size = new Size(328, 111);
             panelSenha.TabIndex = 30;
             // 
+<<<<<<< HEAD
             // linkLogin2
             // 
             linkLogin2.ActiveLinkColor = Color.FromArgb(192, 255, 255);
@@ -294,11 +298,16 @@
             linkLogin2.Text = "Login";
             linkLogin2.LinkClicked += linkLogin2_LinkClicked;
             // 
+=======
+>>>>>>> homeNavBar
             // UC_EsqueciSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
             Controls.Add(linkLogin2);
+=======
+>>>>>>> homeNavBar
             Controls.Add(btnEnviar);
             Controls.Add(panelSenha);
             Controls.Add(lblCodigo);
@@ -346,6 +355,9 @@
         private Button btnEnviar;
         private Label lblCodigo;
         private Panel panelSenha;
+<<<<<<< HEAD
         private LinkLabel linkLogin2;
+=======
+>>>>>>> homeNavBar
     }
 }

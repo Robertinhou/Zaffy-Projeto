@@ -8,8 +8,12 @@
     ".NETCoreApp,Version=v8.0": {
       "ZaffyStore/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "MySql.Data": "9.4.0",
           "Newtonsoft.Json": "13.0.1"
+=======
+          "MySql.Data": "9.4.0"
+>>>>>>> homeNavBar
         },
         "runtime": {
           "ZaffyStore.dll": {}
@@ -112,6 +116,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -120,6 +125,8 @@
           }
         }
       },
+=======
+>>>>>>> homeNavBar
       "System.Buffers/4.5.1": {},
       "System.Configuration.ConfigurationManager/8.0.0": {
         "dependencies": {
@@ -299,6 +306,7 @@
       "path": "mysql.data/9.4.0",
       "hashPath": "mysql.data.9.4.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
@@ -306,6 +314,8 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
+=======
+>>>>>>> homeNavBar
     "System.Buffers/4.5.1": {
       "type": "package",
       "serviceable": true,
