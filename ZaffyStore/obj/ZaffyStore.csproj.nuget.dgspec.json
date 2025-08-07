@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robert\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj": {}
+    "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robert\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj": {
+    "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robert\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
         "projectName": "ZaffyStore",
-        "projectPath": "C:\\Users\\Robert\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
-        "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robert\\source\\repos\\Zaffy-Projeto\\ZaffyStore\\obj\\",
+        "projectPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\ZaffyStore.csproj",
+        "packagesPath": "C:\\Users\\Aluno_Manha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aluno_Manha\\Source\\Repos\\zaffy\\Zaffy-Projeto\\ZaffyStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aluno_Manha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
