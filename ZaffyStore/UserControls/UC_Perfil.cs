@@ -130,11 +130,11 @@ namespace ZaffyStore.UserControls
 
                         if (usuarios.CadastroInformacoes(lblCaminhoFoto.Text))
                         {
-                            MessageBox.Show("INFOS SALVAS");
+                            MessageBox.Show("Informações alteradas!");
                         }
                         else
                         {
-                            MessageBox.Show("nÃO CADAStra nao sei pq");
+                            MessageBox.Show("Não cadastrou");
                         }
                     }
                     else

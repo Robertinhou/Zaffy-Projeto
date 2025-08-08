@@ -50,18 +50,20 @@
             // panelFotos
             // 
             panelFotos.Controls.Add(pictureBox1);
-            panelFotos.Location = new Point(76, 74);
+            panelFotos.Location = new Point(109, 123);
+            panelFotos.Margin = new Padding(4, 5, 4, 5);
             panelFotos.Name = "panelFotos";
-            panelFotos.Size = new Size(624, 163);
+            panelFotos.Size = new Size(891, 272);
             panelFotos.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.MinimumSize = new Size(624, 163);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            pictureBox1.MinimumSize = new Size(891, 272);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(624, 163);
+            pictureBox1.Size = new Size(891, 272);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -75,8 +77,9 @@
             pnlNavBar.Controls.Add(lnkPerfil);
             pnlNavBar.Controls.Add(lnkHome);
             pnlNavBar.Location = new Point(0, 0);
+            pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(785, 32);
+            pnlNavBar.Size = new Size(1121, 53);
             pnlNavBar.TabIndex = 1;
             pnlNavBar.Paint += pnlNavBar_Paint;
             // 
@@ -85,9 +88,10 @@
             lnkMeuAnuncio.AutoSize = true;
             lnkMeuAnuncio.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkMeuAnuncio.LinkColor = Color.White;
-            lnkMeuAnuncio.Location = new Point(551, 9);
+            lnkMeuAnuncio.Location = new Point(787, 15);
+            lnkMeuAnuncio.Margin = new Padding(4, 0, 4, 0);
             lnkMeuAnuncio.Name = "lnkMeuAnuncio";
-            lnkMeuAnuncio.Size = new Size(101, 15);
+            lnkMeuAnuncio.Size = new Size(154, 25);
             lnkMeuAnuncio.TabIndex = 8;
             lnkMeuAnuncio.TabStop = true;
             lnkMeuAnuncio.Text = "MEUS ANÚNCIOS";
@@ -98,9 +102,10 @@
             lnkCadAnuncios.AutoSize = true;
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(89, 9);
+            lnkCadAnuncios.Location = new Point(127, 15);
+            lnkCadAnuncios.Margin = new Padding(4, 0, 4, 0);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
-            lnkCadAnuncios.Size = new Size(67, 15);
+            lnkCadAnuncios.Size = new Size(101, 25);
             lnkCadAnuncios.TabIndex = 7;
             lnkCadAnuncios.TabStop = true;
             lnkCadAnuncios.Text = "ANUNCIAR";
@@ -111,9 +116,10 @@
             lnkLogout.AutoSize = true;
             lnkLogout.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkLogout.LinkColor = Color.White;
-            lnkLogout.Location = new Point(715, 9);
+            lnkLogout.Location = new Point(1021, 15);
+            lnkLogout.Margin = new Padding(4, 0, 4, 0);
             lnkLogout.Name = "lnkLogout";
-            lnkLogout.Size = new Size(47, 15);
+            lnkLogout.Size = new Size(72, 25);
             lnkLogout.TabIndex = 6;
             lnkLogout.TabStop = true;
             lnkLogout.Text = "LogOut";
@@ -124,9 +130,10 @@
             lnkPerfil.AutoSize = true;
             lnkPerfil.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkPerfil.LinkColor = Color.White;
-            lnkPerfil.Location = new Point(658, 9);
+            lnkPerfil.Location = new Point(940, 15);
+            lnkPerfil.Margin = new Padding(4, 0, 4, 0);
             lnkPerfil.Name = "lnkPerfil";
-            lnkPerfil.Size = new Size(42, 15);
+            lnkPerfil.Size = new Size(64, 25);
             lnkPerfil.TabIndex = 5;
             lnkPerfil.TabStop = true;
             lnkPerfil.Text = "PERFIL";
@@ -137,9 +144,10 @@
             lnkHome.AutoSize = true;
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
-            lnkHome.Location = new Point(23, 9);
+            lnkHome.Location = new Point(33, 15);
+            lnkHome.Margin = new Padding(4, 0, 4, 0);
             lnkHome.Name = "lnkHome";
-            lnkHome.Size = new Size(42, 15);
+            lnkHome.Size = new Size(64, 25);
             lnkHome.TabIndex = 4;
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
@@ -153,18 +161,21 @@
             dgvAnuncios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAnuncios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAnuncios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAnuncios.Location = new Point(107, 468);
+            dgvAnuncios.Location = new Point(153, 780);
+            dgvAnuncios.Margin = new Padding(4, 5, 4, 5);
             dgvAnuncios.Name = "dgvAnuncios";
-            dgvAnuncios.Size = new Size(576, 211);
+            dgvAnuncios.RowHeadersWidth = 62;
+            dgvAnuncios.Size = new Size(823, 352);
             dgvAnuncios.TabIndex = 3;
             dgvAnuncios.CellContentClick += dgvAnuncios_CellContentClick;
             // 
             // lblWelcome
             // 
             lblWelcome.AutoSize = true;
-            lblWelcome.Location = new Point(360, 46);
+            lblWelcome.Location = new Point(514, 77);
+            lblWelcome.Margin = new Padding(4, 0, 4, 0);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(38, 15);
+            lblWelcome.Size = new Size(59, 25);
             lblWelcome.TabIndex = 4;
             lblWelcome.Text = "label1";
             lblWelcome.TextAlign = ContentAlignment.TopCenter;
@@ -176,9 +187,10 @@
             panel1.Controls.Add(btnVisualizar);
             panel1.Controls.Add(lblProductName);
             panel1.Controls.Add(cardFoto);
-            panel1.Location = new Point(305, 243);
+            panel1.Location = new Point(436, 405);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(156, 219);
+            panel1.Size = new Size(223, 365);
             panel1.TabIndex = 5;
             panel1.MouseEnter += panel1_MouseEnter;
             panel1.MouseLeave += panel1_MouseLeave;
@@ -186,9 +198,10 @@
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(96, 162);
+            lblPrice.Location = new Point(137, 270);
+            lblPrice.Margin = new Padding(4, 0, 4, 0);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(56, 15);
+            lblPrice.Size = new Size(92, 25);
             lblPrice.TabIndex = 3;
             lblPrice.Text = "R$ 8000.7";
             // 
@@ -196,9 +209,10 @@
             // 
             btnVisualizar.BackColor = Color.FromArgb(115, 76, 191);
             btnVisualizar.ForeColor = Color.White;
-            btnVisualizar.Location = new Point(11, 180);
+            btnVisualizar.Location = new Point(16, 300);
+            btnVisualizar.Margin = new Padding(4, 5, 4, 5);
             btnVisualizar.Name = "btnVisualizar";
-            btnVisualizar.Size = new Size(136, 30);
+            btnVisualizar.Size = new Size(194, 50);
             btnVisualizar.TabIndex = 2;
             btnVisualizar.Text = "Visualizar";
             btnVisualizar.UseVisualStyleBackColor = false;
@@ -207,18 +221,20 @@
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Location = new Point(4, 137);
+            lblProductName.Location = new Point(6, 228);
+            lblProductName.Margin = new Padding(4, 0, 4, 0);
             lblProductName.Name = "lblProductName";
-            lblProductName.Size = new Size(122, 30);
+            lblProductName.Size = new Size(187, 50);
             lblProductName.TabIndex = 1;
             lblProductName.Text = "PS4 SLIM do Cristiano\r\n Ronaldo (Jr)";
             // 
             // cardFoto
             // 
             cardFoto.Image = Properties.Resources.download__1_;
-            cardFoto.Location = new Point(4, 5);
+            cardFoto.Location = new Point(6, 8);
+            cardFoto.Margin = new Padding(4, 5, 4, 5);
             cardFoto.Name = "cardFoto";
-            cardFoto.Size = new Size(148, 129);
+            cardFoto.Size = new Size(211, 215);
             cardFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             cardFoto.TabIndex = 0;
             cardFoto.TabStop = false;
@@ -228,16 +244,16 @@
             // 
             // UC_Home
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
             Controls.Add(panel1);
             Controls.Add(lblWelcome);
             Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
             Controls.Add(panelFotos);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "UC_Home";
-            Size = new Size(785, 693);
+            Size = new Size(1121, 1155);
             Load += UC_Home_Load;
             panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

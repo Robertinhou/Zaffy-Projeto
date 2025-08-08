@@ -73,7 +73,7 @@ namespace ZaffyStore.UserControls
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\";
 
 
-            string caminhoDasImagens = @"C:\Users\Robert\source\repos\Zaffy-Projetoas\ZaffyStore\Resources\banners\";
+            string caminhoDasImagens = @"C:\Users\Aluno_Manha\Desktop\zaffy\Zaffy-Projeto\ZaffyStore\Resources\banners\";
 
 
             if (Directory.Exists(caminhoDasImagens))

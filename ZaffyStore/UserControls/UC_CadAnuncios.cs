@@ -24,6 +24,10 @@ namespace ZaffyStore.UserControls
         private void lnkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            UC_Home home = new UC_Home();
+            this.Controls.Clear();
+            this.Controls.Add(home);
+
         }
 
         private void lnkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
