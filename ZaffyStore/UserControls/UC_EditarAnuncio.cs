@@ -136,9 +136,7 @@ namespace ZaffyStore.UserControls
 
         private void lnkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UC_Home home = new UC_Home();
-            this.Parent.Controls.Clear();
-            this.Parent.Controls.Add(home);
+
         }
 
         private void lnkCadAnuncios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -150,10 +148,31 @@ namespace ZaffyStore.UserControls
 
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
             Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
             UC_Login login = new UC_Login();
             this.Parent.Controls.Clear();
             this.Parent.Controls.Add(login);
+        }
+
+
+        private void linkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Home home = new UC_Home();
+            this.Parent.Controls.Clear();
+            this.Parent.Controls.Add(home);
+        }
+
+        private void pbPerfil_Click(object sender, EventArgs e)
+        {
+            UC_Perfil perfil = new UC_Perfil();
+            this.Parent.Controls.Clear();
+            this.Parent.Controls.Add(perfil);
+            
         }
     }
 }

@@ -103,6 +103,16 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_casa_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-casa-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_excluir_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-excluir-48", resourceCulture);
@@ -153,9 +163,49 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_sair_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sair-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_usuário_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-usuário-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuário_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuário-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuário_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuário-481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuário_482 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuário-482", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +293,16 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ondaBaixo2 {
+            get {
+                object obj = ResourceManager.GetObject("ondaBaixo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade", resourceCulture);
@@ -276,6 +336,16 @@ namespace ZaffyStore.Properties {
         internal static System.Drawing.Bitmap waves {
             get {
                 object obj = ResourceManager.GetObject("waves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zaffyNav {
+            get {
+                object obj = ResourceManager.GetObject("zaffyNav", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

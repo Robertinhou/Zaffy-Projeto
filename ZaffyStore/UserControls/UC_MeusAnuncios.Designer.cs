@@ -51,7 +51,7 @@
             pnlNavBar.Dock = DockStyle.Top;
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(786, 32);
+            pnlNavBar.Size = new Size(786, 38);
             pnlNavBar.TabIndex = 6;
             pnlNavBar.Paint += pnlNavBar_Paint;
             // 
