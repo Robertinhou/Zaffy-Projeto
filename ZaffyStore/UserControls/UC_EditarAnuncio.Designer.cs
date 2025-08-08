@@ -86,10 +86,11 @@
             // linkHome
             // 
             linkHome.AutoSize = true;
+            linkHome.Cursor = Cursors.Hand;
             linkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             linkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             linkHome.LinkColor = Color.White;
-            linkHome.Location = new Point(83, 9);
+            linkHome.Location = new Point(78, 9);
             linkHome.Name = "linkHome";
             linkHome.Size = new Size(55, 19);
             linkHome.TabIndex = 42;
@@ -99,6 +100,7 @@
             // 
             // pbLogout
             // 
+            pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
             pbLogout.Location = new Point(746, 1);
             pbLogout.Name = "pbLogout";
@@ -110,6 +112,7 @@
             // 
             // pbPerfil
             // 
+            pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
             pbPerfil.Location = new Point(704, 1);
             pbPerfil.Name = "pbPerfil";
@@ -122,10 +125,11 @@
             // lnkCadAnuncios
             // 
             lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.Cursor = Cursors.Hand;
             lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(158, 9);
+            lnkCadAnuncios.Location = new Point(149, 9);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
             lnkCadAnuncios.Size = new Size(92, 19);
             lnkCadAnuncios.TabIndex = 7;
@@ -136,6 +140,7 @@
             // btnSalvar
             // 
             btnSalvar.BackColor = Color.FromArgb(115, 76, 191);
+            btnSalvar.Cursor = Cursors.Hand;
             btnSalvar.ForeColor = Color.White;
             btnSalvar.Location = new Point(616, 503);
             btnSalvar.Name = "btnSalvar";

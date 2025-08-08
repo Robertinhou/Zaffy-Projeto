@@ -142,8 +142,8 @@ namespace ZaffyStore.UserControls
         private void lnkCadAnuncios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UC_CadAnuncios cadAnuncios = new UC_CadAnuncios();
-            this.Parent.Controls.Clear();
-            this.Parent.Controls.Add(cadAnuncios);
+            this.Controls.Clear();
+            this.Controls.Add(cadAnuncios);
         }
 
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -164,7 +164,7 @@ namespace ZaffyStore.UserControls
         {
             UC_Home home = new UC_Home();
             this.Parent.Controls.Clear();
-            this.Parent.Controls.Add(home);
+            this.Controls.Add(home);
         }
 
         private void pbPerfil_Click(object sender, EventArgs e)

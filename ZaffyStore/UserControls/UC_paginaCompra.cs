@@ -44,5 +44,19 @@ namespace ZaffyStore.UserControls
             this.Parent.Controls.Clear();
             this.Parent.Controls.Add(perfil);
         }
+
+        private void linkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Home home = new UC_Home();
+            this.Parent.Controls.Clear();
+            this.Parent.Controls.Add(home);
+        }
+
+        private void lnkCadAnuncios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_CadAnuncios cadAnuncios = new UC_CadAnuncios();
+            this.Parent.Controls.Clear();
+            this.Parent.Controls.Add(cadAnuncios);
+        }
     }
 }

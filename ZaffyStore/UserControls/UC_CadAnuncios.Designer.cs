@@ -136,7 +136,7 @@
             // 
             lblMessageInfos.AutoSize = true;
             lblMessageInfos.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMessageInfos.Location = new Point(39, 183);
+            lblMessageInfos.Location = new Point(37, 161);
             lblMessageInfos.Name = "lblMessageInfos";
             lblMessageInfos.Size = new Size(394, 29);
             lblMessageInfos.TabIndex = 7;
@@ -146,7 +146,7 @@
             // 
             lblProductName.AutoSize = true;
             lblProductName.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProductName.Location = new Point(39, 241);
+            lblProductName.Location = new Point(37, 219);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(143, 22);
             lblProductName.TabIndex = 8;
@@ -154,7 +154,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(39, 282);
+            txtNome.Location = new Point(37, 260);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(502, 23);
             txtNome.TabIndex = 9;
@@ -163,7 +163,7 @@
             // 
             lblPreco.AutoSize = true;
             lblPreco.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPreco.Location = new Point(580, 241);
+            lblPreco.Location = new Point(578, 219);
             lblPreco.Name = "lblPreco";
             lblPreco.Size = new Size(54, 22);
             lblPreco.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             // mtxtPreco
             // 
-            mtxtPreco.Location = new Point(580, 282);
+            mtxtPreco.Location = new Point(578, 260);
             mtxtPreco.Name = "mtxtPreco";
             mtxtPreco.Size = new Size(182, 23);
             mtxtPreco.TabIndex = 12;
@@ -181,7 +181,7 @@
             // 
             lblContato.AutoSize = true;
             lblContato.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblContato.Location = new Point(580, 315);
+            lblContato.Location = new Point(578, 293);
             lblContato.Name = "lblContato";
             lblContato.Size = new Size(70, 22);
             lblContato.TabIndex = 13;
@@ -189,14 +189,14 @@
             // 
             // txtContato
             // 
-            txtContato.Location = new Point(580, 347);
+            txtContato.Location = new Point(578, 325);
             txtContato.Name = "txtContato";
             txtContato.Size = new Size(182, 23);
             txtContato.TabIndex = 15;
             // 
             // txtDesc
             // 
-            txtDesc.Location = new Point(39, 356);
+            txtDesc.Location = new Point(37, 334);
             txtDesc.Multiline = true;
             txtDesc.Name = "txtDesc";
             txtDesc.Size = new Size(347, 96);
@@ -206,7 +206,7 @@
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescricao.Location = new Point(39, 315);
+            lblDescricao.Location = new Point(37, 293);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(85, 22);
             lblDescricao.TabIndex = 16;
@@ -216,7 +216,7 @@
             // 
             lblFoto.AutoSize = true;
             lblFoto.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFoto.Location = new Point(452, 315);
+            lblFoto.Location = new Point(450, 293);
             lblFoto.Name = "lblFoto";
             lblFoto.Size = new Size(44, 22);
             lblFoto.TabIndex = 18;
@@ -225,7 +225,7 @@
             // pbImagem
             // 
             pbImagem.Image = Properties.Resources.carregarfoto;
-            pbImagem.Location = new Point(411, 347);
+            pbImagem.Location = new Point(409, 325);
             pbImagem.Name = "pbImagem";
             pbImagem.Size = new Size(130, 105);
             pbImagem.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -235,7 +235,7 @@
             // 
             // txtLocal
             // 
-            txtLocal.Location = new Point(39, 514);
+            txtLocal.Location = new Point(37, 466);
             txtLocal.Name = "txtLocal";
             txtLocal.Size = new Size(502, 23);
             txtLocal.TabIndex = 21;
@@ -244,7 +244,7 @@
             // 
             lblLocal.AutoSize = true;
             lblLocal.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLocal.Location = new Point(39, 473);
+            lblLocal.Location = new Point(37, 441);
             lblLocal.Name = "lblLocal";
             lblLocal.Size = new Size(51, 22);
             lblLocal.TabIndex = 20;
@@ -254,7 +254,7 @@
             // 
             btnAnunciar.BackColor = Color.FromArgb(115, 76, 191);
             btnAnunciar.ForeColor = Color.White;
-            btnAnunciar.Location = new Point(606, 504);
+            btnAnunciar.Location = new Point(608, 372);
             btnAnunciar.Name = "btnAnunciar";
             btnAnunciar.Size = new Size(126, 40);
             btnAnunciar.TabIndex = 22;
