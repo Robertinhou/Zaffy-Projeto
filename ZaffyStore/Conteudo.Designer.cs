@@ -46,9 +46,8 @@
             panelTop.Controls.Add(pbClose);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
-            panelTop.Margin = new Padding(4, 5, 4, 5);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1144, 53);
+            panelTop.Size = new Size(801, 32);
             panelTop.TabIndex = 0;
             panelTop.MouseDown += panelTop_MouseDown;
             panelTop.MouseMove += panelTop_MouseMove;
@@ -58,10 +57,9 @@
             // 
             pbMinimize.Cursor = Cursors.Hand;
             pbMinimize.Image = Properties.Resources.minimize;
-            pbMinimize.Location = new Point(1053, 5);
-            pbMinimize.Margin = new Padding(4, 5, 4, 5);
+            pbMinimize.Location = new Point(737, 3);
             pbMinimize.Name = "pbMinimize";
-            pbMinimize.Size = new Size(40, 43);
+            pbMinimize.Size = new Size(28, 26);
             pbMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             pbMinimize.TabIndex = 3;
             pbMinimize.TabStop = false;
@@ -71,10 +69,9 @@
             // 
             pbClose.Cursor = Cursors.Hand;
             pbClose.Image = Properties.Resources.icons8_excluir_48__1_;
-            pbClose.Location = new Point(1101, 5);
-            pbClose.Margin = new Padding(4, 5, 4, 5);
+            pbClose.Location = new Point(771, 3);
             pbClose.Name = "pbClose";
-            pbClose.Size = new Size(37, 43);
+            pbClose.Size = new Size(26, 26);
             pbClose.SizeMode = PictureBoxSizeMode.Zoom;
             pbClose.TabIndex = 2;
             pbClose.TabStop = false;
@@ -82,36 +79,31 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(0, 53);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(0, 32);
             panel1.Name = "panel1";
             panel1.Size = new Size(0, 0);
             panel1.TabIndex = 1;
             // 
             // panelCentral
             // 
-            panelCentral.AutoScroll = true;
-            panelCentral.AutoSize = true;
             panelCentral.Dock = DockStyle.Fill;
-            panelCentral.Location = new Point(0, 53);
-            panelCentral.Margin = new Padding(4, 5, 4, 5);
+            panelCentral.Location = new Point(0, 32);
             panelCentral.Name = "panelCentral";
-            panelCentral.Size = new Size(1144, 822);
+            panelCentral.Size = new Size(801, 441);
             panelCentral.TabIndex = 2;
             // 
             // Conteudo
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1144, 875);
+            ClientSize = new Size(801, 473);
             Controls.Add(panelCentral);
             Controls.Add(panel1);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 5, 4, 5);
-            MaximumSize = new Size(1144, 1167);
-            MinimumSize = new Size(1144, 875);
+            MaximumSize = new Size(801, 700);
+            MinimumSize = new Size(801, 436);
             Name = "Conteudo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -121,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)pbMinimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbClose).EndInit();
             ResumeLayout(false);
-            PerformLayout();
 
 
         }

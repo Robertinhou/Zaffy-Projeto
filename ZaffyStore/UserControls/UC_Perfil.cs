@@ -114,6 +114,7 @@ namespace ZaffyStore.UserControls
                     !string.IsNullOrWhiteSpace(mskdDataNascimento.Text))
                 {
                     Usuarios usuarios = new Usuarios();
+                    usuarios.Nome = Sessao.UsuarioAtual.Nome;
                     usuarios.Bairro = txtBairro.Text;
                     usuarios.Rua = txtRua.Text;
                     usuarios.Email = txtEmail.Text;
@@ -123,7 +124,7 @@ namespace ZaffyStore.UserControls
                     usuarios.Cep = mskdCep.Text;
                     usuarios.Celular = mskdCelular.Text;
                     usuarios.Data_Nascimento = DateTime.Parse(mskdDataNascimento.Text);
-                    usuarios.Caminho_Foto = lblCaminhoFoto.Text;
+                    usuarios.Caminho_Foto = Sessao.UsuarioAtual.Caminho_Foto;
 
                     if (Usuarios.IsCpf(mskdCpf.Text))
                     {
@@ -131,6 +132,7 @@ namespace ZaffyStore.UserControls
                         if (usuarios.CadastroInformacoes(lblCaminhoFoto.Text))
                         {
                             MessageBox.Show("Informações alteradas!");
+                            Sessao.UsuarioAtual = usuarios;
                         }
                         else
                         {

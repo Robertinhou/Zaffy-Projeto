@@ -32,13 +32,14 @@ namespace ZaffyStore.UserControls
             txtLocal.Text = anuncioAtual.Localidade;
             txtContato.Text = anuncioAtual.Contato;
 
+            //pbImagem.Image = anuncioAtual.Foto;
             // Puxa imagem ao carregar
+
             if (!string.IsNullOrEmpty(anuncioAtual.Foto) && File.Exists(anuncioAtual.Foto))
             {
-                using (FileStream fs = new FileStream(anuncioAtual.Foto, FileMode.Open, FileAccess.Read))
-                {
-                    pbImagem.Image = Image.FromStream(fs);
-                }
+
+                pbImagem.Image = Image.FromFile(anuncioAtual.Foto);
+
             }
             else
             {
@@ -95,6 +96,7 @@ namespace ZaffyStore.UserControls
                     anuncioAtual.Localidade = txtLocal.Text;
                     anuncioAtual.Contato = txtContato.Text;
                     anuncioAtual.Horario = DateTime.Now.TimeOfDay;
+
 
                     if (anuncioAtual.AtualizarAnuncio())
                     {

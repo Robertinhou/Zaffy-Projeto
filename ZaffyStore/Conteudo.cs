@@ -17,6 +17,7 @@ namespace ZaffyStore
         {
             UC_Login login = new UC_Login();
             adicionarUserControl(login);
+            HorizontalScroll.Enabled = false;
         }
 
 

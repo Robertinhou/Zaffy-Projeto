@@ -22,7 +22,7 @@ namespace ZaffyStore.UserControls
             // UC_Home cresce com conteúdo
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-
+            
 
 
 
@@ -33,6 +33,7 @@ namespace ZaffyStore.UserControls
 
             HorizontalScroll.Enabled = false;
             VerticalScroll.Enabled = true;
+            HorizontalScroll.Visible = false;
             this.Dock = DockStyle.Fill;
 
             var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
