@@ -172,7 +172,7 @@ namespace ZaffyStore.UserControls
             UC_Perfil perfil = new UC_Perfil();
             this.Controls.Clear();
             this.Controls.Add(perfil);
-            
+
         }
     }
 }

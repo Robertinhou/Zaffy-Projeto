@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace ZaffyStore
 {
-    public  class Anuncios
+    public class Anuncios
     {
 
         private int id_anuncio;
@@ -97,7 +97,7 @@ namespace ZaffyStore
             {
                 using (MySqlConnection conexaoBanco = new ConexaoBD().Conectar())
                 {
-                    
+
                     string sqlInsert = "INSERT into anuncios (nome, descricao, categoria, preco, dataPost, horario, localidade, contato, id_user, foto) " +
                                        "VALUES (@nome, @descricao, @categoria, @preco, @dataPost, @horario, @localidade, @contato, @id_user, @foto)";
 
@@ -218,15 +218,15 @@ namespace ZaffyStore
         {
             try
             {
-               
+
 
                 using (MySqlConnection conexao = new ConexaoBD().Conectar())
                 {
-                    string query = "SELECT * FROM anuncios WHERE id_user = @id";
+                    string query = "SELECT id_anuncio, nome, descricao, categoria, preco, dataPost, horario, localidade, contato, foto FROM anuncios WHERE id_user = @id";
 
                     using (MySqlCommand comando = new MySqlCommand(query, conexao))
                     {
-                        comando.Parameters.AddWithValue("@id",Convert.ToInt32(Sessao.UsuarioAtual.Id));
+                        comando.Parameters.AddWithValue("@id", Convert.ToInt32(Sessao.UsuarioAtual.Id));
 
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(comando))
                         {
@@ -252,7 +252,7 @@ namespace ZaffyStore
             {
                 using (MySqlConnection conexao = new ConexaoBD().Conectar())
                 {
-                  
+
 
                     string buscarNome = "SELECT * FROM anuncios WHERE nome = @nome and id = @id";
                     MySqlCommand comando = new MySqlCommand(buscarNome, conexao);
@@ -266,30 +266,11 @@ namespace ZaffyStore
 
                         if (reader.Read())
                         {
-
-                            
-
-
                             Anuncios anuncio = new Anuncios
                             {
-
                                 Nome = reader["nome"].ToString(),
                                 Descricao = reader["descricao"].ToString(),
-
-
-
                             };
-
-
-
-
-
-                            
-
-
-
-
-
 
                             return true; // ✅ Login bem-sucedido
 
@@ -306,15 +287,9 @@ namespace ZaffyStore
             }
             catch (Exception ex)
             {
-                
-
-                        
-                            return false; // ❌ Login falhou, email ou senha incorretos
-                        
-                    
-                
+                return false; // ❌ Login falhou, email ou senha incorretos;                
             }
-            
+
         }
 
 

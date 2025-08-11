@@ -29,25 +29,30 @@
         private void InitializeComponent()
         {
             pnlNavBar = new Panel();
+            pbLogout = new PictureBox();
+            pbPerfil = new PictureBox();
+            pictureBox2 = new PictureBox();
             lnkCadAnuncios = new LinkLabel();
-            lnkLogout = new LinkLabel();
-            lnkPerfil = new LinkLabel();
             lnkHome = new LinkLabel();
             dgvMeusAnuncios = new DataGridView();
-            btnEditar = new Button();
             btnExcluir = new Button();
             btnListar = new Button();
             label1 = new Label();
+            label2 = new Label();
             pnlNavBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPerfil).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMeusAnuncios).BeginInit();
             SuspendLayout();
             // 
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(pbLogout);
+            pnlNavBar.Controls.Add(pbPerfil);
+            pnlNavBar.Controls.Add(pictureBox2);
             pnlNavBar.Controls.Add(lnkCadAnuncios);
-            pnlNavBar.Controls.Add(lnkLogout);
-            pnlNavBar.Controls.Add(lnkPerfil);
             pnlNavBar.Controls.Add(lnkHome);
             pnlNavBar.Dock = DockStyle.Top;
             pnlNavBar.Location = new Point(0, 0);
@@ -55,59 +60,69 @@
             pnlNavBar.Name = "pnlNavBar";
             pnlNavBar.Size = new Size(1123, 63);
             pnlNavBar.TabIndex = 6;
-            pnlNavBar.Paint += pnlNavBar_Paint;
+            // 
+            // pbLogout
+            // 
+            pbLogout.Cursor = Cursors.Hand;
+            pbLogout.Image = Properties.Resources.ondaBaixo2;
+            pbLogout.Location = new Point(1064, 1);
+            pbLogout.Margin = new Padding(4, 5, 4, 5);
+            pbLogout.Name = "pbLogout";
+            pbLogout.Size = new Size(54, 58);
+            pbLogout.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogout.TabIndex = 47;
+            pbLogout.TabStop = false;
+            pbLogout.Click += pbLogout_Click;
+            // 
+            // pbPerfil
+            // 
+            pbPerfil.Cursor = Cursors.Hand;
+            pbPerfil.Image = Properties.Resources.icons8_usuário_482;
+            pbPerfil.Location = new Point(1004, 1);
+            pbPerfil.Margin = new Padding(4, 5, 4, 5);
+            pbPerfil.Name = "pbPerfil";
+            pbPerfil.Size = new Size(54, 58);
+            pbPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbPerfil.TabIndex = 46;
+            pbPerfil.TabStop = false;
+            pbPerfil.Click += pbPerfil_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.zaffyNav;
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(62, 63);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 45;
+            pictureBox2.TabStop = false;
             // 
             // lnkCadAnuncios
             // 
             lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(127, 15);
+            lnkCadAnuncios.Location = new Point(183, 15);
             lnkCadAnuncios.Margin = new Padding(4, 0, 4, 0);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
-            lnkCadAnuncios.Size = new Size(101, 25);
+            lnkCadAnuncios.Size = new Size(139, 28);
             lnkCadAnuncios.TabIndex = 7;
             lnkCadAnuncios.TabStop = true;
             lnkCadAnuncios.Text = "ANUNCIAR";
             lnkCadAnuncios.LinkClicked += lnkCadAnuncios_LinkClicked;
             // 
-            // lnkLogout
-            // 
-            lnkLogout.AutoSize = true;
-            lnkLogout.LinkBehavior = LinkBehavior.HoverUnderline;
-            lnkLogout.LinkColor = Color.White;
-            lnkLogout.Location = new Point(1021, 15);
-            lnkLogout.Margin = new Padding(4, 0, 4, 0);
-            lnkLogout.Name = "lnkLogout";
-            lnkLogout.Size = new Size(72, 25);
-            lnkLogout.TabIndex = 6;
-            lnkLogout.TabStop = true;
-            lnkLogout.Text = "LogOut";
-            lnkLogout.LinkClicked += lnkLogout_LinkClicked;
-            // 
-            // lnkPerfil
-            // 
-            lnkPerfil.AutoSize = true;
-            lnkPerfil.LinkBehavior = LinkBehavior.HoverUnderline;
-            lnkPerfil.LinkColor = Color.White;
-            lnkPerfil.Location = new Point(940, 15);
-            lnkPerfil.Margin = new Padding(4, 0, 4, 0);
-            lnkPerfil.Name = "lnkPerfil";
-            lnkPerfil.Size = new Size(64, 25);
-            lnkPerfil.TabIndex = 5;
-            lnkPerfil.TabStop = true;
-            lnkPerfil.Text = "PERFIL";
-            lnkPerfil.LinkClicked += lnkPerfil_LinkClicked;
-            // 
             // lnkHome
             // 
             lnkHome.AutoSize = true;
+            lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
-            lnkHome.Location = new Point(33, 15);
+            lnkHome.Location = new Point(93, 15);
             lnkHome.Margin = new Padding(4, 0, 4, 0);
             lnkHome.Name = "lnkHome";
-            lnkHome.Size = new Size(64, 25);
+            lnkHome.Size = new Size(82, 28);
             lnkHome.TabIndex = 4;
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
@@ -128,39 +143,34 @@
             dgvMeusAnuncios.RowHeadersWidth = 62;
             dgvMeusAnuncios.Size = new Size(1115, 415);
             dgvMeusAnuncios.TabIndex = 7;
-            dgvMeusAnuncios.CellContentClick += dgvMeusAnuncios_CellContentClick;
             dgvMeusAnuncios.CellDoubleClick += dgvMeusAnuncios_CellDoubleClick;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(323, 647);
-            btnEditar.Margin = new Padding(4, 5, 4, 5);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(126, 60);
-            btnEditar.TabIndex = 8;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(484, 647);
+            btnExcluir.BackColor = Color.Indigo;
+            btnExcluir.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnExcluir.ForeColor = SystemColors.Control;
+            btnExcluir.Location = new Point(992, 588);
             btnExcluir.Margin = new Padding(4, 5, 4, 5);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(126, 60);
             btnExcluir.TabIndex = 9;
             btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 
             // btnListar
             // 
-            btnListar.Location = new Point(647, 647);
+            btnListar.BackColor = Color.Indigo;
+            btnListar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnListar.ForeColor = SystemColors.Control;
+            btnListar.Location = new Point(1004, 106);
             btnListar.Margin = new Padding(4, 5, 4, 5);
             btnListar.Name = "btnListar";
-            btnListar.Size = new Size(126, 60);
+            btnListar.Size = new Size(114, 47);
             btnListar.TabIndex = 10;
             btnListar.Text = "Listar";
-            btnListar.UseVisualStyleBackColor = true;
+            btnListar.UseVisualStyleBackColor = false;
             btnListar.Click += btnListar_Click;
             // 
             // label1
@@ -173,14 +183,24 @@
             label1.TabIndex = 8;
             label1.Text = "Meus Anúncios";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(4, 588);
+            label2.Name = "label2";
+            label2.Size = new Size(301, 23);
+            label2.TabIndex = 11;
+            label2.Text = "Clique duas vezes para editar";
+            // 
             // UC_MeusAnuncios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnListar);
             Controls.Add(btnExcluir);
-            Controls.Add(btnEditar);
             Controls.Add(pnlNavBar);
             Controls.Add(dgvMeusAnuncios);
             Margin = new Padding(4, 5, 4, 5);
@@ -189,6 +209,9 @@
             Load += UC_MeusAnuncios_Load;
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPerfil).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvMeusAnuncios).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -198,13 +221,14 @@
 
         private Panel pnlNavBar;
         private LinkLabel lnkCadAnuncios;
-        private LinkLabel lnkLogout;
-        private LinkLabel lnkPerfil;
         private LinkLabel lnkHome;
         private DataGridView dgvMeusAnuncios;
-        private Button btnEditar;
         private Button btnExcluir;
         private Button btnListar;
         private Label label1;
+        private PictureBox pictureBox2;
+        private PictureBox pbLogout;
+        private PictureBox pbPerfil;
+        private Label label2;
     }
 }

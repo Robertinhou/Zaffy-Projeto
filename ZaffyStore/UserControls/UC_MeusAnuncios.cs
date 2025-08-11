@@ -15,6 +15,7 @@ namespace ZaffyStore.UserControls
         public UC_MeusAnuncios()
         {
             InitializeComponent();
+
         }
 
         private void UC_MeusAnuncios_Load(object sender, EventArgs e)
@@ -41,24 +42,6 @@ namespace ZaffyStore.UserControls
             this.Controls.Add(cadAnuncios);
         }
 
-        private void lnkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            UC_Perfil perfil = new UC_Perfil();
-            this.Controls.Clear();
-            this.Controls.Add(perfil);
-        }
-
-        private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
-
-            UC_Login login = new UC_Login();
-
-            this.Controls.Clear();
-            this.Controls.Add(login);
-
-        }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
@@ -82,6 +65,7 @@ namespace ZaffyStore.UserControls
                     Anuncios anuncios = new Anuncios();
                     anuncios.Id_Anuncio = Convert.ToInt32(dgvMeusAnuncios.CurrentRow.Cells[0].Value);
                     anuncios.DeletarAnuncio();
+                    anuncios.ListarMeusAnuncios(dgvMeusAnuncios);
                 }
             }
             else
@@ -103,21 +87,27 @@ namespace ZaffyStore.UserControls
             anuncio.Contato = Convert.ToString(dgvMeusAnuncios.CurrentRow.Cells[6].Value);
             anuncio.Foto = Convert.ToString(dgvMeusAnuncios.CurrentRow.Cells[10].Value);
 
-
             UC_EditarAnuncio editar = new UC_EditarAnuncio(anuncio);
             this.Controls.Clear();
             this.Controls.Add(editar);
-
         }
 
-        private void pnlNavBar_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void pbPerfil_Click(object sender, EventArgs e)
+        {
+            UC_Perfil perfil = new UC_Perfil();
+            this.Controls.Clear();
+            this.Controls.Add(perfil);
         }
 
-        private void dgvMeusAnuncios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void pbLogout_Click(object sender, EventArgs e)
         {
+            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
 
+            UC_Login login = new UC_Login();
+
+            this.Controls.Clear();
+            this.Controls.Add(login);
         }
     }
 }
