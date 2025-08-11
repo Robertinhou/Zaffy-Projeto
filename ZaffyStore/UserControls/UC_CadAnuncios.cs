@@ -30,20 +30,6 @@ namespace ZaffyStore.UserControls
 
         }
 
-        private void lnkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
-
-            UC_Login login = new UC_Login();
-
-            this.Controls.Clear();
-            this.Controls.Add(login);
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -161,7 +147,7 @@ namespace ZaffyStore.UserControls
                 {
                     MessageBox.Show("Conclua o cadastro e perfil para cadastrar anúncios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -179,6 +165,23 @@ namespace ZaffyStore.UserControls
                 MessageBox.Show("Apenas números são permitidos no campo preço.");
                 mtxtPreco.Clear();
             }
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
+
+            UC_Login login = new UC_Login();
+
+            this.Controls.Clear();
+            this.Controls.Add(login);
+        }
+
+        private void pbPerfil_Click(object sender, EventArgs e)
+        {
+            UC_Perfil perifl = new UC_Perfil();
+            this.Controls.Clear();
+            this.Controls.Add(perifl);
         }
     }
 }

@@ -198,7 +198,7 @@ namespace ZaffyStore
                 using (MySqlConnection conexao = new ConexaoBD().Conectar())
                 {
                     DataTable dt = new DataTable();
-                    string busca = "SELECT nome, dataPost FROM anuncios";
+                    string busca = "SELECT nome, descricao, categoria, dataPost FROM anuncios";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(busca, conexao);
                     adapter.Fill(dt);
 

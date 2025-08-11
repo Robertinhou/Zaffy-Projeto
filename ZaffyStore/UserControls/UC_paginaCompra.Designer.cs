@@ -51,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)pbPerfil).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbImagem).BeginInit();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // pnlNavBar
@@ -63,16 +64,18 @@
             pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Dock = DockStyle.Top;
             pnlNavBar.Location = new Point(0, 0);
+            pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(786, 38);
+            pnlNavBar.Size = new Size(1123, 63);
             pnlNavBar.TabIndex = 3;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.zaffyNav;
             pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(41, 38);
+            pictureBox2.Size = new Size(59, 63);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 48;
             pictureBox2.TabStop = false;
@@ -84,9 +87,10 @@
             linkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             linkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             linkHome.LinkColor = Color.White;
-            linkHome.Location = new Point(77, 9);
+            linkHome.Location = new Point(110, 15);
+            linkHome.Margin = new Padding(4, 0, 4, 0);
             linkHome.Name = "linkHome";
-            linkHome.Size = new Size(55, 19);
+            linkHome.Size = new Size(82, 28);
             linkHome.TabIndex = 47;
             linkHome.TabStop = true;
             linkHome.Text = "HOME";
@@ -96,9 +100,10 @@
             // 
             pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(745, 1);
+            pbLogout.Location = new Point(1064, 2);
+            pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
-            pbLogout.Size = new Size(38, 35);
+            pbLogout.Size = new Size(54, 58);
             pbLogout.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogout.TabIndex = 46;
             pbLogout.TabStop = false;
@@ -108,9 +113,10 @@
             // 
             pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
-            pbPerfil.Location = new Point(699, 1);
+            pbPerfil.Location = new Point(999, 2);
+            pbPerfil.Margin = new Padding(4, 5, 4, 5);
             pbPerfil.Name = "pbPerfil";
-            pbPerfil.Size = new Size(38, 35);
+            pbPerfil.Size = new Size(54, 58);
             pbPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPerfil.TabIndex = 45;
             pbPerfil.TabStop = false;
@@ -123,9 +129,10 @@
             lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(150, 9);
+            lnkCadAnuncios.Location = new Point(214, 15);
+            lnkCadAnuncios.Margin = new Padding(4, 0, 4, 0);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
-            lnkCadAnuncios.Size = new Size(92, 19);
+            lnkCadAnuncios.Size = new Size(139, 28);
             lnkCadAnuncios.TabIndex = 44;
             lnkCadAnuncios.TabStop = true;
             lnkCadAnuncios.Text = "ANUNCIAR";
@@ -135,9 +142,10 @@
             // 
             btnEntrarEmContato.BackColor = Color.FromArgb(115, 76, 191);
             btnEntrarEmContato.ForeColor = Color.White;
-            btnEntrarEmContato.Location = new Point(611, 222);
+            btnEntrarEmContato.Location = new Point(873, 766);
+            btnEntrarEmContato.Margin = new Padding(4, 5, 4, 5);
             btnEntrarEmContato.Name = "btnEntrarEmContato";
-            btnEntrarEmContato.Size = new Size(126, 40);
+            btnEntrarEmContato.Size = new Size(180, 67);
             btnEntrarEmContato.TabIndex = 39;
             btnEntrarEmContato.Text = "Contatar";
             btnEntrarEmContato.UseVisualStyleBackColor = false;
@@ -146,18 +154,20 @@
             // 
             lblLocal.AutoSize = true;
             lblLocal.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLocal.Location = new Point(295, 252);
+            lblLocal.Location = new Point(459, 335);
+            lblLocal.Margin = new Padding(4, 0, 4, 0);
             lblLocal.Name = "lblLocal";
-            lblLocal.Size = new Size(273, 22);
+            lblLocal.Size = new Size(398, 29);
             lblLocal.TabIndex = 37;
             lblLocal.Text = "Casa do Cristiano Ronaldo - Lisboa\r\n";
             // 
             // pbImagem
             // 
             pbImagem.Image = Properties.Resources.download__1_;
-            pbImagem.Location = new Point(36, 76);
+            pbImagem.Location = new Point(51, 127);
+            pbImagem.Margin = new Padding(4, 5, 4, 5);
             pbImagem.Name = "pbImagem";
-            pbImagem.Size = new Size(244, 196);
+            pbImagem.Size = new Size(349, 327);
             pbImagem.SizeMode = PictureBoxSizeMode.StretchImage;
             pbImagem.TabIndex = 36;
             pbImagem.TabStop = false;
@@ -167,9 +177,10 @@
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescricao.Location = new Point(36, 329);
+            lblDescricao.Location = new Point(51, 548);
+            lblDescricao.Margin = new Padding(4, 0, 4, 0);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(85, 22);
+            lblDescricao.Size = new Size(120, 29);
             lblDescricao.TabIndex = 33;
             lblDescricao.Text = "Descrição";
             // 
@@ -177,9 +188,10 @@
             // 
             lblContato.AutoSize = true;
             lblContato.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblContato.Location = new Point(295, 178);
+            lblContato.Location = new Point(370, 287);
+            lblContato.Margin = new Padding(4, 0, 4, 0);
             lblContato.Name = "lblContato";
-            lblContato.Size = new Size(148, 22);
+            lblContato.Size = new Size(217, 29);
             lblContato.TabIndex = 31;
             lblContato.Text = "Contato: Anônimo";
             // 
@@ -187,9 +199,10 @@
             // 
             lblPreco.AutoSize = true;
             lblPreco.Font = new Font("Trebuchet MS", 19F, FontStyle.Bold);
-            lblPreco.Location = new Point(295, 129);
+            lblPreco.Location = new Point(370, 114);
+            lblPreco.Margin = new Padding(4, 0, 4, 0);
             lblPreco.Name = "lblPreco";
-            lblPreco.Size = new Size(146, 33);
+            lblPreco.Size = new Size(213, 49);
             lblPreco.TabIndex = 29;
             lblPreco.Text = "R$8000,00";
             // 
@@ -197,9 +210,10 @@
             // 
             lblProdName.AutoSize = true;
             lblProdName.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProdName.Location = new Point(295, 76);
+            lblProdName.Location = new Point(370, 56);
+            lblProdName.Margin = new Padding(4, 0, 4, 0);
             lblProdName.Name = "lblProdName";
-            lblProdName.Size = new Size(107, 29);
+            lblProdName.Size = new Size(161, 44);
             lblProdName.TabIndex = 23;
             lblProdName.Text = "PS4 Slim\r\n";
             // 
@@ -207,9 +221,10 @@
             // 
             lblDescricaoProd.AutoSize = true;
             lblDescricaoProd.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescricaoProd.Location = new Point(3, 12);
+            lblDescricaoProd.Location = new Point(4, 20);
+            lblDescricaoProd.Margin = new Padding(4, 0, 4, 0);
             lblDescricaoProd.Name = "lblDescricaoProd";
-            lblDescricaoProd.Size = new Size(269, 66);
+            lblDescricaoProd.Size = new Size(394, 87);
             lblDescricaoProd.TabIndex = 40;
             lblDescricaoProd.Text = "PS4 do filho do cristiano ronaldo. \r\n\r\nEntrega a combinar";
             // 
@@ -217,9 +232,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(295, 230);
+            label1.Location = new Point(370, 335);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(57, 22);
+            label1.Size = new Size(81, 29);
             label1.TabIndex = 41;
             label1.Text = "Local:";
             // 
@@ -227,36 +243,39 @@
             // 
             panel1.BackColor = Color.WhiteSmoke;
             panel1.Controls.Add(lblDescricaoProd);
-            panel1.Location = new Point(36, 354);
+            panel1.Location = new Point(51, 590);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(443, 146);
+            panel1.Size = new Size(633, 243);
             panel1.TabIndex = 42;
             // 
             // panel2
             // 
             panel2.BackColor = Color.WhiteSmoke;
-            panel2.Location = new Point(36, 54);
+            panel2.Controls.Add(lblProdName);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(lblPreco);
+            panel2.Controls.Add(lblContato);
+            panel2.Controls.Add(lblLocal);
+            panel2.Location = new Point(51, 90);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(713, 255);
+            panel2.Size = new Size(1019, 425);
             panel2.TabIndex = 43;
             // 
             // UC_paginaCompra
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(lblDescricao);
-            Controls.Add(label1);
             Controls.Add(btnEntrarEmContato);
-            Controls.Add(lblLocal);
             Controls.Add(pbImagem);
-            Controls.Add(lblContato);
-            Controls.Add(lblPreco);
-            Controls.Add(lblProdName);
             Controls.Add(pnlNavBar);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "UC_paginaCompra";
-            Size = new Size(786, 567);
+            Size = new Size(1123, 945);
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -265,6 +284,8 @@
             ((System.ComponentModel.ISupportInitialize)pbImagem).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

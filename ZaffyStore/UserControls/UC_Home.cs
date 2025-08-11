@@ -135,22 +135,6 @@ namespace ZaffyStore.UserControls
         }
 
 
-
-
-
-        private void linkperfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-
-        private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-
-
-        }
-
         private void lnkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UC_Perfil perfil = new UC_Perfil();
@@ -158,10 +142,6 @@ namespace ZaffyStore.UserControls
             this.Controls.Add(perfil);
         }
 
-        private void pnlNavBar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void dgvAnuncios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -224,7 +204,7 @@ namespace ZaffyStore.UserControls
         }
 
         private void pbLogout_Click(object sender, EventArgs e)
-        {
+        { 
             Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
 
             UC_Login login = new UC_Login();
