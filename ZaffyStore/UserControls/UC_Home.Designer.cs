@@ -110,6 +110,7 @@
             // 
             // pbLogout
             // 
+            pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
             pbLogout.Location = new Point(1063, 2);
             pbLogout.Margin = new Padding(4, 5, 4, 5);
@@ -133,6 +134,7 @@
             // 
             // pbPerfil
             // 
+            pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
             pbPerfil.Location = new Point(1003, 2);
             pbPerfil.Margin = new Padding(4, 5, 4, 5);
