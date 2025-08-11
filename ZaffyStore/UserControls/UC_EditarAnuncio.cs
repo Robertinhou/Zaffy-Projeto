@@ -155,23 +155,23 @@ namespace ZaffyStore.UserControls
         {
             Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
             UC_Login login = new UC_Login();
-            this.Parent.Controls.Clear();
-            this.Parent.Controls.Add(login);
+            this.Controls.Clear();
+            this.Controls.Add(login);
         }
 
 
         private void linkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UC_Home home = new UC_Home();
-            this.Parent.Controls.Clear();
+            this.Controls.Clear();
             this.Controls.Add(home);
         }
 
         private void pbPerfil_Click(object sender, EventArgs e)
         {
             UC_Perfil perfil = new UC_Perfil();
-            this.Parent.Controls.Clear();
-            this.Parent.Controls.Add(perfil);
+            this.Controls.Clear();
+            this.Controls.Add(perfil);
             
         }
     }

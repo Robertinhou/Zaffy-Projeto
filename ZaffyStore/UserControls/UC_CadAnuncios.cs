@@ -112,43 +112,56 @@ namespace ZaffyStore.UserControls
 
             try
             {
-
-                if (!string.IsNullOrWhiteSpace(txtNome.Text) &&
-                    !string.IsNullOrWhiteSpace(txtDesc.Text) &&
-                    !string.IsNullOrWhiteSpace(cbCategoria.Text) &&
-                    !string.IsNullOrWhiteSpace(mtxtPreco.Text) &&
-                    !string.IsNullOrWhiteSpace(txtLocal.Text) &&
-                    !string.IsNullOrWhiteSpace(txtContato.Text) &&
-                    anuncios.Foto != null)
-
+                if (Sessao.UsuarioAtual.Celular != null &&
+                    Sessao.UsuarioAtual.Cep != null)
                 {
-                    anuncios.Nome = txtNome.Text;
-                    anuncios.Descricao = txtDesc.Text;
-                    anuncios.Categoria = cbCategoria.SelectedItem.ToString();
-                    anuncios.Preco = double.Parse(mtxtPreco.Text);
-                    anuncios.DataPost = DateTime.Now;
-                    anuncios.Localidade = txtLocal.Text;
-                    anuncios.Contato = txtContato.Text;
-                    anuncios.Id_User = Convert.ToInt32(Sessao.UsuarioAtual.Id);
+                    if (
+                        !string.IsNullOrWhiteSpace(txtNome.Text) &&
+                        !string.IsNullOrWhiteSpace(txtDesc.Text) &&
+                        !string.IsNullOrWhiteSpace(cbCategoria.Text) &&
+                        !string.IsNullOrWhiteSpace(mtxtPreco.Text) &&
+                        !string.IsNullOrWhiteSpace(txtLocal.Text) &&
+                        !string.IsNullOrWhiteSpace(txtContato.Text) &&
+                        anuncios.Foto != null)
 
-                    anuncios.Horario = DateTime.Now.TimeOfDay;
-
-                    if (anuncios.CadastrarAnuncio())
                     {
+                        anuncios.Nome = txtNome.Text;
+                        anuncios.Descricao = txtDesc.Text;
+                        anuncios.Categoria = cbCategoria.SelectedItem.ToString();
+                        anuncios.Preco = double.Parse(mtxtPreco.Text);
+                        anuncios.DataPost = DateTime.Now;
+                        anuncios.Localidade = txtLocal.Text;
+                        anuncios.Contato = txtContato.Text;
+                        anuncios.Id_User = Convert.ToInt32(Sessao.UsuarioAtual.Id);
 
-                        MessageBox.Show("Anúncio cadastrado", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        anuncios.Horario = DateTime.Now.TimeOfDay;
 
-                        UC_Home home = new UC_Home();
-                        this.Controls.Clear();
-                        this.Controls.Add(home);
+                        if (anuncios.CadastrarAnuncio())
+                        {
+
+                            MessageBox.Show("Anúncio cadastrado", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            UC_Home home = new UC_Home();
+                            this.Controls.Clear();
+                            this.Controls.Add(home);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não cadastrou o anúncio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
                     }
                     else
                     {
-                        MessageBox.Show("Não cadastrou o anúncio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Preencha todos os campos!");
                     }
-
                 }
+                else
+                {
+                    MessageBox.Show("Conclua o cadastro e perfil para cadastrar anúncios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             catch (Exception ex)
             {
