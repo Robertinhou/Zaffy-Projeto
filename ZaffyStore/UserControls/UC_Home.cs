@@ -68,12 +68,12 @@ namespace ZaffyStore.UserControls
 
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\"; Robert
             string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\";//  Matheus pc senai
-            // string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
+                                                                                                                             // string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
 
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\";
 
 
-          //  string caminhoDasImagens = @"C:\Users\Aluno_Manha\Desktop\zaffy\Zaffy-Projeto\ZaffyStore\Resources\banners\";
+            //  string caminhoDasImagens = @"C:\Users\Aluno_Manha\Desktop\zaffy\Zaffy-Projeto\ZaffyStore\Resources\banners\";
 
 
             if (Directory.Exists(caminhoDasImagens))
@@ -140,21 +140,13 @@ namespace ZaffyStore.UserControls
 
         private void linkperfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UC_Perfil perfil = new UC_Perfil();
-            this.Controls.Clear();
-            this.Controls.Add(perfil);
+
         }
 
 
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
-
-            UC_Login login = new UC_Login();
-
-            this.Controls.Clear();
-            this.Controls.Add(login);
 
 
         }
@@ -229,6 +221,23 @@ namespace ZaffyStore.UserControls
             UC_paginaCompra comprar = new UC_paginaCompra();
             this.Controls.Clear();
             this.Controls.Add(comprar);
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
+
+            UC_Login login = new UC_Login();
+
+            this.Controls.Clear();
+            this.Controls.Add(login);
+        }
+
+        private void pbPerfil_Click(object sender, EventArgs e)
+        {
+            UC_Perfil perfil = new UC_Perfil();
+            this.Controls.Clear();
+            this.Controls.Add(perfil);
         }
     }
 }

@@ -39,12 +39,18 @@
             btnVisualizar = new Button();
             lblProductName = new Label();
             cardFoto = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pbPerfil = new PictureBox();
+            pbLogout = new PictureBox();
             panelFotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cardFoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPerfil).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).BeginInit();
             SuspendLayout();
             // 
             // panelFotos
@@ -71,6 +77,9 @@
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(pbLogout);
+            pnlNavBar.Controls.Add(pictureBox2);
+            pnlNavBar.Controls.Add(pbPerfil);
             pnlNavBar.Controls.Add(lnkMeuAnuncio);
             pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Controls.Add(lnkLogout);
@@ -79,19 +88,20 @@
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1121, 53);
+            pnlNavBar.Size = new Size(1121, 63);
             pnlNavBar.TabIndex = 1;
             pnlNavBar.Paint += pnlNavBar_Paint;
             // 
             // lnkMeuAnuncio
             // 
             lnkMeuAnuncio.AutoSize = true;
+            lnkMeuAnuncio.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkMeuAnuncio.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkMeuAnuncio.LinkColor = Color.White;
-            lnkMeuAnuncio.Location = new Point(787, 15);
+            lnkMeuAnuncio.Location = new Point(366, 15);
             lnkMeuAnuncio.Margin = new Padding(4, 0, 4, 0);
             lnkMeuAnuncio.Name = "lnkMeuAnuncio";
-            lnkMeuAnuncio.Size = new Size(154, 25);
+            lnkMeuAnuncio.Size = new Size(207, 28);
             lnkMeuAnuncio.TabIndex = 8;
             lnkMeuAnuncio.TabStop = true;
             lnkMeuAnuncio.Text = "MEUS ANÚNCIOS";
@@ -100,12 +110,13 @@
             // lnkCadAnuncios
             // 
             lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(127, 15);
+            lnkCadAnuncios.Location = new Point(202, 15);
             lnkCadAnuncios.Margin = new Padding(4, 0, 4, 0);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
-            lnkCadAnuncios.Size = new Size(101, 25);
+            lnkCadAnuncios.Size = new Size(139, 28);
             lnkCadAnuncios.TabIndex = 7;
             lnkCadAnuncios.TabStop = true;
             lnkCadAnuncios.Text = "ANUNCIAR";
@@ -142,12 +153,13 @@
             // lnkHome
             // 
             lnkHome.AutoSize = true;
+            lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
-            lnkHome.Location = new Point(33, 15);
+            lnkHome.Location = new Point(95, 15);
             lnkHome.Margin = new Padding(4, 0, 4, 0);
             lnkHome.Name = "lnkHome";
-            lnkHome.Size = new Size(64, 25);
+            lnkHome.Size = new Size(82, 28);
             lnkHome.TabIndex = 4;
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
@@ -242,6 +254,41 @@
             cardFoto.MouseLeave += cardFoto_MouseLeave;
             cardFoto.MouseHover += cardFoto_MouseHover;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.zaffyNav;
+            pictureBox2.Location = new Point(1, -1);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(59, 63);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 44;
+            pictureBox2.TabStop = false;
+            // 
+            // pbPerfil
+            // 
+            pbPerfil.Image = Properties.Resources.icons8_usuário_482;
+            pbPerfil.Location = new Point(811, 4);
+            pbPerfil.Margin = new Padding(4, 5, 4, 5);
+            pbPerfil.Name = "pbPerfil";
+            pbPerfil.Size = new Size(54, 58);
+            pbPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbPerfil.TabIndex = 44;
+            pbPerfil.TabStop = false;
+            pbPerfil.Click += pbPerfil_Click;
+            // 
+            // pbLogout
+            // 
+            pbLogout.Image = Properties.Resources.ondaBaixo2;
+            pbLogout.Location = new Point(871, 4);
+            pbLogout.Margin = new Padding(4, 5, 4, 5);
+            pbLogout.Name = "pbLogout";
+            pbLogout.Size = new Size(54, 58);
+            pbLogout.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogout.TabIndex = 45;
+            pbLogout.TabStop = false;
+            pbLogout.Click += pbLogout_Click;
+            // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -263,6 +310,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)cardFoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPerfil).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -287,5 +337,8 @@
         private Label lblProductName;
         private PictureBox cardFoto;
         private Label lblPrice;
+        private PictureBox pictureBox2;
+        private PictureBox pbLogout;
+        private PictureBox pbPerfil;
     }
 }

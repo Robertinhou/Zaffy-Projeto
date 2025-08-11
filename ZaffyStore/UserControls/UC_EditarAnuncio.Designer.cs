@@ -69,16 +69,18 @@
             pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Dock = DockStyle.Top;
             pnlNavBar.Location = new Point(0, 0);
+            pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(786, 38);
+            pnlNavBar.Size = new Size(1123, 63);
             pnlNavBar.TabIndex = 7;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.zaffyNav;
             pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(41, 38);
+            pictureBox2.Size = new Size(59, 63);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 43;
             pictureBox2.TabStop = false;
@@ -90,9 +92,10 @@
             linkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             linkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             linkHome.LinkColor = Color.White;
-            linkHome.Location = new Point(78, 9);
+            linkHome.Location = new Point(111, 15);
+            linkHome.Margin = new Padding(4, 0, 4, 0);
             linkHome.Name = "linkHome";
-            linkHome.Size = new Size(55, 19);
+            linkHome.Size = new Size(82, 28);
             linkHome.TabIndex = 42;
             linkHome.TabStop = true;
             linkHome.Text = "HOME";
@@ -102,9 +105,10 @@
             // 
             pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(746, 1);
+            pbLogout.Location = new Point(1066, 2);
+            pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
-            pbLogout.Size = new Size(38, 35);
+            pbLogout.Size = new Size(54, 58);
             pbLogout.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogout.TabIndex = 41;
             pbLogout.TabStop = false;
@@ -114,9 +118,10 @@
             // 
             pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
-            pbPerfil.Location = new Point(704, 1);
+            pbPerfil.Location = new Point(1006, 2);
+            pbPerfil.Margin = new Padding(4, 5, 4, 5);
             pbPerfil.Name = "pbPerfil";
-            pbPerfil.Size = new Size(38, 35);
+            pbPerfil.Size = new Size(54, 58);
             pbPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPerfil.TabIndex = 40;
             pbPerfil.TabStop = false;
@@ -129,9 +134,10 @@
             lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(149, 9);
+            lnkCadAnuncios.Location = new Point(213, 15);
+            lnkCadAnuncios.Margin = new Padding(4, 0, 4, 0);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
-            lnkCadAnuncios.Size = new Size(92, 19);
+            lnkCadAnuncios.Size = new Size(139, 28);
             lnkCadAnuncios.TabIndex = 7;
             lnkCadAnuncios.TabStop = true;
             lnkCadAnuncios.Text = "ANUNCIAR";
@@ -142,9 +148,10 @@
             btnSalvar.BackColor = Color.FromArgb(115, 76, 191);
             btnSalvar.Cursor = Cursors.Hand;
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(616, 503);
+            btnSalvar.Location = new Point(880, 838);
+            btnSalvar.Margin = new Padding(4, 5, 4, 5);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(126, 40);
+            btnSalvar.Size = new Size(180, 67);
             btnSalvar.TabIndex = 39;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
@@ -152,27 +159,30 @@
             // 
             // txtLocal
             // 
-            txtLocal.Location = new Point(31, 513);
+            txtLocal.Location = new Point(44, 855);
+            txtLocal.Margin = new Padding(4, 5, 4, 5);
             txtLocal.Name = "txtLocal";
-            txtLocal.Size = new Size(228, 23);
+            txtLocal.Size = new Size(324, 31);
             txtLocal.TabIndex = 38;
             // 
             // lblLocal
             // 
             lblLocal.AutoSize = true;
             lblLocal.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLocal.Location = new Point(31, 488);
+            lblLocal.Location = new Point(44, 813);
+            lblLocal.Margin = new Padding(4, 0, 4, 0);
             lblLocal.Name = "lblLocal";
-            lblLocal.Size = new Size(51, 22);
+            lblLocal.Size = new Size(72, 29);
             lblLocal.TabIndex = 37;
             lblLocal.Text = "Local";
             // 
             // pbImagem
             // 
             pbImagem.Image = Properties.Resources.carregarfoto;
-            pbImagem.Location = new Point(30, 135);
+            pbImagem.Location = new Point(43, 225);
+            pbImagem.Margin = new Padding(4, 5, 4, 5);
             pbImagem.Name = "pbImagem";
-            pbImagem.Size = new Size(160, 121);
+            pbImagem.Size = new Size(229, 202);
             pbImagem.SizeMode = PictureBoxSizeMode.StretchImage;
             pbImagem.TabIndex = 36;
             pbImagem.TabStop = false;
@@ -182,97 +192,108 @@
             // 
             lblFoto.AutoSize = true;
             lblFoto.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFoto.Location = new Point(31, 110);
+            lblFoto.Location = new Point(44, 183);
+            lblFoto.Margin = new Padding(4, 0, 4, 0);
             lblFoto.Name = "lblFoto";
-            lblFoto.Size = new Size(131, 22);
+            lblFoto.Size = new Size(191, 29);
             lblFoto.TabIndex = 35;
             lblFoto.Text = "Insira uma foto:";
             // 
             // txtDesc
             // 
-            txtDesc.Location = new Point(31, 367);
+            txtDesc.Location = new Point(44, 612);
+            txtDesc.Margin = new Padding(4, 5, 4, 5);
             txtDesc.Multiline = true;
             txtDesc.Name = "txtDesc";
-            txtDesc.Size = new Size(347, 96);
+            txtDesc.Size = new Size(494, 157);
             txtDesc.TabIndex = 34;
             // 
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescricao.Location = new Point(30, 342);
+            lblDescricao.Location = new Point(43, 570);
+            lblDescricao.Margin = new Padding(4, 0, 4, 0);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(85, 22);
+            lblDescricao.Size = new Size(120, 29);
             lblDescricao.TabIndex = 33;
             lblDescricao.Text = "Descrição";
             // 
             // txtContato
             // 
-            txtContato.Location = new Point(416, 440);
+            txtContato.Location = new Point(594, 733);
+            txtContato.Margin = new Padding(4, 5, 4, 5);
             txtContato.Name = "txtContato";
-            txtContato.Size = new Size(182, 23);
+            txtContato.Size = new Size(258, 31);
             txtContato.TabIndex = 32;
             // 
             // lblContato
             // 
             lblContato.AutoSize = true;
             lblContato.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblContato.Location = new Point(416, 415);
+            lblContato.Location = new Point(594, 692);
+            lblContato.Margin = new Padding(4, 0, 4, 0);
             lblContato.Name = "lblContato";
-            lblContato.Size = new Size(70, 22);
+            lblContato.Size = new Size(103, 29);
             lblContato.TabIndex = 31;
             lblContato.Text = "Contato";
             // 
             // mtxtPreco
             // 
-            mtxtPreco.Location = new Point(416, 375);
+            mtxtPreco.Location = new Point(594, 625);
+            mtxtPreco.Margin = new Padding(4, 5, 4, 5);
             mtxtPreco.Mask = "$#,##0.00";
             mtxtPreco.Name = "mtxtPreco";
-            mtxtPreco.Size = new Size(70, 23);
+            mtxtPreco.Size = new Size(98, 31);
             mtxtPreco.TabIndex = 30;
             // 
             // lblPreco
             // 
             lblPreco.AutoSize = true;
             lblPreco.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPreco.Location = new Point(416, 350);
+            lblPreco.Location = new Point(594, 583);
+            lblPreco.Margin = new Padding(4, 0, 4, 0);
             lblPreco.Name = "lblPreco";
-            lblPreco.Size = new Size(54, 22);
+            lblPreco.Size = new Size(77, 29);
             lblPreco.TabIndex = 29;
             lblPreco.Text = "Preço";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(31, 302);
+            txtNome.Location = new Point(44, 503);
+            txtNome.Margin = new Padding(4, 5, 4, 5);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(273, 23);
+            txtNome.Size = new Size(388, 31);
             txtNome.TabIndex = 28;
             // 
             // lblProductName
             // 
             lblProductName.AutoSize = true;
             lblProductName.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProductName.Location = new Point(30, 277);
+            lblProductName.Location = new Point(43, 462);
+            lblProductName.Margin = new Padding(4, 0, 4, 0);
             lblProductName.Name = "lblProductName";
-            lblProductName.Size = new Size(143, 22);
+            lblProductName.Size = new Size(210, 29);
             lblProductName.TabIndex = 27;
             lblProductName.Text = "Nome do Produto";
             // 
             // cbCategoria
             // 
             cbCategoria.FormattingEnabled = true;
-            cbCategoria.Location = new Point(429, 302);
+            cbCategoria.Location = new Point(613, 503);
+            cbCategoria.Margin = new Padding(4, 5, 4, 5);
             cbCategoria.Name = "cbCategoria";
-            cbCategoria.Size = new Size(169, 23);
+            cbCategoria.Size = new Size(240, 33);
             cbCategoria.TabIndex = 25;
             // 
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategoria.Location = new Point(339, 300);
+            lblCategoria.Location = new Point(484, 500);
+            lblCategoria.Margin = new Padding(4, 0, 4, 0);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(84, 22);
+            lblCategoria.Size = new Size(121, 29);
             lblCategoria.TabIndex = 24;
             lblCategoria.Text = "Categoria";
             // 
@@ -280,25 +301,27 @@
             // 
             lblMessage.AutoSize = true;
             lblMessage.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMessage.Location = new Point(23, 60);
+            lblMessage.Location = new Point(33, 100);
+            lblMessage.Margin = new Padding(4, 0, 4, 0);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(200, 29);
+            lblMessage.Size = new Size(297, 44);
             lblMessage.TabIndex = 23;
             lblMessage.Text = "EDITAR ANÚNCIO";
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.Protótipo_de_Baixa_Fidelidade;
-            pictureBox3.Location = new Point(443, 56);
+            pictureBox3.Location = new Point(633, 93);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(305, 248);
+            pictureBox3.Size = new Size(436, 413);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 44;
             pictureBox3.TabStop = false;
             // 
             // UC_EditarAnuncio
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnSalvar);
             Controls.Add(txtLocal);
@@ -318,8 +341,9 @@
             Controls.Add(lblMessage);
             Controls.Add(pnlNavBar);
             Controls.Add(pictureBox3);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "UC_EditarAnuncio";
-            Size = new Size(786, 567);
+            Size = new Size(1123, 945);
             Load += UC_EditarAnuncio_Load;
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
