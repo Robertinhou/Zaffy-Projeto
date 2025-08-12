@@ -56,6 +56,7 @@
             Bairro = new Label();
             lblCaminhoFoto = new Label();
             pnlNavBar = new Panel();
+            linkPlanos = new LinkLabel();
             pictureBox2 = new PictureBox();
             pbLogout = new PictureBox();
             lnkHome = new LinkLabel();
@@ -232,6 +233,7 @@
             // btnEnvFoto
             // 
             btnEnvFoto.BackColor = Color.Indigo;
+            btnEnvFoto.Cursor = Cursors.Hand;
             btnEnvFoto.Enabled = false;
             btnEnvFoto.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEnvFoto.ForeColor = Color.White;
@@ -247,6 +249,7 @@
             // btnSalvar
             // 
             btnSalvar.BackColor = Color.Indigo;
+            btnSalvar.Cursor = Cursors.Hand;
             btnSalvar.Enabled = false;
             btnSalvar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.White;
@@ -273,6 +276,7 @@
             // btnEditarPerfil
             // 
             btnEditarPerfil.BackColor = Color.Indigo;
+            btnEditarPerfil.Cursor = Cursors.Hand;
             btnEditarPerfil.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditarPerfil.ForeColor = Color.White;
             btnEditarPerfil.Location = new Point(774, 103);
@@ -332,6 +336,7 @@
             // btnBuscarCep
             // 
             btnBuscarCep.BackColor = Color.Indigo;
+            btnBuscarCep.Cursor = Cursors.Hand;
             btnBuscarCep.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBuscarCep.ForeColor = Color.White;
             btnBuscarCep.Location = new Point(774, 472);
@@ -378,6 +383,7 @@
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(linkPlanos);
             pnlNavBar.Controls.Add(pictureBox2);
             pnlNavBar.Controls.Add(pbLogout);
             pnlNavBar.Controls.Add(lnkHome);
@@ -385,8 +391,25 @@
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1138, 63);
+            pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 2;
+            // 
+            // linkPlanos
+            // 
+            linkPlanos.ActiveLinkColor = Color.White;
+            linkPlanos.AutoSize = true;
+            linkPlanos.Cursor = Cursors.Hand;
+            linkPlanos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linkPlanos.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkPlanos.LinkColor = Color.White;
+            linkPlanos.Location = new Point(191, 17);
+            linkPlanos.Margin = new Padding(4, 0, 4, 0);
+            linkPlanos.Name = "linkPlanos";
+            linkPlanos.Size = new Size(116, 29);
+            linkPlanos.TabIndex = 50;
+            linkPlanos.TabStop = true;
+            linkPlanos.Text = "PLANOS";
+            linkPlanos.LinkClicked += linkPlanos_LinkClicked;
             // 
             // pictureBox2
             // 
@@ -403,7 +426,7 @@
             // 
             pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(1068, 2);
+            pbLogout.Location = new Point(1083, 2);
             pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
             pbLogout.Size = new Size(54, 58);
@@ -415,6 +438,7 @@
             // lnkHome
             // 
             lnkHome.AutoSize = true;
+            lnkHome.Cursor = Cursors.Hand;
             lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
@@ -463,7 +487,7 @@
             Controls.Add(label1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "UC_Perfil";
-            Size = new Size(1138, 945);
+            Size = new Size(1144, 875);
             Load += UC_Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).EndInit();
             pnlNavBar.ResumeLayout(false);
@@ -506,5 +530,6 @@
         private LinkLabel lnkHome;
         private PictureBox pbLogout;
         private PictureBox pictureBox2;
+        private LinkLabel linkPlanos;
     }
 }

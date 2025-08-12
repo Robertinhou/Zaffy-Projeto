@@ -112,5 +112,12 @@ namespace ZaffyStore.UserControls
             this.Controls.Clear();
             this.Controls.Add(login);
         }
+
+        private void linkPlanos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Planos planos = new UC_Planos();
+            this.Controls.Clear();
+            this.Controls.Add(planos);
+        }
     }
 }

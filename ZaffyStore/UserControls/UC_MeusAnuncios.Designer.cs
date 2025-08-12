@@ -39,6 +39,7 @@
             btnListar = new Button();
             label1 = new Label();
             label2 = new Label();
+            linkPlanos = new LinkLabel();
             pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogout).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPerfil).BeginInit();
@@ -49,6 +50,7 @@
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(linkPlanos);
             pnlNavBar.Controls.Add(pbLogout);
             pnlNavBar.Controls.Add(pbPerfil);
             pnlNavBar.Controls.Add(pictureBox2);
@@ -101,6 +103,7 @@
             // lnkCadAnuncios
             // 
             lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.Cursor = Cursors.Hand;
             lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
@@ -116,6 +119,7 @@
             // lnkHome
             // 
             lnkHome.AutoSize = true;
+            lnkHome.Cursor = Cursors.Hand;
             lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
@@ -193,6 +197,23 @@
             label2.TabIndex = 11;
             label2.Text = "Clique duas vezes para editar";
             // 
+            // linkPlanos
+            // 
+            linkPlanos.ActiveLinkColor = Color.White;
+            linkPlanos.AutoSize = true;
+            linkPlanos.Cursor = Cursors.Hand;
+            linkPlanos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linkPlanos.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkPlanos.LinkColor = Color.White;
+            linkPlanos.Location = new Point(330, 15);
+            linkPlanos.Margin = new Padding(4, 0, 4, 0);
+            linkPlanos.Name = "linkPlanos";
+            linkPlanos.Size = new Size(116, 29);
+            linkPlanos.TabIndex = 51;
+            linkPlanos.TabStop = true;
+            linkPlanos.Text = "PLANOS";
+            linkPlanos.LinkClicked += linkPlanos_LinkClicked;
+            // 
             // UC_MeusAnuncios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -230,5 +251,6 @@
         private PictureBox pbLogout;
         private PictureBox pbPerfil;
         private Label label2;
+        private LinkLabel linkPlanos;
     }
 }

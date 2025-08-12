@@ -27,6 +27,7 @@
             panelFotos = new Panel();
             pictureBox1 = new PictureBox();
             pnlNavBar = new Panel();
+            linkPlanos = new LinkLabel();
             pbLogout = new PictureBox();
             pictureBox2 = new PictureBox();
             pbPerfil = new PictureBox();
@@ -96,6 +97,7 @@
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
+            pnlNavBar.Controls.Add(linkPlanos);
             pnlNavBar.Controls.Add(pbLogout);
             pnlNavBar.Controls.Add(pictureBox2);
             pnlNavBar.Controls.Add(pbPerfil);
@@ -107,6 +109,23 @@
             pnlNavBar.Name = "pnlNavBar";
             pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 1;
+            // 
+            // linkPlanos
+            // 
+            linkPlanos.ActiveLinkColor = Color.White;
+            linkPlanos.AutoSize = true;
+            linkPlanos.Cursor = Cursors.Hand;
+            linkPlanos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linkPlanos.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkPlanos.LinkColor = Color.White;
+            linkPlanos.Location = new Point(601, 15);
+            linkPlanos.Margin = new Padding(4, 0, 4, 0);
+            linkPlanos.Name = "linkPlanos";
+            linkPlanos.Size = new Size(116, 29);
+            linkPlanos.TabIndex = 46;
+            linkPlanos.TabStop = true;
+            linkPlanos.Text = "PLANOS";
+            linkPlanos.LinkClicked += linkPlanos_LinkClicked;
             // 
             // pbLogout
             // 
@@ -147,6 +166,7 @@
             // 
             // lnkMeuAnuncio
             // 
+            lnkMeuAnuncio.ActiveLinkColor = Color.White;
             lnkMeuAnuncio.AutoSize = true;
             lnkMeuAnuncio.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkMeuAnuncio.LinkBehavior = LinkBehavior.HoverUnderline;
@@ -162,6 +182,7 @@
             // 
             // lnkCadAnuncios
             // 
+            lnkCadAnuncios.ActiveLinkColor = Color.White;
             lnkCadAnuncios.AutoSize = true;
             lnkCadAnuncios.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
@@ -177,6 +198,7 @@
             // 
             // lnkHome
             // 
+            lnkHome.ActiveLinkColor = Color.White;
             lnkHome.AutoSize = true;
             lnkHome.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
@@ -244,6 +266,7 @@
             // btnVisualizar
             // 
             btnVisualizar.BackColor = Color.FromArgb(115, 76, 191);
+            btnVisualizar.Cursor = Cursors.Hand;
             btnVisualizar.ForeColor = Color.White;
             btnVisualizar.Location = new Point(16, 262);
             btnVisualizar.Margin = new Padding(4, 5, 4, 5);
@@ -523,5 +546,6 @@
         private Button button2;
         private Label label4;
         private PictureBox pictureBox4;
+        private LinkLabel linkPlanos;
     }
 }

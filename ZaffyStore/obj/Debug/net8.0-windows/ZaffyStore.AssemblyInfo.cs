@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZaffyStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adeb8c577936150be632c02d9b64ae628844a1a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+617ce1794e4afd4881b40a8728a5076bde5031d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZaffyStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZaffyStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

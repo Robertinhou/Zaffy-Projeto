@@ -120,7 +120,9 @@
             // 
             // lnkCadAnuncios
             // 
+            lnkCadAnuncios.ActiveLinkColor = Color.White;
             lnkCadAnuncios.AutoSize = true;
+            lnkCadAnuncios.Cursor = Cursors.Hand;
             lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
@@ -136,6 +138,7 @@
             // lnkHome
             // 
             lnkHome.AutoSize = true;
+            lnkHome.Cursor = Cursors.Hand;
             lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
@@ -174,6 +177,7 @@
             // button1
             // 
             button1.BackColor = Color.Indigo;
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Location = new Point(95, 466);
@@ -242,6 +246,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(115, 76, 191);
+            button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Location = new Point(103, 466);
@@ -310,6 +315,7 @@
             // button3
             // 
             button3.BackColor = Color.Indigo;
+            button3.Cursor = Cursors.Hand;
             button3.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
             button3.Location = new Point(96, 466);

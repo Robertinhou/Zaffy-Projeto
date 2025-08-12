@@ -128,9 +128,9 @@
             lblMessage.Location = new Point(39, 90);
             lblMessage.Margin = new Padding(4, 0, 4, 0);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(542, 44);
+            lblMessage.Size = new Size(439, 44);
             lblMessage.TabIndex = 3;
-            lblMessage.Text = "Olá, o que você quer anunciar?";
+            lblMessage.Text = "O que você vai anunciar?";
             // 
             // lblCategoria
             // 
@@ -149,7 +149,7 @@
             cbCategoria.Location = new Point(318, 183);
             cbCategoria.Margin = new Padding(4, 5, 4, 5);
             cbCategoria.Name = "cbCategoria";
-            cbCategoria.Size = new Size(240, 33);
+            cbCategoria.Size = new Size(229, 33);
             cbCategoria.TabIndex = 5;
             // 
             // lblMessageInfos
@@ -179,7 +179,7 @@
             txtNome.Location = new Point(58, 399);
             txtNome.Margin = new Padding(4, 5, 4, 5);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(594, 31);
+            txtNome.Size = new Size(489, 31);
             txtNome.TabIndex = 9;
             // 
             // lblPreco
@@ -269,7 +269,7 @@
             txtLocal.Location = new Point(53, 777);
             txtLocal.Margin = new Padding(4, 5, 4, 5);
             txtLocal.Name = "txtLocal";
-            txtLocal.Size = new Size(494, 31);
+            txtLocal.Size = new Size(348, 31);
             txtLocal.TabIndex = 21;
             // 
             // lblLocal
@@ -285,7 +285,9 @@
             // 
             // btnAnunciar
             // 
-            btnAnunciar.BackColor = Color.FromArgb(115, 76, 191);
+            btnAnunciar.BackColor = Color.Indigo;
+            btnAnunciar.Cursor = Cursors.Hand;
+            btnAnunciar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAnunciar.ForeColor = Color.White;
             btnAnunciar.Location = new Point(904, 759);
             btnAnunciar.Margin = new Padding(4, 5, 4, 5);

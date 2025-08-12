@@ -39,7 +39,7 @@ namespace ZaffyStore.UserControls
             var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
             if (formPrincipal != null)
             {
-                
+
                 //formPrincipal.Size = new Size(1138, 945); // ou o tamanho que desejar
                 formPrincipal.Size = new Size(1144, 984); // ou o tamanho que desejar
             }
@@ -217,6 +217,13 @@ namespace ZaffyStore.UserControls
             UC_Perfil perfil = new UC_Perfil();
             this.Controls.Clear();
             this.Controls.Add(perfil);
+        }
+
+        private void linkPlanos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Planos planos = new UC_Planos();
+            this.Controls.Clear();
+            this.Controls.Add(planos);
         }
     }
 }
