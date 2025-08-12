@@ -242,7 +242,6 @@
             // 
             mtxtPreco.Location = new Point(594, 614);
             mtxtPreco.Margin = new Padding(4, 5, 4, 5);
-            mtxtPreco.Mask = "0000000,00";
             mtxtPreco.Name = "mtxtPreco";
             mtxtPreco.Size = new Size(98, 31);
             mtxtPreco.TabIndex = 30;

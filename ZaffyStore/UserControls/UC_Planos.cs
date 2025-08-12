@@ -16,5 +16,37 @@ namespace ZaffyStore.UserControls
         {
             InitializeComponent();
         }
+
+        private void lnkHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_Home home = new UC_Home();
+            this.Controls.Clear();
+            this.Controls.Add(home);
+
+        }
+
+        private void pbPerfil_Click(object sender, EventArgs e)
+        {
+            UC_Perfil perfil = new UC_Perfil();
+            this.Controls.Clear();
+            this.Controls.Add(perfil);
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
+
+            UC_Login login = new UC_Login();
+
+            this.Controls.Clear();
+            this.Controls.Add(login);
+        }
+
+        private void lnkCadAnuncios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UC_CadAnuncios cadAnuncios = new UC_CadAnuncios();
+            this.Controls.Clear();
+            this.Controls.Add(cadAnuncios);
+        }
     }
 }

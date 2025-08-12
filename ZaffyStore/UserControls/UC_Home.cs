@@ -39,7 +39,9 @@ namespace ZaffyStore.UserControls
             var formPrincipal = this.FindForm(); // Pega o formulário que contém este UserControl
             if (formPrincipal != null)
             {
-                formPrincipal.Size = new Size(1138, 945); // ou o tamanho que desejar
+                
+                //formPrincipal.Size = new Size(1138, 945); // ou o tamanho que desejar
+                formPrincipal.Size = new Size(1144, 984); // ou o tamanho que desejar
             }
 
             CarregarBanners();

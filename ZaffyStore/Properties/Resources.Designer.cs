@@ -63,9 +63,29 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camisaCreuzeiro {
+            get {
+                object obj = ResourceManager.GetObject("camisaCreuzeiro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carregarfoto {
             get {
                 object obj = ResourceManager.GetObject("carregarfoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chave_de_fena {
+            get {
+                object obj = ResourceManager.GetObject("chave de fena", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +333,16 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plano_DIAMOND1 {
+            get {
+                object obj = ResourceManager.GetObject("plano DIAMOND1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plano_Medio {
             get {
                 object obj = ResourceManager.GetObject("plano Medio", resourceCulture);
@@ -356,6 +386,16 @@ namespace ZaffyStore.Properties {
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade11 {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trator {
+            get {
+                object obj = ResourceManager.GetObject("trator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

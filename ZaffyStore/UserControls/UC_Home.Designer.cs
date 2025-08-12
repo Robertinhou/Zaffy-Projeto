@@ -40,6 +40,11 @@
             btnVisualizar = new Button();
             lblProductName = new Label();
             cardFoto = new PictureBox();
+            panel4 = new Panel();
+            label5 = new Label();
+            button3 = new Button();
+            label6 = new Label();
+            pictureBox5 = new PictureBox();
             panel2 = new Panel();
             label1 = new Label();
             button1 = new Button();
@@ -50,11 +55,6 @@
             button2 = new Button();
             label4 = new Label();
             pictureBox4 = new PictureBox();
-            panel4 = new Panel();
-            label5 = new Label();
-            button3 = new Button();
-            label6 = new Label();
-            pictureBox5 = new PictureBox();
             panelFotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlNavBar.SuspendLayout();
@@ -64,12 +64,12 @@
             ((System.ComponentModel.ISupportInitialize)dgvAnuncios).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cardFoto).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // panelFotos
@@ -103,7 +103,7 @@
             pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Controls.Add(lnkHome);
             pnlNavBar.Location = new Point(0, 0);
-            pnlNavBar.Margin = new Padding(0, 0, 0, 0);
+            pnlNavBar.Margin = new Padding(0);
             pnlNavBar.Name = "pnlNavBar";
             pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 1;
@@ -198,18 +198,18 @@
             dgvAnuncios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAnuncios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAnuncios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAnuncios.Location = new Point(43, 780);
+            dgvAnuncios.Location = new Point(43, 740);
             dgvAnuncios.Margin = new Padding(4, 5, 4, 5);
             dgvAnuncios.Name = "dgvAnuncios";
             dgvAnuncios.RowHeadersWidth = 62;
-            dgvAnuncios.Size = new Size(1051, 352);
+            dgvAnuncios.Size = new Size(1051, 179);
             dgvAnuncios.TabIndex = 3;
             // 
             // lblWelcome
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblWelcome.Location = new Point(14, 78);
+            lblWelcome.Location = new Point(14, 73);
             lblWelcome.Margin = new Padding(4, 0, 4, 0);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(0, 30);
@@ -226,7 +226,7 @@
             panel1.Location = new Point(571, 405);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(223, 365);
+            panel1.Size = new Size(223, 325);
             panel1.TabIndex = 5;
             panel1.MouseEnter += panel1_MouseEnter;
             panel1.MouseLeave += panel1_MouseLeave;
@@ -234,7 +234,7 @@
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(131, 270);
+            lblPrice.Location = new Point(127, 232);
             lblPrice.Margin = new Padding(4, 0, 4, 0);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(92, 25);
@@ -245,7 +245,7 @@
             // 
             btnVisualizar.BackColor = Color.FromArgb(115, 76, 191);
             btnVisualizar.ForeColor = Color.White;
-            btnVisualizar.Location = new Point(16, 300);
+            btnVisualizar.Location = new Point(16, 262);
             btnVisualizar.Margin = new Padding(4, 5, 4, 5);
             btnVisualizar.Name = "btnVisualizar";
             btnVisualizar.Size = new Size(194, 50);
@@ -257,7 +257,7 @@
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Location = new Point(6, 228);
+            lblProductName.Location = new Point(6, 190);
             lblProductName.Margin = new Padding(4, 0, 4, 0);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(187, 50);
@@ -267,128 +267,16 @@
             // cardFoto
             // 
             cardFoto.Image = Properties.Resources.download__1_;
-            cardFoto.Location = new Point(6, 8);
+            cardFoto.Location = new Point(9, 8);
             cardFoto.Margin = new Padding(4, 5, 4, 5);
             cardFoto.Name = "cardFoto";
-            cardFoto.Size = new Size(211, 215);
+            cardFoto.Size = new Size(204, 177);
             cardFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             cardFoto.TabIndex = 0;
             cardFoto.TabStop = false;
             cardFoto.Click += cardFoto_Click;
             cardFoto.MouseLeave += cardFoto_MouseLeave;
             cardFoto.MouseHover += cardFoto_MouseHover;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ButtonHighlight;
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(pictureBox3);
-            panel2.Location = new Point(831, 405);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(223, 365);
-            panel2.TabIndex = 6;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(131, 270);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 25);
-            label1.TabIndex = 3;
-            label1.Text = "R$ 8000.7";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(115, 76, 191);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(16, 300);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(194, 50);
-            button1.TabIndex = 2;
-            button1.Text = "Visualizar";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 228);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(187, 50);
-            label2.TabIndex = 1;
-            label2.Text = "PS4 SLIM do Cristiano\r\n Ronaldo (Jr)";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.download__1_;
-            pictureBox3.Location = new Point(6, 8);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(211, 215);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.ButtonHighlight;
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(pictureBox4);
-            panel3.Location = new Point(319, 405);
-            panel3.Margin = new Padding(4, 5, 4, 5);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(223, 365);
-            panel3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(131, 270);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(92, 25);
-            label3.TabIndex = 3;
-            label3.Text = "R$ 8000.7";
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(115, 76, 191);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(16, 300);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(194, 50);
-            button2.TabIndex = 2;
-            button2.Text = "Visualizar";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 228);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(187, 50);
-            label4.TabIndex = 1;
-            label4.Text = "PS4 SLIM do Cristiano\r\n Ronaldo (Jr)";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.download__1_;
-            pictureBox4.Location = new Point(6, 8);
-            pictureBox4.Margin = new Padding(4, 5, 4, 5);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(211, 215);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 0;
-            pictureBox4.TabStop = false;
             // 
             // panel4
             // 
@@ -400,24 +288,24 @@
             panel4.Location = new Point(66, 405);
             panel4.Margin = new Padding(4, 5, 4, 5);
             panel4.Name = "panel4";
-            panel4.Size = new Size(223, 365);
+            panel4.Size = new Size(223, 325);
             panel4.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(131, 270);
+            label5.Location = new Point(131, 232);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(92, 25);
+            label5.Size = new Size(82, 25);
             label5.TabIndex = 3;
-            label5.Text = "R$ 8000.7";
+            label5.Text = "R$ 80.79";
             // 
             // button3
             // 
             button3.BackColor = Color.FromArgb(115, 76, 191);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(16, 300);
+            button3.Location = new Point(16, 262);
             button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
             button3.Size = new Size(194, 50);
@@ -428,40 +316,152 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(6, 228);
+            label6.Location = new Point(6, 190);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(187, 50);
+            label6.Size = new Size(138, 25);
             label6.TabIndex = 1;
-            label6.Text = "PS4 SLIM do Cristiano\r\n Ronaldo (Jr)";
+            label6.Text = "Chave de Fenda";
             // 
             // pictureBox5
             // 
-            pictureBox5.Image = Properties.Resources.download__1_;
-            pictureBox5.Location = new Point(6, 8);
+            pictureBox5.Image = Properties.Resources.chave_de_fena;
+            pictureBox5.Location = new Point(8, 8);
             pictureBox5.Margin = new Padding(4, 5, 4, 5);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(211, 215);
+            pictureBox5.Size = new Size(204, 177);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ButtonHighlight;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(pictureBox3);
+            panel2.Location = new Point(319, 405);
+            panel2.Margin = new Padding(4, 5, 4, 5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(223, 325);
+            panel2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(131, 232);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(82, 25);
+            label1.TabIndex = 3;
+            label1.Text = "R$ 65,00";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(115, 76, 191);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(16, 262);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(194, 50);
+            button1.TabIndex = 2;
+            button1.Text = "Visualizar";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 190);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(205, 25);
+            label2.TabIndex = 1;
+            label2.Text = "Caminhao de brinquedo";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.trator;
+            pictureBox3.Location = new Point(8, 8);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(204, 177);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ButtonHighlight;
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(pictureBox4);
+            panel3.Location = new Point(829, 405);
+            panel3.Margin = new Padding(4, 5, 4, 5);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(223, 325);
+            panel3.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(131, 232);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 25);
+            label3.TabIndex = 3;
+            label3.Text = "R$ 200.99";
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(115, 76, 191);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(16, 262);
+            button2.Margin = new Padding(4, 5, 4, 5);
+            button2.Name = "button2";
+            button2.Size = new Size(194, 50);
+            button2.TabIndex = 2;
+            button2.Text = "Visualizar";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 190);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(162, 50);
+            label4.TabIndex = 1;
+            label4.Text = "Camisa do Melhor \r\ndo Mundo";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.camisaCreuzeiro;
+            pictureBox4.Location = new Point(10, 8);
+            pictureBox4.Margin = new Padding(4, 5, 4, 5);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(204, 177);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 0;
+            pictureBox4.TabStop = false;
             // 
             // UC_Home
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
+            Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(lblWelcome);
             Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
             Controls.Add(panelFotos);
-            Margin = new Padding(0, 0, 0, 0);
+            Margin = new Padding(0);
             Name = "UC_Home";
-            Size = new Size(1144, 1137);
+            Size = new Size(1144, 984);
             Load += UC_Home_Load;
             panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -474,15 +474,15 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)cardFoto).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -508,6 +508,11 @@
         private PictureBox pictureBox2;
         private PictureBox pbLogout;
         private PictureBox pbPerfil;
+        private Panel panel4;
+        private Label label5;
+        private Button button3;
+        private Label label6;
+        private PictureBox pictureBox5;
         private Panel panel2;
         private Label label1;
         private Button button1;
@@ -518,10 +523,5 @@
         private Button button2;
         private Label label4;
         private PictureBox pictureBox4;
-        private Panel panel4;
-        private Label label5;
-        private Button button3;
-        private Label label6;
-        private PictureBox pictureBox5;
     }
 }

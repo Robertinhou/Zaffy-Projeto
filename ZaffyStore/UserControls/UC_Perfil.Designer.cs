@@ -56,13 +56,13 @@
             Bairro = new Label();
             lblCaminhoFoto = new Label();
             pnlNavBar = new Panel();
+            pictureBox2 = new PictureBox();
             pbLogout = new PictureBox();
             lnkHome = new LinkLabel();
-            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).BeginInit();
             pnlNavBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLogout).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -385,8 +385,19 @@
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1123, 63);
+            pnlNavBar.Size = new Size(1138, 63);
             pnlNavBar.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.zaffyNav;
+            pictureBox2.Location = new Point(4, 0);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(59, 63);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 49;
+            pictureBox2.TabStop = false;
             // 
             // pbLogout
             // 
@@ -415,17 +426,6 @@
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
             lnkHome.LinkClicked += lnkHome_LinkClicked;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.zaffyNav;
-            pictureBox2.Location = new Point(4, 0);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(59, 63);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 49;
-            pictureBox2.TabStop = false;
             // 
             // UC_Perfil
             // 
@@ -463,13 +463,13 @@
             Controls.Add(label1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "UC_Perfil";
-            Size = new Size(1123, 945);
+            Size = new Size(1138, 945);
             Load += UC_Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).EndInit();
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLogout).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
