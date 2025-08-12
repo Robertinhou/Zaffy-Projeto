@@ -22,7 +22,7 @@ namespace ZaffyStore.UserControls
             // UC_Home cresce com conteúdo
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            
+
 
 
 
@@ -68,12 +68,8 @@ namespace ZaffyStore.UserControls
         {
 
             //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\"; Robert
-            string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\";//  Matheus pc senai
-                                                                                                                             // string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
-
-            //string caminhoDasImagens = @"C:\Users\Robert\source\repos\home\ZaffyStore\Resources\banners\";
-
-
+            // string caminhoDasImagens = @"C:\Users\Aluno_Manha\Source\Repos\Zaffy-ProjetoAtual\ZaffyStore\Resources\banners\";//  Matheus pc senai
+            string caminhoDasImagens = @"C:\Users\Aluno_Tarde\source\repos\Zaffy-Projeto\ZaffyStore\Resources\banners\"; // matheus notebook tarde
             //  string caminhoDasImagens = @"C:\Users\Aluno_Manha\Desktop\zaffy\Zaffy-Projeto\ZaffyStore\Resources\banners\";
 
 
@@ -205,7 +201,7 @@ namespace ZaffyStore.UserControls
         }
 
         private void pbLogout_Click(object sender, EventArgs e)
-        { 
+        {
             Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
 
             UC_Login login = new UC_Login();

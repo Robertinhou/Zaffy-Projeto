@@ -56,21 +56,23 @@
             Bairro = new Label();
             lblCaminhoFoto = new Label();
             pnlNavBar = new Panel();
-            lnkLogout = new LinkLabel();
-            lnkPerfil = new LinkLabel();
+            pbLogout = new PictureBox();
             lnkHome = new LinkLabel();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).BeginInit();
             pnlNavBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 77);
+            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(17, 80);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(333, 36);
+            label1.Size = new Size(290, 37);
             label1.TabIndex = 1;
             label1.Text = "PERFIL DO USUÁRIO";
             // 
@@ -78,7 +80,7 @@
             // 
             lblNomeUser.AutoSize = true;
             lblNomeUser.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
-            lblNomeUser.Location = new Point(289, 208);
+            lblNomeUser.Location = new Point(288, 216);
             lblNomeUser.Margin = new Padding(4, 0, 4, 0);
             lblNomeUser.Name = "lblNomeUser";
             lblNomeUser.Size = new Size(0, 40);
@@ -218,7 +220,7 @@
             pbFotoUsuario.ErrorImage = Properties.Resources.icons8_usuário_30;
             pbFotoUsuario.Image = Properties.Resources.icons8_usuário_96;
             pbFotoUsuario.InitialImage = Properties.Resources.icons8_usuário_30;
-            pbFotoUsuario.Location = new Point(51, 135);
+            pbFotoUsuario.Location = new Point(50, 143);
             pbFotoUsuario.Margin = new Padding(4, 5, 4, 5);
             pbFotoUsuario.Name = "pbFotoUsuario";
             pbFotoUsuario.Size = new Size(203, 198);
@@ -233,7 +235,7 @@
             btnEnvFoto.Enabled = false;
             btnEnvFoto.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEnvFoto.ForeColor = Color.White;
-            btnEnvFoto.Location = new Point(89, 343);
+            btnEnvFoto.Location = new Point(88, 351);
             btnEnvFoto.Margin = new Padding(4, 5, 4, 5);
             btnEnvFoto.Name = "btnEnvFoto";
             btnEnvFoto.Size = new Size(129, 38);
@@ -376,56 +378,54 @@
             // pnlNavBar
             // 
             pnlNavBar.BackColor = Color.FromArgb(115, 76, 191);
-            pnlNavBar.Controls.Add(lnkLogout);
-            pnlNavBar.Controls.Add(lnkPerfil);
+            pnlNavBar.Controls.Add(pictureBox2);
+            pnlNavBar.Controls.Add(pbLogout);
             pnlNavBar.Controls.Add(lnkHome);
             pnlNavBar.Dock = DockStyle.Top;
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1123, 53);
+            pnlNavBar.Size = new Size(1123, 63);
             pnlNavBar.TabIndex = 2;
             // 
-            // lnkLogout
+            // pbLogout
             // 
-            lnkLogout.AutoSize = true;
-            lnkLogout.LinkBehavior = LinkBehavior.HoverUnderline;
-            lnkLogout.LinkColor = Color.White;
-            lnkLogout.Location = new Point(1021, 15);
-            lnkLogout.Margin = new Padding(4, 0, 4, 0);
-            lnkLogout.Name = "lnkLogout";
-            lnkLogout.Size = new Size(72, 25);
-            lnkLogout.TabIndex = 6;
-            lnkLogout.TabStop = true;
-            lnkLogout.Text = "LogOut";
-            lnkLogout.LinkClicked += lnkLogout_LinkClicked;
-            // 
-            // lnkPerfil
-            // 
-            lnkPerfil.AutoSize = true;
-            lnkPerfil.LinkBehavior = LinkBehavior.HoverUnderline;
-            lnkPerfil.LinkColor = Color.White;
-            lnkPerfil.Location = new Point(514, 15);
-            lnkPerfil.Margin = new Padding(4, 0, 4, 0);
-            lnkPerfil.Name = "lnkPerfil";
-            lnkPerfil.Size = new Size(64, 25);
-            lnkPerfil.TabIndex = 5;
-            lnkPerfil.TabStop = true;
-            lnkPerfil.Text = "PERFIL";
+            pbLogout.Cursor = Cursors.Hand;
+            pbLogout.Image = Properties.Resources.ondaBaixo2;
+            pbLogout.Location = new Point(1068, 2);
+            pbLogout.Margin = new Padding(4, 5, 4, 5);
+            pbLogout.Name = "pbLogout";
+            pbLogout.Size = new Size(54, 58);
+            pbLogout.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogout.TabIndex = 47;
+            pbLogout.TabStop = false;
+            pbLogout.Click += pbLogout_Click;
             // 
             // lnkHome
             // 
             lnkHome.AutoSize = true;
+            lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkHome.LinkColor = Color.White;
-            lnkHome.Location = new Point(33, 15);
+            lnkHome.Location = new Point(89, 18);
             lnkHome.Margin = new Padding(4, 0, 4, 0);
             lnkHome.Name = "lnkHome";
-            lnkHome.Size = new Size(64, 25);
+            lnkHome.Size = new Size(82, 28);
             lnkHome.TabIndex = 4;
             lnkHome.TabStop = true;
             lnkHome.Text = "HOME";
             lnkHome.LinkClicked += lnkHome_LinkClicked;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.zaffyNav;
+            pictureBox2.Location = new Point(4, 0);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(59, 63);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 49;
+            pictureBox2.TabStop = false;
             // 
             // UC_Perfil
             // 
@@ -468,6 +468,8 @@
             ((System.ComponentModel.ISupportInitialize)pbFotoUsuario).EndInit();
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogout).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -501,8 +503,8 @@
         private Label Bairro;
         private Label lblCaminhoFoto;
         private Panel pnlNavBar;
-        private LinkLabel lnkLogout;
-        private LinkLabel lnkPerfil;
         private LinkLabel lnkHome;
+        private PictureBox pbLogout;
+        private PictureBox pictureBox2;
     }
 }

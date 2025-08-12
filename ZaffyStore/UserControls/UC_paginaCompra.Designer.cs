@@ -66,7 +66,7 @@
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1123, 63);
+            pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 3;
             // 
             // pictureBox2
@@ -87,7 +87,7 @@
             linkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             linkHome.LinkBehavior = LinkBehavior.HoverUnderline;
             linkHome.LinkColor = Color.White;
-            linkHome.Location = new Point(110, 15);
+            linkHome.Location = new Point(104, 16);
             linkHome.Margin = new Padding(4, 0, 4, 0);
             linkHome.Name = "linkHome";
             linkHome.Size = new Size(82, 28);
@@ -100,7 +100,7 @@
             // 
             pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(1064, 2);
+            pbLogout.Location = new Point(1083, 3);
             pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
             pbLogout.Size = new Size(54, 58);
@@ -113,7 +113,7 @@
             // 
             pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
-            pbPerfil.Location = new Point(999, 2);
+            pbPerfil.Location = new Point(1018, 3);
             pbPerfil.Margin = new Padding(4, 5, 4, 5);
             pbPerfil.Name = "pbPerfil";
             pbPerfil.Size = new Size(54, 58);
@@ -129,7 +129,7 @@
             lnkCadAnuncios.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkCadAnuncios.LinkBehavior = LinkBehavior.HoverUnderline;
             lnkCadAnuncios.LinkColor = Color.White;
-            lnkCadAnuncios.Location = new Point(214, 15);
+            lnkCadAnuncios.Location = new Point(208, 16);
             lnkCadAnuncios.Margin = new Padding(4, 0, 4, 0);
             lnkCadAnuncios.Name = "lnkCadAnuncios";
             lnkCadAnuncios.Size = new Size(139, 28);
@@ -275,7 +275,7 @@
             Controls.Add(panel2);
             Margin = new Padding(4, 5, 4, 5);
             Name = "UC_paginaCompra";
-            Size = new Size(1123, 945);
+            Size = new Size(1144, 875);
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -58,14 +58,14 @@
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1123, 63);
+            pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 6;
             // 
             // pbLogout
             // 
             pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(1064, 1);
+            pbLogout.Location = new Point(1082, 3);
             pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
             pbLogout.Size = new Size(54, 58);
@@ -78,7 +78,7 @@
             // 
             pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
-            pbPerfil.Location = new Point(1004, 1);
+            pbPerfil.Location = new Point(1022, 3);
             pbPerfil.Margin = new Padding(4, 5, 4, 5);
             pbPerfil.Name = "pbPerfil";
             pbPerfil.Size = new Size(54, 58);
@@ -141,7 +141,7 @@
             dgvMeusAnuncios.Margin = new Padding(4, 5, 4, 5);
             dgvMeusAnuncios.Name = "dgvMeusAnuncios";
             dgvMeusAnuncios.RowHeadersWidth = 62;
-            dgvMeusAnuncios.Size = new Size(1115, 415);
+            dgvMeusAnuncios.Size = new Size(1132, 527);
             dgvMeusAnuncios.TabIndex = 7;
             dgvMeusAnuncios.CellDoubleClick += dgvMeusAnuncios_CellDoubleClick;
             // 
@@ -150,7 +150,7 @@
             btnExcluir.BackColor = Color.Indigo;
             btnExcluir.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             btnExcluir.ForeColor = SystemColors.Control;
-            btnExcluir.Location = new Point(992, 588);
+            btnExcluir.Location = new Point(1010, 708);
             btnExcluir.Margin = new Padding(4, 5, 4, 5);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(126, 60);
@@ -164,7 +164,7 @@
             btnListar.BackColor = Color.Indigo;
             btnListar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnListar.ForeColor = SystemColors.Control;
-            btnListar.Location = new Point(1004, 106);
+            btnListar.Location = new Point(1022, 106);
             btnListar.Margin = new Padding(4, 5, 4, 5);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(114, 47);
@@ -187,7 +187,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(4, 588);
+            label2.Location = new Point(4, 708);
             label2.Name = "label2";
             label2.Size = new Size(301, 23);
             label2.TabIndex = 11;
@@ -205,7 +205,7 @@
             Controls.Add(dgvMeusAnuncios);
             Margin = new Padding(4, 5, 4, 5);
             Name = "UC_MeusAnuncios";
-            Size = new Size(1123, 945);
+            Size = new Size(1144, 875);
             Load += UC_MeusAnuncios_Load;
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();

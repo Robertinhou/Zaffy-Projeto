@@ -68,13 +68,13 @@
             pnlNavBar.Location = new Point(0, 0);
             pnlNavBar.Margin = new Padding(4, 5, 4, 5);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1123, 63);
+            pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 2;
             // 
             // pbLogout
             // 
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(1068, 3);
+            pbLogout.Location = new Point(1080, 3);
             pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
             pbLogout.Size = new Size(54, 58);
@@ -86,7 +86,7 @@
             // pbPerfil
             // 
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
-            pbPerfil.Location = new Point(1008, 3);
+            pbPerfil.Location = new Point(1020, 3);
             pbPerfil.Margin = new Padding(4, 5, 4, 5);
             pbPerfil.Name = "pbPerfil";
             pbPerfil.Size = new Size(54, 58);
@@ -320,7 +320,7 @@
             Controls.Add(pnlNavBar);
             Margin = new Padding(4, 5, 4, 5);
             Name = "UC_CadAnuncios";
-            Size = new Size(1123, 945);
+            Size = new Size(1144, 875);
             Load += UC_CadAnuncios_Load;
             pnlNavBar.ResumeLayout(false);
             pnlNavBar.PerformLayout();

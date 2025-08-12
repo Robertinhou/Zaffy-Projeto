@@ -204,17 +204,22 @@ namespace ZaffyStore.UserControls
 
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+           
+        }
+
+        private void pbFotoUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
             Sessao.RemoverUsuarioLogado(Sessao.UsuarioAtual);
 
             UC_Login login = new UC_Login();
 
             this.Controls.Clear();
             this.Controls.Add(login);
-        }
-
-        private void pbFotoUsuario_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
