@@ -108,6 +108,7 @@
             // 
             // lnkHome
             // 
+            lnkHome.ActiveLinkColor = Color.White;
             lnkHome.AutoSize = true;
             lnkHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnkHome.LinkBehavior = LinkBehavior.HoverUnderline;
