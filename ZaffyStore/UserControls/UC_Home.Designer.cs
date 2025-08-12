@@ -103,16 +103,16 @@
             pnlNavBar.Controls.Add(lnkCadAnuncios);
             pnlNavBar.Controls.Add(lnkHome);
             pnlNavBar.Location = new Point(0, 0);
-            pnlNavBar.Margin = new Padding(4, 5, 4, 5);
+            pnlNavBar.Margin = new Padding(0, 0, 0, 0);
             pnlNavBar.Name = "pnlNavBar";
-            pnlNavBar.Size = new Size(1121, 63);
+            pnlNavBar.Size = new Size(1144, 63);
             pnlNavBar.TabIndex = 1;
             // 
             // pbLogout
             // 
             pbLogout.Cursor = Cursors.Hand;
             pbLogout.Image = Properties.Resources.ondaBaixo2;
-            pbLogout.Location = new Point(1063, 2);
+            pbLogout.Location = new Point(1083, 2);
             pbLogout.Margin = new Padding(4, 5, 4, 5);
             pbLogout.Name = "pbLogout";
             pbLogout.Size = new Size(54, 58);
@@ -136,7 +136,7 @@
             // 
             pbPerfil.Cursor = Cursors.Hand;
             pbPerfil.Image = Properties.Resources.icons8_usuário_482;
-            pbPerfil.Location = new Point(1003, 2);
+            pbPerfil.Location = new Point(1023, 2);
             pbPerfil.Margin = new Padding(4, 5, 4, 5);
             pbPerfil.Name = "pbPerfil";
             pbPerfil.Size = new Size(54, 58);
@@ -198,7 +198,7 @@
             dgvAnuncios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAnuncios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAnuncios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAnuncios.Location = new Point(34, 780);
+            dgvAnuncios.Location = new Point(43, 780);
             dgvAnuncios.Margin = new Padding(4, 5, 4, 5);
             dgvAnuncios.Name = "dgvAnuncios";
             dgvAnuncios.RowHeadersWidth = 62;
@@ -459,9 +459,9 @@
             Controls.Add(dgvAnuncios);
             Controls.Add(pnlNavBar);
             Controls.Add(panelFotos);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(0, 0, 0, 0);
             Name = "UC_Home";
-            Size = new Size(1126, 1155);
+            Size = new Size(1144, 1137);
             Load += UC_Home_Load;
             panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

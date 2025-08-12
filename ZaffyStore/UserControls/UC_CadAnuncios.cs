@@ -95,7 +95,6 @@ namespace ZaffyStore.UserControls
 
         private void btnAnunciar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (Sessao.UsuarioAtual.Celular != null &&
@@ -109,34 +108,45 @@ namespace ZaffyStore.UserControls
                         !string.IsNullOrWhiteSpace(txtLocal.Text) &&
                         !string.IsNullOrWhiteSpace(txtContato.Text) &&
                         anuncios.Foto != null)
-
                     {
                         anuncios.Nome = txtNome.Text;
                         anuncios.Descricao = txtDesc.Text;
                         anuncios.Categoria = cbCategoria.SelectedItem.ToString();
-                        anuncios.Preco = double.Parse(mtxtPreco.Text);
+
+                        // Tratamento do preço para converter corretamente
+                        string precoTexto = mtxtPreco.Text.Replace("R$", "")
+                                                          .Replace(".", "")
+                                                          .Replace(",", ".")
+                                                          .Trim();
+
+                        double preco;
+                        if (double.TryParse(precoTexto, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out preco))
+                        {
+                            anuncios.Preco = preco;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Formato de preço inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
                         anuncios.DataPost = DateTime.Now;
                         anuncios.Localidade = txtLocal.Text;
                         anuncios.Contato = txtContato.Text;
                         anuncios.Id_User = Convert.ToInt32(Sessao.UsuarioAtual.Id);
-
                         anuncios.Horario = DateTime.Now.TimeOfDay;
 
                         if (anuncios.CadastrarAnuncio())
                         {
-
                             MessageBox.Show("Anúncio cadastrado", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                             UC_Home home = new UC_Home();
                             this.Controls.Clear();
                             this.Controls.Add(home);
-
                         }
                         else
                         {
                             MessageBox.Show("Não cadastrou o anúncio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-
                     }
                     else
                     {
@@ -147,24 +157,22 @@ namespace ZaffyStore.UserControls
                 {
                     MessageBox.Show("Conclua o cadastro e perfil para cadastrar anúncios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar o anúncio: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
         }
+
 
         private void mtxtPreco_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(mtxtPreco.Text, @"^\d+$"))
-            {
-                MessageBox.Show("Apenas números são permitidos no campo preço.");
-                mtxtPreco.Clear();
-            }
+            //if (!Regex.IsMatch(mtxtPreco.Text, @"^\d+$"))
+            //{
+            //    MessageBox.Show("Apenas números são permitidos no campo preço.");
+            //    mtxtPreco.Clear();
+            //}
         }
 
         private void pbLogout_Click(object sender, EventArgs e)

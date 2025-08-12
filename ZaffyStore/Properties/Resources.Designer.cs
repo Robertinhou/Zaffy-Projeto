@@ -303,6 +303,36 @@ namespace ZaffyStore.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plano_DIAMOND {
+            get {
+                object obj = ResourceManager.GetObject("plano DIAMOND", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plano_Medio {
+            get {
+                object obj = ResourceManager.GetObject("plano Medio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plano_STARTER {
+            get {
+                object obj = ResourceManager.GetObject("plano STARTER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Protótipo_de_Baixa_Fidelidade {
             get {
                 object obj = ResourceManager.GetObject("Protótipo de Baixa Fidelidade", resourceCulture);
