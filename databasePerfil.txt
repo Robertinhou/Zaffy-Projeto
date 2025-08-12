@@ -5,12 +5,12 @@ use zaffy;
 
 create table usuarios(
 id_usuario int not null auto_increment primary key,
-nome varchar(200) not null,
-email varchar(200) not null,
-senha varchar(255) not null,
-celular varchar(20) not null,
-cpf varchar(20) not null unique,
-data_nascimento date not null,
+nome varchar(200),
+email varchar(200),
+senha varchar(255),
+celular varchar(20),
+cpf varchar(20) unique,
+data_nascimento date,
 
 cep varchar(10),
 rua varchar(200),
