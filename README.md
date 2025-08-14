@@ -5,7 +5,7 @@
 
 ## 🛠️ Protótipo em Windows Forms 
 
-Esse é o protótipo do sitema Web da Zaffy, feito em Windows Forms apenas para demonstrar as funcionalidades. Atualmente está na versão beta e pode ser baixado em versão portable clicando em "<>code" depois em "Download ZIP". Em futuras atualizações pretendemos lançar a versão Web como versão definitiva, migrando os dados e adicionando funcionalidades. Além de tornar o sistema acessível em qualquer plataforma, em qualquer lugar.  
+Esse é o protótipo do sistema Web da Zaffy, feito em Windows Forms apenas para demonstrar as funcionalidades. Atualmente está na versão beta e pode ser baixado em versão portable clicando em "<>code" depois em "Download ZIP". Em futuras atualizações pretendemos lançar a versão Web como versão definitiva, migrando os dados e adicionando funcionalidades. Além de tornar o sistema acessível em qualquer plataforma, em qualquer lugar.  
 
 ## 📌 Sobre o projeto
 O **Zaffy** é um sistema **C2C (Consumer-to-Consumer)** desenvolvido para facilitar a interação entre usuários que desejam **anunciar produtos** e **visualizar anúncios de outras pessoas**.  
