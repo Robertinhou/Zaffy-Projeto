@@ -15,8 +15,7 @@ A proposta do Zaffy é oferecer uma plataforma simples, funcional e segura, perm
 - ✔ Cadastro e login de usuários  
 - ✔ Criação, edição e exclusão de anúncios  
 - ✔ Visualização de anúncios de outros usuários  
-- ✔ Pesquisa e filtros para encontrar produtos  
-- ✔ Interface intuitiva e responsiva (Windows Forms)  
+- ✔ Visualização de anúncios próprios
 - ✔ Armazenamento seguro das informações em banco de dados **MySQL**
 
 ---
